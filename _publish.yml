@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: a1eccd01-af69-469a-990a-7e8e23941860
+      url: 'https://zingy-pudding-17dd2e.netlify.app'
