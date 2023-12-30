@@ -4,21 +4,21 @@
     "href": "people.html",
     "title": "People",
     "section": "",
-    "text": "Kyle P Messier is a Stadtman Tenure-Track Investigator at the National Institute of Environmental Health Sciences (NIEHS) in the Division of Translational Toxicology (DTT). He leads the Spatiotemporal Exposures and Toxicology group {S.E.T.} within the Predictive Toxicology Branch. He also holds a joint appointment with the National Institute of Minority Health and Health Disparities (NIMHD) in Bethesda, Maryland and a secondary appointment in the NIEHS Biostatistics and Computational Biology Branch. Messier received a B.S. in Environmental Studies from the University of North Carolina at Asheville and a M.S. and Ph.D. from the University of North Carolina at Chapel Hill."
+    "text": "Kyle P Messier is a Stadtman Tenure-Track Investigator at the National Institute of Environmental Health Sciences (NIEHS) in the Division of Translational Toxicology (DTT). He leads the Spatiotemporal Exposures and Toxicology group, {SET}grp, within the Predictive Toxicology Branch. He also holds a joint appointment with the National Institute of Minority Health and Health Disparities (NIMHD) in Bethesda, Maryland and a secondary appointment in the NIEHS Biostatistics and Computational Biology Branch. Messier received a B.S. in Environmental Studies from the University of North Carolina at Asheville and a M.S. and Ph.D. from the University of North Carolina at Chapel Hill."
   },
   {
     "objectID": "people.html#group-lead",
     "href": "people.html#group-lead",
     "title": "People",
     "section": "",
-    "text": "Kyle P Messier is a Stadtman Tenure-Track Investigator at the National Institute of Environmental Health Sciences (NIEHS) in the Division of Translational Toxicology (DTT). He leads the Spatiotemporal Exposures and Toxicology group {S.E.T.} within the Predictive Toxicology Branch. He also holds a joint appointment with the National Institute of Minority Health and Health Disparities (NIMHD) in Bethesda, Maryland and a secondary appointment in the NIEHS Biostatistics and Computational Biology Branch. Messier received a B.S. in Environmental Studies from the University of North Carolina at Asheville and a M.S. and Ph.D. from the University of North Carolina at Chapel Hill."
+    "text": "Kyle P Messier is a Stadtman Tenure-Track Investigator at the National Institute of Environmental Health Sciences (NIEHS) in the Division of Translational Toxicology (DTT). He leads the Spatiotemporal Exposures and Toxicology group, {SET}grp, within the Predictive Toxicology Branch. He also holds a joint appointment with the National Institute of Minority Health and Health Disparities (NIMHD) in Bethesda, Maryland and a secondary appointment in the NIEHS Biostatistics and Computational Biology Branch. Messier received a B.S. in Environmental Studies from the University of North Carolina at Asheville and a M.S. and Ph.D. from the University of North Carolina at Chapel Hill."
   },
   {
     "objectID": "people.html#postdoctoral-fellows",
     "href": "people.html#postdoctoral-fellows",
     "title": "People",
     "section": "Postdoctoral Fellows",
-    "text": "Postdoctoral Fellows\n\nInsang Song\nDaniel Zilber\nEva Marques\nMariana Alifa Kassien\nRanadeep Daw"
+    "text": "Postdoctoral Fellows\n\nIt’s no secret that the engine driving cutting edge research across the world our postdoctoral fellows. The SET group has many talented postdoctoral fellows with a variety of backgrounds including spatial statistics, machine learning, epidemiology, atmospheric sciences, and geography.\n\nCurrent fellows in no particular order:\n\nInsang Song\n\nDaniel Zilber\n\nEva Marques\n\nMariana Alifa Kassien\nRanadeep Daw"
   },
   {
     "objectID": "people.html#data-analyst",
@@ -46,7 +46,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "The SETgrp has a broad interest in geospatial exposure modeling and risk assessment for environmental exposomics (e.g. chemical mixtures, social, behaviorial + environmental factors) through the integration with non-animal toxicological data such as high-through in vitro screen assays.\nRecently, SETgrp has adopted a test-driven-development (TDD) strategy to its research and software development approach."
   },
   {
     "objectID": "index.html#environmental-exposure-assessment-and-mechanistically-informed-risk-assessments-using-spatiotemporal-statistics",

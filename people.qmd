@@ -4,15 +4,27 @@ title: "People"
 
 ## Group Lead
 
-Kyle P Messier is a Stadtman Tenure-Track Investigator at the National Institute of Environmental Health Sciences (NIEHS) in the Division of Translational Toxicology (DTT). He leads the Spatiotemporal Exposures and Toxicology group {S.E.T.} within the Predictive Toxicology Branch. He also holds a joint appointment with the National Institute of Minority Health and Health Disparities (NIMHD) in Bethesda, Maryland and a secondary appointment in the NIEHS Biostatistics and Computational Biology Branch. Messier received a B.S. in Environmental Studies from the University of North Carolina at Asheville and a M.S. and Ph.D. from the University of North Carolina at Chapel Hill.
+![](images\KPM-headshot-Oct2023.jpg){width="30%"}
+
+Kyle P Messier is a Stadtman Tenure-Track Investigator at the National Institute of Environmental Health Sciences (NIEHS) in the Division of Translational Toxicology (DTT). He leads the Spatiotemporal Exposures and Toxicology group, {SET}grp, within the Predictive Toxicology Branch. He also holds a joint appointment with the National Institute of Minority Health and Health Disparities (NIMHD) in Bethesda, Maryland and a secondary appointment in the NIEHS Biostatistics and Computational Biology Branch. Messier received a B.S. in Environmental Studies from the University of North Carolina at Asheville and a M.S. and Ph.D. from the University of North Carolina at Chapel Hill.
 
 ## Postdoctoral Fellows
 
+### It's no secret that the engine driving cutting edge research across the world our postdoctoral fellows. The SET group has many talented postdoctoral fellows with a variety of backgrounds including spatial statistics, machine learning, epidemiology, atmospheric sciences, and geography.
+
+#### Current fellows in no particular order: 
+
 1.  [Insang Song](https://sigmafelix.wixsite.com/mysite/ "Postdoctoral Fellow")
+
+    ![](images\IS-Headshot-Oct2023.jpg){width="30%"}
 
 2.  Daniel Zilber
 
+    ![](images\DZ-Headshot-Oct2023.jpg){width="30%"}
+
 3.  Eva Marques
+
+    ![](images\ESM-Headshot-Oct2023.jpg){width="30%"}
 
 4.  Mariana Alifa Kassien
 
@@ -24,8 +36,8 @@ Mitchell Manware
 
 ## Former Members
 
-1.  Kristin Eccles, Postdoctoral Fellow, Now at [Health Canada](https://kristineccles.wordpress.com/)
+1.  [Kristin Eccles](https://kristineccles.wordpress.com/), Postdoctoral Fellow, Now at Health Canada
 
-2.  Melissa Lowe, Postbaccalaureate Fellow, Now at [Duke Cancer Institute](https://www.linkedin.com/in/melissa-lowe-1a62a8b3/)
+2.  [Melissa Lowe](https://www.linkedin.com/in/melissa-lowe-1a62a8b3/), Postbaccalaureate Fellow, Now at Duke Cancer Institute
 
 3.  Taylor A Potter, Postbaccalaureate Fellow, Now in medical school at Meherry Medical College

@@ -2,8 +2,6 @@
 title: "About"
 ---
 
-About this site
+The **SETgrp** has a broad interest in geospatial exposure modeling and risk assessment for environmental [exposomics](https://factor.niehs.nih.gov/2022/9/feature/2-feature-exposomics-research) (e.g. chemical mixtures, social, behaviorial + environmental factors) through the integration with non-animal toxicological data such as high-through *in vitro* screen assays.
 
-```{r}
-1 + 1
-```
+Recently, SETgrp has adopted a test-driven-development ([TDD](https://github.com/topics/test-driven-development)) strategy to its research and software development approach.
