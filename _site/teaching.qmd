@@ -1,7 +1,0 @@
----
-title: "teaching"
----
-
-# Talks
-
-# Guest Lectures
