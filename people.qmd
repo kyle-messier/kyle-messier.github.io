@@ -1,5 +1,6 @@
 ---
 title: "People"
+toc-depth: 2
 ---
 
 ## Group Lead
@@ -12,23 +13,23 @@ Kyle P Messier is a Stadtman Tenure-Track Investigator at the National Institute
 
 ### It's no secret that the engine driving cutting edge research across the world is postdoctoral fellows. The SET group has many talented postdoctoral fellows with a variety of backgrounds including spatial statistics, machine learning, epidemiology, atmospheric sciences, and geography.
 
-#### Current fellows in no particular order: 
+#### Current fellows, alphabetically by last name: 
 
-1.  [Insang Song](https://sigmafelix.wixsite.com/mysite/ "Postdoctoral Fellow")
+1.  Mariana Alifa
+
+    ![](images\MAK-Headshot-Oct2023.jpg){width="30%"}
+
+2.  Ranadeep Daw
+
+3.  [Insang Song](https://sigmafelix.wixsite.com/mysite/ "Postdoctoral Fellow")
 
     ![](images\IS-Headshot-Oct2023.jpg){width="30%"}
 
-2.  Daniel Zilber
+4.  Eva Marques
+
+5.  Daniel Zilber
 
     ![](images\DZ-Headshot-Oct2023.jpg){width="30%"}
-
-3.  Eva Marques
-
-    ![](images\ESM-Headshot-Oct2023.jpg){width="30%"}
-
-4.  Mariana Alifa Kassien
-
-5.  Ranadeep Daw
 
 ## Data Analyst
 
