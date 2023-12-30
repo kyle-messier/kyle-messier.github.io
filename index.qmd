@@ -1,7 +1,9 @@
 ---
-title: "Spatiotemporal Exposures and Toxicology Group"
+title: "Spatiotemporal Exposures and Toxicology"
 ---
 
 ## **Environmental Exposure Assessment and Mechanistically Informed Risk Assessments Using Spatiotemporal Statistics**
 
-The common theme is spatial statistics methods and applications in population-level exposure and risk assessment. As an investigator in the Division of Translational Toxicology, Dr. Kyle P Messoer is expanding to include the integration of toxicological methods into geospatial exposure and risk models. The long-term goals are to use integrated geospatial and toxicological data and methods (1) to characterize the large-scale, population-level internal exposome, (2) to model the source-to-outcome continuum for complex mixtures, and (3) utilize these risk assessment tools to improve lives with an emphasis on historically disadvantaged communities and susceptible populations.
+The common theme of the Spatiotemporal Exposures and Toxicology group (a.k.a. SET group) is spatial statistics methods and applications in population-level exposure and risk assessment. As an investigator in the Division of Translational Toxicology, Dr. Kyle P Messier is expanding to include the integration of toxicological methods into geospatial exposure and risk models. The long-term goals are to use integrated geospatial and toxicological data and methods (1) to characterize the large-scale, population-level internal exposome, (2) to model the source-to-outcome continuum for complex mixtures, and (3) utilize these risk assessment tools to improve lives with an emphasis on historically disadvantaged communities and susceptible populations.
+
+![The Spatiotemporal Exposures and Toxicology group in October 2023. Top Row: Eva Marques, Daniel Zilber, Ranadeep Daw, Mariana Alifa. Bottom Row: Insang Song, Kyle Messier](images\SETgroup-Oct2023.jpg){width="75%"}
