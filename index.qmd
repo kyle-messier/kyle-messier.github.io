@@ -1,9 +1,7 @@
 ---
-title: "SET Group "
+title: "Spatiotemporal Exposures and Toxicology Group"
 ---
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## **Environmental Exposure Assessment and Mechanistically Informed Risk Assessments Using Spatiotemporal Statistics**
 
-```{r}
-1 + 1
-```
+The common theme is spatial statistics methods and applications in population-level exposure and risk assessment. As an investigator in the Division of Translational Toxicology, Dr. Kyle P Messoer is expanding to include the integration of toxicological methods into geospatial exposure and risk models. The long-term goals are to use integrated geospatial and toxicological data and methods (1) to characterize the large-scale, population-level internal exposome, (2) to model the source-to-outcome continuum for complex mixtures, and (3) utilize these risk assessment tools to improve lives with an emphasis on historically disadvantaged communities and susceptible populations.
