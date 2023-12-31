@@ -4,8 +4,12 @@ title: "Spatiotemporal Exposures and Toxicology"
 
 ## **Environmental Exposure Assessment and Mechanistically Informed Risk Assessments Using Spatiotemporal Statistics**
 
-The common theme of the Spatiotemporal Exposures and Toxicology group (a.k.a. SET group) is spatial statistics methods and applications in population-level exposure and risk assessment. As an investigator in the Division of Translational Toxicology, Dr. Kyle P Messier is expanding to include the integration of toxicological methods into geospatial exposure and risk models. The long-term goals are to use integrated geospatial and toxicological data and methods (1) to characterize the large-scale, population-level internal exposome, (2) to model the source-to-outcome continuum for complex mixtures, and (3) utilize these risk assessment tools to improve lives with an emphasis on historically disadvantaged communities and susceptible populations.
+![Spatiotemporal Exposures and Toxicology group -\> {SET} grp](images/setlogo.jpg){alt="Spatiotemporal Exposures and Toxicology group -> {SET} grp" width="75%"}
 
-![The Spatiotemporal Exposures and Toxicology group in October 2023. Top Row: Eva Marques, Daniel Zilber, Ranadeep Daw, Mariana Alifa. Bottom Row: Insang Song, Kyle Messier. Not pictured: Mitchell Manware](images\SETgroup-Oct2023.jpg){width="75%"}
+## The SETgrp has a broad interest in geospatial exposure modeling and risk assessment for environmental [exposomics](https://factor.niehs.nih.gov/2022/9/feature/2-feature-exposomics-research) (e.g. chemical mixtures, social, behaviorial + environmental factors). Key areas of research include: 
 
-![Spatiotemporal Exposures and Toxicology group -\> {SET} grp. With { } a nod to mathematical set notation. Our group logo - thanks to the NIEHS Office of Communications and Public Liaison for the design.](images/setlogo.jpg){width="75%"}
+#### ***GeoTox:*** Integration of geospatial exposure with non-animal toxicological data such as high-through *in vitro* screen assays to develop mechanistically-informed risk maps
+
+#### Spatiotemporal exposure mapping of environmental and climate variables
+
+#### Leading and promoting software and computational best-practices such as test-driven-development ([TDD](https://github.com/topics/test-driven-development)) and open-source code for the environmental health sciences

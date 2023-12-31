@@ -32,7 +32,7 @@
     "href": "index.html",
     "title": "Spatiotemporal Exposures and Toxicology",
     "section": "",
-    "text": "The common theme of the Spatiotemporal Exposures and Toxicology group (a.k.a. SET group) is spatial statistics methods and applications in population-level exposure and risk assessment. As an investigator in the Division of Translational Toxicology, Dr. Kyle P Messier is expanding to include the integration of toxicological methods into geospatial exposure and risk models. The long-term goals are to use integrated geospatial and toxicological data and methods (1) to characterize the large-scale, population-level internal exposome, (2) to model the source-to-outcome continuum for complex mixtures, and (3) utilize these risk assessment tools to improve lives with an emphasis on historically disadvantaged communities and susceptible populations.\n\n\n\nThe Spatiotemporal Exposures and Toxicology group in October 2023. Top Row: Eva Marques, Daniel Zilber, Ranadeep Daw, Mariana Alifa. Bottom Row: Insang Song, Kyle Messier. Not pictured: Mitchell Manware\n\n\n\n\n\nSpatiotemporal Exposures and Toxicology group -&gt; {SET} grp. With { } a nod to mathematical set notation. Our group logo - thanks to the NIEHS Office of Communications and Public Liaison for the design."
+    "text": "Spatiotemporal Exposures and Toxicology group -&gt; {SET} grp"
   },
   {
     "objectID": "teaching.html",
@@ -46,14 +46,14 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "The SETgrp has a broad interest in geospatial exposure modeling and risk assessment for environmental exposomics (e.g. chemical mixtures, social, behaviorial + environmental factors) through the integration with non-animal toxicological data such as high-through in vitro screen assays.\nRecently, SETgrp has adopted a test-driven-development (TDD) strategy to its research and software development approach."
+    "text": "The common theme of the Spatiotemporal Exposures and Toxicology group (a.k.a. SET group) is spatial statistics methods and applications in population-level exposure and risk assessment. As an investigator in the Division of Translational Toxicology, Dr. Kyle P Messier is expanding to include the integration of toxicological methods into geospatial exposure and risk models. The long-term goals are to use integrated geospatial and toxicological data and methods (1) to characterize the large-scale, population-level internal exposome, (2) to model the source-to-outcome continuum for complex mixtures, and (3) utilize these risk assessment tools to improve lives with an emphasis on historically disadvantaged communities and susceptible populations.\n\n\n\nThe Spatiotemporal Exposures and Toxicology group in October 2023. Top Row: Eva Marques, Daniel Zilber, Ranadeep Daw, Mariana Alifa. Bottom Row: Insang Song, Kyle Messier\n\n\n\n\n\n{SET}grp logo. { } is a nod to mathematical set notation. Thanks to the NIEHS Office of Communications and Public Liaison for the design."
   },
   {
     "objectID": "index.html#environmental-exposure-assessment-and-mechanistically-informed-risk-assessments-using-spatiotemporal-statistics",
     "href": "index.html#environmental-exposure-assessment-and-mechanistically-informed-risk-assessments-using-spatiotemporal-statistics",
     "title": "Spatiotemporal Exposures and Toxicology",
     "section": "",
-    "text": "The common theme of the Spatiotemporal Exposures and Toxicology group (a.k.a. SET group) is spatial statistics methods and applications in population-level exposure and risk assessment. As an investigator in the Division of Translational Toxicology, Dr. Kyle P Messier is expanding to include the integration of toxicological methods into geospatial exposure and risk models. The long-term goals are to use integrated geospatial and toxicological data and methods (1) to characterize the large-scale, population-level internal exposome, (2) to model the source-to-outcome continuum for complex mixtures, and (3) utilize these risk assessment tools to improve lives with an emphasis on historically disadvantaged communities and susceptible populations.\n\n\n\nThe Spatiotemporal Exposures and Toxicology group in October 2023. Top Row: Eva Marques, Daniel Zilber, Ranadeep Daw, Mariana Alifa. Bottom Row: Insang Song, Kyle Messier. Not pictured: Mitchell Manware\n\n\n\n\n\nSpatiotemporal Exposures and Toxicology group -&gt; {SET} grp. With { } a nod to mathematical set notation. Our group logo - thanks to the NIEHS Office of Communications and Public Liaison for the design."
+    "text": "Spatiotemporal Exposures and Toxicology group -&gt; {SET} grp"
   },
   {
     "objectID": "people.html#former-members",
@@ -61,5 +61,54 @@
     "title": "People",
     "section": "Former Members",
     "text": "Former Members\n\nKristin Eccles, Postdoctoral Fellow, Now at Health Canada\nMelissa Lowe, Postbaccalaureate Fellow, Now at Duke Cancer Institute\nTaylor A Potter, Postbaccalaureate Fellow, Now in medical school at Meherry Medical College"
+  },
+  {
+    "objectID": "index.html#the-setgrp-has-a-broad-interest-in-geospatial-exposure-modeling-and-risk-assessment-for-environmental-exposomics-e.g.-chemical-mixtures-social-behaviorial-environmental-factors.-key-areas-of-research-include",
+    "href": "index.html#the-setgrp-has-a-broad-interest-in-geospatial-exposure-modeling-and-risk-assessment-for-environmental-exposomics-e.g.-chemical-mixtures-social-behaviorial-environmental-factors.-key-areas-of-research-include",
+    "title": "Spatiotemporal Exposures and Toxicology",
+    "section": "The SETgrp has a broad interest in geospatial exposure modeling and risk assessment for environmental exposomics (e.g. chemical mixtures, social, behaviorial + environmental factors). Key areas of research include:",
+    "text": "The SETgrp has a broad interest in geospatial exposure modeling and risk assessment for environmental exposomics (e.g. chemical mixtures, social, behaviorial + environmental factors). Key areas of research include:\n\nGeoTox: Integration of geospatial exposure with non-animal toxicological data such as high-through in vitro screen assays to develop mechanistically-informed risk maps\n\n\nSpatiotemporal exposure mapping of environmental and climate variables\n\n\nLeading and promoting software and computational best-practices such as test-driven-development (TDD) and open-source code for the environmental health sciences"
+  },
+  {
+    "objectID": "people.html#kyle-p-messier-phd",
+    "href": "people.html#kyle-p-messier-phd",
+    "title": "People",
+    "section": "",
+    "text": "Kyle P Messier is a Stadtman Tenure-Track Investigator at the National Institute of Environmental Health Sciences (NIEHS) in the Division of Translational Toxicology (DTT). He leads the Spatiotemporal Exposures and Toxicology group, {SET}grp, within the Predictive Toxicology Branch. He also holds a joint appointment with the National Institute of Minority Health and Health Disparities (NIMHD) in Bethesda, Maryland and a secondary appointment in the NIEHS Biostatistics and Computational Biology Branch. Messier received a B.S. in Environmental Studies from the University of North Carolina at Asheville and a M.S. and Ph.D. from the University of North Carolina at Chapel Hill."
+  },
+  {
+    "objectID": "people.html#mariana-alifa",
+    "href": "people.html#mariana-alifa",
+    "title": "People",
+    "section": "Mariana Alifa",
+    "text": "Mariana Alifa"
+  },
+  {
+    "objectID": "people.html#ranadeep-daw",
+    "href": "people.html#ranadeep-daw",
+    "title": "People",
+    "section": "Ranadeep Daw",
+    "text": "Ranadeep Daw"
+  },
+  {
+    "objectID": "people.html#insang-song",
+    "href": "people.html#insang-song",
+    "title": "People",
+    "section": "Insang Song",
+    "text": "Insang Song"
+  },
+  {
+    "objectID": "people.html#eva-marques",
+    "href": "people.html#eva-marques",
+    "title": "People",
+    "section": "Eva Marques",
+    "text": "Eva Marques"
+  },
+  {
+    "objectID": "people.html#daniel-zilber",
+    "href": "people.html#daniel-zilber",
+    "title": "People",
+    "section": "Daniel Zilber",
+    "text": "Daniel Zilber"
   }
 ]

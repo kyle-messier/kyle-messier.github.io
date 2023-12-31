@@ -3,39 +3,39 @@ title: "People"
 toc-depth: 2
 ---
 
-## Group Lead
+# Group Lead
 
-![](images\KPM-headshot-Oct2023.jpg){width="30%"}
+## Kyle P Messier, PhD
 
-Kyle P Messier is a Stadtman Tenure-Track Investigator at the National Institute of Environmental Health Sciences (NIEHS) in the Division of Translational Toxicology (DTT). He leads the Spatiotemporal Exposures and Toxicology group, {SET}grp, within the Predictive Toxicology Branch. He also holds a joint appointment with the National Institute of Minority Health and Health Disparities (NIMHD) in Bethesda, Maryland and a secondary appointment in the NIEHS Biostatistics and Computational Biology Branch. Messier received a B.S. in Environmental Studies from the University of North Carolina at Asheville and a M.S. and Ph.D. from the University of North Carolina at Chapel Hill.
+![Kyle P Messier is a Stadtman Tenure-Track Investigator at the National Institute of Environmental Health Sciences (NIEHS) in the Division of Translational Toxicology (DTT). He leads the Spatiotemporal Exposures and Toxicology group, {SET}grp, within the Predictive Toxicology Branch. He also holds a joint appointment with the National Institute of Minority Health and Health Disparities (NIMHD) in Bethesda, Maryland and a secondary appointment in the NIEHS Biostatistics and Computational Biology Branch. Messier received a B.S. in Environmental Studies from the University of North Carolina at Asheville and a M.S. and Ph.D. from the University of North Carolina at Chapel Hill.](images\KPM-headshot-Oct2023.jpg){width="30%"}
 
-## Postdoctoral Fellows
+# Postdoctoral Fellows
 
-### It's no secret that the engine driving cutting edge research across the world is postdoctoral fellows. The SET group has many talented postdoctoral fellows with a variety of backgrounds including spatial statistics, machine learning, epidemiology, atmospheric sciences, and geography.
+It's no secret that the engine driving cutting edge research across the world is postdoctoral fellows. The SET group has many talented postdoctoral fellows with a variety of backgrounds including spatial statistics, machine learning, epidemiology, atmospheric sciences, and geography.
 
-#### Current fellows, alphabetically by last name: 
+Current fellows, alphabetically by last name:
 
-1.  Mariana Alifa
+## Mariana Alifa
 
-    ![](images\MAK-Headshot-Oct2023.jpg){width="30%"}
+![](images\MAK-Headshot-Oct2023.jpg){width="30%"}
 
-2.  Ranadeep Daw
+## Ranadeep Daw
 
-3.  [Insang Song](https://sigmafelix.wixsite.com/mysite/ "Postdoctoral Fellow")
+## [Insang Song](https://sigmafelix.wixsite.com/mysite/ "Postdoctoral Fellow") 
 
-    ![](images\IS-Headshot-Oct2023.jpg){width="30%"}
+![](images\IS-Headshot-Oct2023.jpg){width="30%"}
 
-4.  Eva Marques
+## Eva Marques
 
-5.  Daniel Zilber
+## Daniel Zilber
 
-    ![](images\DZ-Headshot-Oct2023.jpg){width="30%"}
+![](images\DZ-Headshot-Oct2023.jpg){width="30%"}
 
-## Data Analyst
+# Data Analyst
 
 Mitchell Manware
 
-## Former Members
+# Former Members
 
 1.  [Kristin Eccles](https://kristineccles.wordpress.com/), Postdoctoral Fellow, Now at Health Canada
 
