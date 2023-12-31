@@ -1,8 +1,9 @@
 ---
 title: "Spatiotemporal Exposures and Toxicology"
+toc-depth: 1
 ---
 
-## **Environmental Exposure Assessment and Mechanistically Informed Risk Assessments Using Spatiotemporal Statistics**
+# **Environmental Exposure Assessment and Mechanistically Informed Risk Assessments Using Spatiotemporal Statistics**
 
 ![Spatiotemporal Exposures and Toxicology group -\> {SET} grp](images/setlogo.jpg){alt="Spatiotemporal Exposures and Toxicology group -> {SET} grp" width="75%"}
 
