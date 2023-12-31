@@ -10,6 +10,12 @@ website:
         text: Home
       - about.qmd
       - people.qmd
+      - text: "Software"
+        menu: 
+          - text: "NRTAPmodel"
+            href: https://spatiotemporal-exposures-and-toxicology.github.io/NRTAPmodel/
+          - text: "GeoTox" 
+            href: https://spatiotemporal-exposures-and-toxicology.github.io/GeoToxPackage/
       - teaching.qmd
     logo: images/setlogo.jpg
 
