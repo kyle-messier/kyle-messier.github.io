@@ -9,7 +9,24 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-      - people.qmd
+      - text: "People"
+        menu:
+          - text: "Kyle P Messier"
+            href: people.html#KPM
+          - text: "Mariana Alifa"
+            href: people.html#MAK
+          - text: "Ranadeep Daw"
+            href: people.html#RD
+          - text: "Eva Marques"
+            href: people.html#ESM
+          - text: "Insang Song"
+            href: people.html#IS
+          - text: "Daniel Zilber"
+            href: people.html#DZ
+          - text: "Mitchell Manware"
+            href: people.html#MM
+          - text: "Former Members"
+            href: people.html#FormerMembers            
       - text: "Software"
         menu: 
           - text: "NRTAPmodel"

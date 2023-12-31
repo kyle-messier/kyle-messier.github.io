@@ -5,7 +5,7 @@ toc-depth: 2
 
 # Group Lead
 
-## Kyle P Messier, PhD
+## Kyle P Messier, PhD {#KPM}
 
 ![Kyle P Messier is a Stadtman Tenure-Track Investigator at the National Institute of Environmental Health Sciences (NIEHS) in the Division of Translational Toxicology (DTT). He leads the Spatiotemporal Exposures and Toxicology group, {SET}grp, within the Predictive Toxicology Branch. He also holds a joint appointment with the National Institute of Minority Health and Health Disparities (NIMHD) in Bethesda, Maryland and a secondary appointment in the NIEHS Biostatistics and Computational Biology Branch. Messier received a B.S. in Environmental Studies from the University of North Carolina at Asheville and a M.S. and Ph.D. from the University of North Carolina at Chapel Hill.](images\KPM-headshot-Oct2023.jpg){width="30%"}
 
@@ -15,31 +15,33 @@ It's no secret that the engine driving cutting edge research across the world is
 
 Current fellows, alphabetically by last name:
 
-## Mariana Alifa
+## Mariana Alifa {#MAK}
 
 ![](images\MAK-Headshot-Oct2023.jpg){width="30%"}
 
-## Ranadeep Daw
+## Ranadeep Daw {#RD}
 
 ![](images\RD-Headshot-Oct2023.jpg){width="30%"}
 
-## Eva Marques
+## Eva Marques {#ESM}
 
 ![](images\ESM-Headshot-Oct2023.jpg){width="30%"}
 
-## [Insang Song](https://sigmafelix.wixsite.com/mysite/ "Postdoctoral Fellow") 
+## [Insang Song](https://sigmafelix.wixsite.com/mysite/ "Postdoctoral Fellow")  {#IS}
 
 ![](images\IS-Headshot-Oct2023.jpg){width="30%"}
 
-## Daniel Zilber
+## Daniel Zilber {#DZ}
 
 ![](images\DZ-Headshot-Oct2023.jpg){width="30%"}
 
 # Data Analyst
 
-Mitchell Manware
+## Mitchell Manware {#MM}
 
-# Former Members
+![](images\manware_headshot.jpeg){width="30%"}
+
+# Former Members {#FormerMembers}
 
 1.  [Kristin Eccles](https://kristineccles.wordpress.com/), Postdoctoral Fellow, Now at Health Canada
 

@@ -92,10 +92,45 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./people.html" rel="" target="" aria-current="page">
- <span class="menu-text">People</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-people" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">People</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-people">    
+        <li>
+    <a class="dropdown-item" href="./people.html#KPM" rel="" target="">
+ <span class="dropdown-text">Kyle P Messier</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./people.html#MAK" rel="" target="">
+ <span class="dropdown-text">Mariana Alifa</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./people.html#RD" rel="" target="">
+ <span class="dropdown-text">Ranadeep Daw</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./people.html#ESM" rel="" target="">
+ <span class="dropdown-text">Eva Marques</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./people.html#IS" rel="" target="">
+ <span class="dropdown-text">Insang Song</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./people.html#DZ" rel="" target="">
+ <span class="dropdown-text">Daniel Zilber</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./people.html#MM" rel="" target="">
+ <span class="dropdown-text">Mitchell Manware</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./people.html#FormerMembers" rel="" target="">
+ <span class="dropdown-text">Former Members</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-software" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Software</span>
@@ -133,18 +168,21 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#group-lead" id="toc-group-lead" class="nav-link active" data-scroll-target="#group-lead">Group Lead</a>
   <ul class="collapse">
-  <li><a href="#kyle-p-messier-phd" id="toc-kyle-p-messier-phd" class="nav-link" data-scroll-target="#kyle-p-messier-phd">Kyle P Messier, PhD</a></li>
+  <li><a href="#KPM" id="toc-KPM" class="nav-link" data-scroll-target="#KPM">Kyle P Messier, PhD</a></li>
   </ul></li>
   <li><a href="#postdoctoral-fellows" id="toc-postdoctoral-fellows" class="nav-link" data-scroll-target="#postdoctoral-fellows">Postdoctoral Fellows</a>
   <ul class="collapse">
-  <li><a href="#mariana-alifa" id="toc-mariana-alifa" class="nav-link" data-scroll-target="#mariana-alifa">Mariana Alifa</a></li>
-  <li><a href="#ranadeep-daw" id="toc-ranadeep-daw" class="nav-link" data-scroll-target="#ranadeep-daw">Ranadeep Daw</a></li>
-  <li><a href="#eva-marques" id="toc-eva-marques" class="nav-link" data-scroll-target="#eva-marques">Eva Marques</a></li>
-  <li><a href="#insang-song" id="toc-insang-song" class="nav-link" data-scroll-target="#insang-song">Insang Song</a></li>
-  <li><a href="#daniel-zilber" id="toc-daniel-zilber" class="nav-link" data-scroll-target="#daniel-zilber">Daniel Zilber</a></li>
+  <li><a href="#MAK" id="toc-MAK" class="nav-link" data-scroll-target="#MAK">Mariana Alifa</a></li>
+  <li><a href="#RD" id="toc-RD" class="nav-link" data-scroll-target="#RD">Ranadeep Daw</a></li>
+  <li><a href="#ESM" id="toc-ESM" class="nav-link" data-scroll-target="#ESM">Eva Marques</a></li>
+  <li><a href="#IS" id="toc-IS" class="nav-link" data-scroll-target="#IS">Insang Song</a></li>
+  <li><a href="#DZ" id="toc-DZ" class="nav-link" data-scroll-target="#DZ">Daniel Zilber</a></li>
   </ul></li>
-  <li><a href="#data-analyst" id="toc-data-analyst" class="nav-link" data-scroll-target="#data-analyst">Data Analyst</a></li>
-  <li><a href="#former-members" id="toc-former-members" class="nav-link" data-scroll-target="#former-members">Former Members</a></li>
+  <li><a href="#data-analyst" id="toc-data-analyst" class="nav-link" data-scroll-target="#data-analyst">Data Analyst</a>
+  <ul class="collapse">
+  <li><a href="#MM" id="toc-MM" class="nav-link" data-scroll-target="#MM">Mitchell Manware</a></li>
+  </ul></li>
+  <li><a href="#FormerMembers" id="toc-FormerMembers" class="nav-link" data-scroll-target="#FormerMembers">Former Members</a></li>
   </ul>
 </nav>
     </div>
@@ -170,8 +208,8 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="group-lead" class="level1">
 <h1>Group Lead</h1>
-<section id="kyle-p-messier-phd" class="level2">
-<h2 class="anchored" data-anchor-id="kyle-p-messier-phd">Kyle P Messier, PhD</h2>
+<section id="KPM" class="level2">
+<h2 class="anchored" data-anchor-id="KPM">Kyle P Messier, PhD</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images\KPM-headshot-Oct2023.jpg" class="img-fluid figure-img" style="width:30.0%"></p>
@@ -184,32 +222,35 @@ ul.task-list li input[type="checkbox"] {
 <h1>Postdoctoral Fellows</h1>
 <p>It’s no secret that the engine driving cutting edge research across the world is postdoctoral fellows. The SET group has many talented postdoctoral fellows with a variety of backgrounds including spatial statistics, machine learning, epidemiology, atmospheric sciences, and geography.</p>
 <p>Current fellows, alphabetically by last name:</p>
-<section id="mariana-alifa" class="level2">
-<h2 class="anchored" data-anchor-id="mariana-alifa">Mariana Alifa</h2>
+<section id="MAK" class="level2">
+<h2 class="anchored" data-anchor-id="MAK">Mariana Alifa</h2>
 <p><img src="images\MAK-Headshot-Oct2023.jpg" class="img-fluid" style="width:30.0%"></p>
 </section>
-<section id="ranadeep-daw" class="level2">
-<h2 class="anchored" data-anchor-id="ranadeep-daw">Ranadeep Daw</h2>
+<section id="RD" class="level2">
+<h2 class="anchored" data-anchor-id="RD">Ranadeep Daw</h2>
 <p><img src="images\RD-Headshot-Oct2023.jpg" class="img-fluid" style="width:30.0%"></p>
 </section>
-<section id="eva-marques" class="level2">
-<h2 class="anchored" data-anchor-id="eva-marques">Eva Marques</h2>
+<section id="ESM" class="level2">
+<h2 class="anchored" data-anchor-id="ESM">Eva Marques</h2>
 <p><img src="images\ESM-Headshot-Oct2023.jpg" class="img-fluid" style="width:30.0%"></p>
 </section>
-<section id="insang-song" class="level2">
-<h2 class="anchored" data-anchor-id="insang-song"><a href="https://sigmafelix.wixsite.com/mysite/" title="Postdoctoral Fellow">Insang Song</a></h2>
+<section id="IS" class="level2">
+<h2 class="anchored" data-anchor-id="IS"><a href="https://sigmafelix.wixsite.com/mysite/" title="Postdoctoral Fellow">Insang Song</a></h2>
 <p><img src="images\IS-Headshot-Oct2023.jpg" class="img-fluid" style="width:30.0%"></p>
 </section>
-<section id="daniel-zilber" class="level2">
-<h2 class="anchored" data-anchor-id="daniel-zilber">Daniel Zilber</h2>
+<section id="DZ" class="level2">
+<h2 class="anchored" data-anchor-id="DZ">Daniel Zilber</h2>
 <p><img src="images\DZ-Headshot-Oct2023.jpg" class="img-fluid" style="width:30.0%"></p>
 </section>
 </section>
 <section id="data-analyst" class="level1">
 <h1>Data Analyst</h1>
-<p>Mitchell Manware</p>
+<section id="MM" class="level2">
+<h2 class="anchored" data-anchor-id="MM">Mitchell Manware</h2>
+<p><img src="images\manware_headshot.jpeg" class="img-fluid" style="width:30.0%"></p>
 </section>
-<section id="former-members" class="level1">
+</section>
+<section id="FormerMembers" class="level1">
 <h1>Former Members</h1>
 <ol type="1">
 <li><p><a href="https://kristineccles.wordpress.com/">Kristin Eccles</a>, Postdoctoral Fellow, Now at Health Canada</p></li>
