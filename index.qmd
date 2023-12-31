@@ -5,12 +5,12 @@ toc: false
 
 ## **Environmental Exposure Assessment and Mechanistically Informed Risk Assessments Using Spatiotemporal Statistics**
 
-![Spatiotemporal Exposures and Toxicology group -\> {SET} grp](images/setlogo.jpg){alt="Spatiotemporal Exposures and Toxicology group -> {SET} grp" width="75%"}
+![Spatiotemporal Exposures and Toxicology group -\> {SET} grp](images/setlogo.jpg){width="75%"}
 
-## The SETgrp has a broad interest in geospatial [exposomics](https://factor.niehs.nih.gov/2022/9/feature/2-feature-exposomics-research) and risk mapping. Key areas of research include: 
+## The SETgrp has a broad interest in geospatial [exposomics](https://factor.niehs.nih.gov/2022/9/feature/2-feature-exposomics-research) and risk mapping. Key areas of research include:
 
 #### ***GeoTox:*** Integration of geospatial exposure with non-animal toxicological data such as high-through *in vitro* screen assays to develop mechanistically-informed risk maps
 
-#### ***Geospatial Exposure:*** Spatiotemporal exposure mapping of environmental and climate variables (e.g. chemical mixtures, social, behaviorial, environmental, and climate factors) 
+#### ***Geospatial Exposure:*** Spatiotemporal exposure mapping of environmental and climate variables (e.g. chemical mixtures, social, behaviorial, environmental, and climate factors)
 
-#### ***Software:*** Developing and promoting software and computational best-practices such as test-driven-development ([TDD](https://github.com/topics/test-driven-development)) and open-source code for the environmental health sciences
+#### ***Software:*** Leading and promoting software and computational best-practices such as test-driven-development ([TDD](https://github.com/topics/test-driven-development)) and open-source code for the environmental health sciences
