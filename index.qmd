@@ -13,4 +13,4 @@ toc: false
 
 #### ***Geospatial Exposure:*** Spatiotemporal exposure mapping of environmental and climate variables (e.g. chemical mixtures, social, behaviorial, environmental, and climate factors)
 
-#### ***Software:*** Leading and promoting software and computational best-practices such as test-driven-development ([TDD](https://github.com/topics/test-driven-development)) and open-source code for the environmental health sciences
+#### ***Software:*** Developing and promoting software and computational best-practices such as test-driven-development ([TDD](https://github.com/topics/test-driven-development)) and open-source code for the environmental health sciences
