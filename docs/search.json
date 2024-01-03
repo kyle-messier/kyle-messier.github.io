@@ -187,5 +187,82 @@
     "title": "Geostatistical Methods for Environmental Exposomics and Mechanistically-Informed Risk Assessment",
     "section": "What drives health outcomes (i.e. phenotypes)?",
     "text": "What drives health outcomes (i.e. phenotypes)?"
+  },
+  {
+    "objectID": "pres_nimhd_20240109/pres_nimhd_20240109.html#image-right",
+    "href": "pres_nimhd_20240109/pres_nimhd_20240109.html#image-right",
+    "title": "letterbox slides",
+    "section": ".image-right",
+    "text": ".image-right\n\n\nWe can use the .image-right and .image-left classes to insert images in the background\nThese images will be placed behind most other content"
+  },
+  {
+    "objectID": "pres_nimhd_20240109/pres_nimhd_20240109.html#image-left",
+    "href": "pres_nimhd_20240109/pres_nimhd_20240109.html#image-left",
+    "title": "letterbox slides",
+    "section": ".image-left",
+    "text": ".image-left\n\n\n\n\nIt is therefore recommened that you use multiple columns to only have text on the background area"
+  },
+  {
+    "objectID": "pres_nimhd_20240109/pres_nimhd_20240109.html#section",
+    "href": "pres_nimhd_20240109/pres_nimhd_20240109.html#section",
+    "title": "letterbox slides",
+    "section": "",
+    "text": "background images"
+  },
+  {
+    "objectID": "pres_nimhd_20240109/pres_nimhd_20240109.html#setting-background-colors",
+    "href": "pres_nimhd_20240109/pres_nimhd_20240109.html#setting-background-colors",
+    "title": "letterbox slides",
+    "section": "Setting background colors",
+    "text": "Setting background colors\nyou can set your background as you normally would"
+  },
+  {
+    "objectID": "pres_nimhd_20240109/pres_nimhd_20240109.html#video-slide-title",
+    "href": "pres_nimhd_20240109/pres_nimhd_20240109.html#video-slide-title",
+    "title": "letterbox slides",
+    "section": "Video Slide Title",
+    "text": "Video Slide Title\nThis slides’s background video will play in a loop with audio muted."
+  },
+  {
+    "objectID": "pres_nimhd_20240109/pres_nimhd_20240109.html#slide-title",
+    "href": "pres_nimhd_20240109/pres_nimhd_20240109.html#slide-title",
+    "title": "letterbox slides",
+    "section": "Slide Title",
+    "text": "Slide Title"
+  },
+  {
+    "objectID": "pres_nimhd_20240109/pres_nimhd_20240109.html#further-modifying-theme",
+    "href": "pres_nimhd_20240109/pres_nimhd_20240109.html#further-modifying-theme",
+    "title": "letterbox slides",
+    "section": "Further Modifying theme",
+    "text": "Further Modifying theme\nIf you want to modify theme, you can specify the .scss my modifying the yaml to look like this\nformat: \n  letterbox-revealjs:\n    theme: [default, style.scss]"
+  },
+  {
+    "objectID": "pres_nimhd_20240109/pres_nimhd_20240109.html#modifying-letterbox-background",
+    "href": "pres_nimhd_20240109/pres_nimhd_20240109.html#modifying-letterbox-background",
+    "title": "letterbox slides",
+    "section": "Modifying letterbox background",
+    "text": "Modifying letterbox background\nThe background colors can be with with, where #444444 represents the new background color and #222222 represents the color of the shadow\n.quarto-light {\n  background-color: #444444;\n}\n\n.quarto-dark {\n  background-color: #444444;\n}\n\n.slides {\n  box-shadow: #222222 0px 0px 30px 0px;\n}"
+  },
+  {
+    "objectID": "pres_nimhd_20240109/pres_nimhd_20240109.html#quarto",
+    "href": "pres_nimhd_20240109/pres_nimhd_20240109.html#quarto",
+    "title": "letterbox slides",
+    "section": "Quarto",
+    "text": "Quarto\nQuarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see https://quarto.org/docs/presentations/."
+  },
+  {
+    "objectID": "pres_nimhd_20240109/pres_nimhd_20240109.html#bullets",
+    "href": "pres_nimhd_20240109/pres_nimhd_20240109.html#bullets",
+    "title": "letterbox slides",
+    "section": "Bullets",
+    "text": "Bullets\nWhen you click the Render button a document will be generated that includes:\n\nContent authored with markdown\nOutput from executable code"
+  },
+  {
+    "objectID": "pres_nimhd_20240109/pres_nimhd_20240109.html#code",
+    "href": "pres_nimhd_20240109/pres_nimhd_20240109.html#code",
+    "title": "letterbox slides",
+    "section": "Code",
+    "text": "Code\nWhen you click the Render button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n\n[1] 2"
   }
 ]
