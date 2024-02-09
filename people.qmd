@@ -7,7 +7,7 @@ toc-depth: 2
 
 ## Kyle P Messier, PhD {#KPM}
 
-![Kyle P Messier is a Stadtman Tenure-Track Investigator at the National Institute of Environmental Health Sciences (NIEHS) in the Division of Translational Toxicology (DTT). He leads the Spatiotemporal Exposures and Toxicology group, {SET}grp, within the Predictive Toxicology Branch. He also holds a joint appointment with the National Institute of Minority Health and Health Disparities (NIMHD) in Bethesda, Maryland and a secondary appointment in the NIEHS Biostatistics and Computational Biology Branch. Messier received a B.S. in Environmental Studies from the University of North Carolina at Asheville and a M.S. and Ph.D. from the University of North Carolina at Chapel Hill.](images\KPM-headshot-Oct2023.jpg){width="30%"}
+![Kyle P Messier is a Stadtman Tenure-Track Investigator at the National Institute of Environmental Health Sciences (NIEHS) in the Division of Translational Toxicology (DTT). He leads the Spatiotemporal Exposures and Toxicology group, {SET}grp, within the Predictive Toxicology Branch. He also holds a joint appointment with the National Institute of Minority Health and Health Disparities (NIMHD) in Bethesda, Maryland and a secondary appointment in the NIEHS Biostatistics and Computational Biology Branch. Messier received a B.S. in Environmental Studies from the University of North Carolina at Asheville and a M.S. and Ph.D. from the University of North Carolina at Chapel Hill.](images/KPM-headshot-Oct2023.jpg){width="30%"}
 
 # Postdoctoral Fellows
 
@@ -17,29 +17,29 @@ Current fellows, alphabetically by last name:
 
 ## Mariana Alifa {#MAK}
 
-![](images\MAK-Headshot-Oct2023.jpg){width="30%"}
+![](images/MAK-headshot-Oct2023.jpg){width="20%"}
 
 ## Ranadeep Daw {#RD}
 
-![](images\RD-Headshot-Oct2023.jpg){width="30%"}
+![](images/RD-Headshot-Oct2023.jpg){width="20%"}
 
 ## Eva Marques {#ESM}
 
-![](images\ESM-Headshot-Oct2023.jpg){width="30%"}
+![](images/ESM-Headshot-Oct2023.jpg){width="20%"}
 
-## [Insang Song](https://sigmafelix.wixsite.com/mysite/ "Postdoctoral Fellow")  {#IS}
+## [Insang Song](https://sigmafelix.wixsite.com/mysite/ "Postdoctoral Fellow") {#IS}
 
-![](images\IS-Headshot-Oct2023.jpg){width="30%"}
+![](images/IS-Headshot-Oct2023.jpg){width="20%"}
 
 ## Daniel Zilber {#DZ}
 
-![](images\DZ-Headshot-Oct2023.jpg){width="30%"}
+![](images/DZ-Headshot-Oct2023.jpg){width="20%"}
 
 # Data Analyst
 
 ## Mitchell Manware {#MM}
 
-![](images\manware_headshot.jpeg){width="30%"}
+![](images/manware_headshot.jpeg){width="20%"}
 
 # Former Members {#FormerMembers}
 
