@@ -5,7 +5,7 @@ toc: false
 
 ## **Environmental Exposure Assessment and Mechanistically Informed Risk Assessments Using Spatiotemporal Statistics**
 
-![Spatiotemporal Exposures and Toxicology group -\> {SET} grp](docs/images/setlogo.jpg){width="75%"}
+![Spatiotemporal Exposures and Toxicology group -\> {SET} grp](images/setlogo.jpg){width="75%"}
 
 ## The SETgrp has a broad interest in geospatial [exposomics](https://factor.niehs.nih.gov/2022/9/feature/2-feature-exposomics-research) and risk mapping. Key areas of research include:
 
