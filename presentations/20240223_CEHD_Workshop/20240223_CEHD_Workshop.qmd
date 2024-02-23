@@ -179,16 +179,22 @@ Group project using TDD and CI/CD principles
 
 ![](CW-character.png){width="150"} Awesome!
 
-## 
 
-## Some Geospatial Models From Me
+## Some Geospatial Models From Me{.smaller}
 
 #### That are not FAIR+
 
+::: incremental 
 1.  Arsenic in North Carolina
 2.  Tetrachloroethylene in North Carolina
 3.  Nitrate in North Carolina
-4.  
+4.  Radon in North Carolina 
+5.  Nitrogen Dioxide in the US
+6.  Mobile monitoring NO, PM, and BC in the Bay Area
+  - Kind of FAIR+
+  - Raw data is available for research
+  - Modeled data is not readily usable for epidemiology
+:::
 
 ## 
 
