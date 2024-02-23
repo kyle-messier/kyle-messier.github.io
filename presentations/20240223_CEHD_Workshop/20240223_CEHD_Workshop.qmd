@@ -69,6 +69,8 @@ knitr::opts_chunk$set(dev.args=list(bg="transparent"))
 
 ## Back Story
 
+## Back Story
+
 ![](kpm-character.png){width="126"}
 
 ![](group-intro.png){width="200"}
@@ -179,23 +181,149 @@ Group project using TDD and CI/CD principles
 
 ![](CW-character.png){width="150"} Awesome!
 
+## Software and Computational Best Practices
 
-## Some Geospatial Models From Me{.smaller}
+-   Test Driven Development
+-   Continuous Integration
+-   Build Checks
+-   Style/Linting
+-   Workflows/Pipelines
+
+## Some Geospatial Models From Me {.smaller}
 
 #### That are not FAIR+
 
-::: incremental 
+::: incremental
 1.  Arsenic in North Carolina
 2.  Tetrachloroethylene in North Carolina
 3.  Nitrate in North Carolina
-4.  Radon in North Carolina 
+4.  Radon in North Carolina
 5.  Nitrogen Dioxide in the US
 6.  Mobile monitoring NO, PM, and BC in the Bay Area
-  - Kind of FAIR+
-  - Raw data is available for research
-  - Modeled data is not readily usable for epidemiology
+
+-   Kind of FAIR+
+-   Raw data is available for research
+-   Modeled data is not readily usable for epidemiology
 :::
 
-## 
+## Others making exposure data accessible {.scrollable}
 
-## ACAG
+#### Perhaps not perfect, but better than most
+
+-   ACAG
+
+```{=html}
+<iframe width="780" height="500" src="https://sites.wustl.edu/acag/" title="Webpage example"></iframe>
+```
+## Others making exposure data accessible {.scrollable}
+
+#### Perhaps not perfect, but better than most
+
+-   NASA
+
+```{=html}
+<iframe width="780" height="500" src="https://fluid.nccs.nasa.gov/cf_map/" title="Webpage example"></iframe>
+```
+## Others making exposure data accessible {.scrollable}
+
+#### Perhaps not perfect, but better than most
+
+-   NASA
+
+```{=html}
+<iframe width="780" height="500" src="https://opendap.nccs.nasa.gov/dods/gmao/geos-cf" title="Webpage example"></iframe>
+```
+## Others making exposure data accessible {.scrollable}
+
+#### Perhaps not perfect, but better than most
+
+-   Microsoft Planetary Computer
+
+```{=html}
+<iframe width="780" height="500" src="https://planetarycomputer.microsoft.com/catalog" title="Webpage example"></iframe>
+```
+## Others making exposure data accessible
+
+#### Perhaps not perfect, but better than most
+
+-   OpenAQ
+
+![](https://openaq.org/uploads/data-ingestion.webp){width="95%"}
+
+## Others making exposure data accessible
+
+::: incremental
+-   For the most part, these are data catalogs
+-   Spatial and temporal domains can be limited
+-   Still require a heavy lift on the health researcher to integrate
+:::
+
+## SET Group Group Project Intro
+
+::: incremental
+-   Goal: Develop an air pollution model for the last 5 years that is updated bi-annually
+-   Entire SET group, Cavin Ward-Caviness, Lara Clark, Anisha Singh
+-   Test-Driven Development
+-   GitHub with strict rules
+-   Targets make-like pipeline
+-   Fine spatial and temporal resolution
+-   Post-processing for aggregated spatial and temporal resolutions
+:::
+
+## TDD and Test Coverage {.scrollable}
+
+-   Unit tests: Test a function or very specific piece of code e.g.
+-   Does my function return an error when the input is wrong?
+-   Does function return the expected value given a set of inputs?
+-   expect\_\*
+-   Integration tests: Tests the input from function X works with function Y
+-   See testthat R package
+
+```{=html}
+<iframe width="780" height="500" src="https://testthat.r-lib.org/index.html
+" title="Webpage example"></iframe>
+```
+## TDD Philosophy {.scrollable}
+
+![](Raphael.jpg){fig-align="center" width="61%"}
+
+1.  Write a test
+2.  Run the test -\> Expect it to fail
+3.  Write the minimum code
+4.  Run the test -\> Till it passes
+5.  Refactor -\> Repeat -\> Complete
+
+## TDD Philosophy {.scrollable}
+
+-   Forces you to think about code requirements
+-   Forces explicit testing of code
+-   Minimizes bugs
+
+## CI/CD
+
+![](continuous-integration.png)
+
+- Frequent code commits
+- Detect Errors Sooner
+- Reduces Complexity of Debugging
+- Run Code Tests Automatically
+- Make Working in Groups Easier
+
+
+## Style/Linting
+
+- Consistent style --> rEdabIliTY and_maintainability 
+- Identifying syn.tax errors;
+- Semantic Errors
+
+
+
+## Pipelines and Workflows
+
+- A pipeline is a computational workflow that does statistics, analytics, or data science
+- Coordinate analysis with a DAG like structure
+- Skip steps that are not needed with updates
+- Facilitates code and package integration
+
+
+## Let's hop over to the GitHub repository

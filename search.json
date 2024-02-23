@@ -101,8 +101,8 @@
     "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#about-us-setgroup",
     "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#about-us-setgroup",
     "title": "GeoTox and RGCA",
-    "section": "About Us: {SET}group",
-    "text": "About Us: {SET}group\n\n\nSpatiotemporal Exposure Mapping \\[ y \\sim GP(X\\beta, \\Sigma) \\]\nChemical and Stressor Mixtures Prediction \\[ \\frac{[A]}{f_A^{-1}(R)}+\\frac{[B]}{f_B^{-1}(R)} = 1\n\\]\nMechanistically Informed Risk Assessment \\[  R = f(c|\\alpha,\\theta, \\beta) = \\frac{\\alpha}{1+\\left (  \\frac{\\theta}{x}\\right )^\\beta }\n\\]"
+    "section": "",
+    "text": "Spatiotemporal Exposure Mapping \\[ y \\sim GP(X\\beta, \\Sigma) \\]\nChemical and Stressor Mixtures Prediction \\[ \\frac{[A]}{f_A^{-1}(R)}+\\frac{[B]}{f_B^{-1}(R)} = 1\n\\]\nMechanistically Informed Risk Assessment \\[  R = f(c|\\alpha,\\theta, \\beta) = \\frac{\\alpha}{1+\\left (  \\frac{\\theta}{x}\\right )^\\beta }\n\\]"
   },
   {
     "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#about-us-setgroup-1",
@@ -354,7 +354,7 @@
     "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-piecewise-inverse-function-1",
     "title": "GeoTox and RGCA",
     "section": "RGCA: Piecewise Inverse Function",
-    "text": "RGCA: Piecewise Inverse Function\n\n\nThis inverse provides a wide enough support to satisfy the invertibility requirements of GCA"
+    "text": "RGCA: Piecewise Inverse Function\n\n\n\n\n\n\nThis inverse provides a wide enough support to satisfy the invertibility requirements of GCA"
   },
   {
     "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-summary",
@@ -697,56 +697,56 @@
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-1",
     "title": "Exposure on Time:",
     "section": "Back Story",
-    "text": "Back Story\n Kyle\n CEHD Attendees\n Cavin"
+    "text": "Back Story"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-2",
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-2",
     "title": "Exposure on Time:",
     "section": "Back Story",
-    "text": "Back Story\n\n Much discussion: “integration … models … privacy”"
+    "text": "Back Story\n Kyle\n CEHD Attendees\n Cavin"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-3",
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-3",
     "title": "Exposure on Time:",
     "section": "Back Story",
-    "text": "Back Story\n There are so many PM2.5 models, why do we need another one?"
+    "text": "Back Story\n\n Much discussion: “integration … models … privacy”"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-4",
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-4",
     "title": "Exposure on Time:",
     "section": "Back Story",
-    "text": "Back Story\n\n\n Actually…"
+    "text": "Back Story\n There are so many PM2.5 models, why do we need another one?"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-5",
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-5",
     "title": "Exposure on Time:",
     "section": "Back Story",
-    "text": "Back Story\n\n\n I’ve had a difficult time finding air pollution models that are available during the same time range as our EHR data"
+    "text": "Back Story\n\n\n Actually…"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-6",
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-6",
     "title": "Exposure on Time:",
     "section": "Back Story",
-    "text": "Back Story\n Interesting … I’ll look into developing a PM2.5 model for recent years"
+    "text": "Back Story\n\n\n I’ve had a difficult time finding air pollution models that are available during the same time range as our EHR data"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-7",
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-7",
     "title": "Exposure on Time:",
     "section": "Back Story",
-    "text": "Back Story\n A couple months later …"
+    "text": "Back Story\n Interesting … I’ll look into developing a PM2.5 model for recent years"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-8",
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-8",
     "title": "Exposure on Time:",
     "section": "Back Story",
-    "text": "Back Story\n I have new group of postdocs and data analysts joining and am worried about how to keep track of their code and knowledge retention"
+    "text": "Back Story\n A couple months later …"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-9",
@@ -760,35 +760,35 @@
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-10",
     "title": "Exposure on Time:",
     "section": "Back Story",
-    "text": "Back Story\n 30 hours of NIH sponsored project management\n\n\n\nProject and Portfolio management approaches\nTask management through tools like Kanban boards\nAgile project management"
+    "text": "Back Story\n I have new group of postdocs and data analysts joining and am worried about how to keep track of their code and knowledge retention"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-11",
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-11",
     "title": "Exposure on Time:",
     "section": "Back Story",
-    "text": "Back Story\n\n\nAgile \\(||\\) CI/CD"
+    "text": "Back Story\n 30 hours of NIH sponsored project management\n\n\n\nProject and Portfolio management approaches\nTask management through tools like Kanban boards\nAgile project management"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-12",
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-12",
     "title": "Exposure on Time:",
     "section": "Back Story",
-    "text": "Back Story\n\n SET group!"
+    "text": "Back Story\n\n\nAgile \\(||\\) CI/CD"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-13",
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-13",
     "title": "Exposure on Time:",
     "section": "Back Story",
-    "text": "Back Story\nWe discuss the idea of a group project focused the development of an air pollution model with regular updates using TDD and CI/CD principles\n\n Sounds good to us!"
+    "text": "Back Story\n\n SET group!"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-14",
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-14",
     "title": "Exposure on Time:",
     "section": "Back Story",
-    "text": "Back Story\nGroup project using TDD and CI/CD principles\n\n\n Awesome!"
+    "text": "Back Story\nWe discuss the idea of a group project focused the development of an air pollution model with regular updates using TDD and CI/CD principles\n\n Sounds good to us!"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#some-geospatial-models-from-me",
@@ -803,5 +803,138 @@
     "title": "Exposure on Time:",
     "section": "ACAG",
     "text": "ACAG\n\n\n\ntheme by schochastics"
+  },
+  {
+    "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#software-and-computational-best-practices",
+    "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#software-and-computational-best-practices",
+    "title": "Exposure on Time:",
+    "section": "Software and Computational Best Practices",
+    "text": "Software and Computational Best Practices\n\nTest Driven Development\nContinuous Integration\nBuild Checks\nStyle/Linting\nWorkflows/Pipelines"
+  },
+  {
+    "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-that-are-doing-things-well",
+    "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-that-are-doing-things-well",
+    "title": "Exposure on Time:",
+    "section": "Others that are doing things well",
+    "text": "Others that are doing things well\nPerhaps not perfect, but better than 99% of people\n\n\nACAG"
+  },
+  {
+    "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#set-group-group-project-intro",
+    "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#set-group-group-project-intro",
+    "title": "Exposure on Time:",
+    "section": "SET Group Group Project Intro",
+    "text": "SET Group Group Project Intro\n\n\nGoal: Develop an air pollution model for the last 5 years that is updated bi-annually\nEntire SET group, Cavin Ward-Caviness, Lara Clark, Anisha Singh\nTest-Driven Development\nGitHub with strict rules\nTargets make-like pipeline\nFine spatial and temporal resolution\nPost-processing for aggregated spatial and temporal resolutions"
+  },
+  {
+    "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#tdd-and-test-coverage",
+    "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#tdd-and-test-coverage",
+    "title": "Exposure on Time:",
+    "section": "TDD and Test Coverage",
+    "text": "TDD and Test Coverage\n\nUnit tests: Test a function or very specific piece of code e.g.\nDoes my function return an error when the input is wrong?\nDoes function return the expected value given a set of inputs?\nexpect_*\nIntegration tests: Tests the input from function X works with function Y\nSee testthat R package"
+  },
+  {
+    "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#tdd-philosophy",
+    "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#tdd-philosophy",
+    "title": "Exposure on Time:",
+    "section": "TDD Philosophy",
+    "text": "TDD Philosophy\n\n\nWrite a test\nRun the test -&gt; Expect it to fail\nWrite the minimum code\nRun the test -&gt; Till it passes\nRefactor -&gt; Repeat -&gt; Complete"
+  },
+  {
+    "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#cicd",
+    "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#cicd",
+    "title": "Exposure on Time:",
+    "section": "CI/CD",
+    "text": "CI/CD\n\n\nFrequent code commits\nDetect Errors Sooner\nReduces Complexity of Debugging\nRun Code Tests Automatically\nMake Working in Groups Easier"
+  },
+  {
+    "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#stylelinting",
+    "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#stylelinting",
+    "title": "Exposure on Time:",
+    "section": "Style/Linting",
+    "text": "Style/Linting\n\nConsistent style –&gt; rEdabIliTY and_maintainability\nIdentifying syn.tax errors;\nSemantic Errors"
+  },
+  {
+    "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#pipelines-and-workflows",
+    "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#pipelines-and-workflows",
+    "title": "Exposure on Time:",
+    "section": "Pipelines and Workflows",
+    "text": "Pipelines and Workflows\n\nA pipeline is a computational workflow that does statistics, analytics, or data science\nCoordinate analysis with a DAG like structure\nSkip steps that are not needed with updates\nFacilitates code and package integration"
+  },
+  {
+    "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#lets-hope-over-to-the-github-repository",
+    "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#lets-hope-over-to-the-github-repository",
+    "title": "Exposure on Time:",
+    "section": "Let’s hope over to the GitHub repository",
+    "text": "Let’s hope over to the GitHub repository"
+  },
+  {
+    "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-15",
+    "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#back-story-15",
+    "title": "Exposure on Time:",
+    "section": "Back Story",
+    "text": "Back Story\nGroup project using TDD and CI/CD principles\n\n\n Awesome!"
+  },
+  {
+    "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible",
+    "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible",
+    "title": "Exposure on Time:",
+    "section": "Others making exposure data accessible",
+    "text": "Others making exposure data accessible\nPerhaps not perfect, but better than most\n\nACAG"
+  },
+  {
+    "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible-1",
+    "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible-1",
+    "title": "Exposure on Time:",
+    "section": "Others making exposure data accessible",
+    "text": "Others making exposure data accessible\nPerhaps not perfect, but better than most\n\nNASA"
+  },
+  {
+    "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible-2",
+    "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible-2",
+    "title": "Exposure on Time:",
+    "section": "Others making exposure data accessible",
+    "text": "Others making exposure data accessible\nPerhaps not perfect, but better than most\n\nNASA"
+  },
+  {
+    "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible-3",
+    "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible-3",
+    "title": "Exposure on Time:",
+    "section": "Others making exposure data accessible",
+    "text": "Others making exposure data accessible\nPerhaps not perfect, but better than most\n\nMicrosoft Planetary Computer"
+  },
+  {
+    "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible-4",
+    "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible-4",
+    "title": "Exposure on Time:",
+    "section": "Others making exposure data accessible",
+    "text": "Others making exposure data accessible\nPerhaps not perfect, but better than most\n\nOpenAQ"
+  },
+  {
+    "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible-5",
+    "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible-5",
+    "title": "Exposure on Time:",
+    "section": "Others making exposure data accessible",
+    "text": "Others making exposure data accessible\n\n\nFor the most part, these are data catalogs\nSpatial and temporal domains can be limited\nStill require a heavy lift on the health researcher to integrate"
+  },
+  {
+    "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#lets-hop-over-to-the-github-repository",
+    "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#lets-hop-over-to-the-github-repository",
+    "title": "Exposure on Time:",
+    "section": "Let’s hop over to the GitHub repository",
+    "text": "Let’s hop over to the GitHub repository"
+  },
+  {
+    "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#tdd-philosophy-1",
+    "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#tdd-philosophy-1",
+    "title": "Exposure on Time:",
+    "section": "TDD Philosophy",
+    "text": "TDD Philosophy\n\nForces you to think about code requirements\nForces explicit testing of code\nMinimizes bugs"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html",
+    "title": "GeoTox and RGCA",
+    "section": "",
+    "text": "Spatiotemporal Exposure Mapping \\[ y \\sim GP(X\\beta, \\Sigma) \\]\nChemical and Stressor Mixtures Prediction \\[ \\frac{[A]}{f_A^{-1}(R)}+\\frac{[B]}{f_B^{-1}(R)} = 1\n\\]\nMechanistically Informed Risk Assessment \\[  R = f(c|\\alpha,\\theta, \\beta) = \\frac{\\alpha}{1+\\left (  \\frac{\\theta}{x}\\right )^\\beta }\n\\]"
   }
 ]

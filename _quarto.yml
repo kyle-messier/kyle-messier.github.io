@@ -45,6 +45,8 @@ website:
             href: presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html
           - text: "UNC-ENVR-500-Lecture-2024-02-22"
             href: presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html
+          - text: "RENCI-Workshop-2024-02-23"
+            href: presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html            
     logo: images/setlogo.jpg
 
 format:
