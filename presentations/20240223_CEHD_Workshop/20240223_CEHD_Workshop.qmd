@@ -77,7 +77,7 @@ knitr::opts_chunk$set(dev.args=list(bg="transparent"))
 
 ## Back Story
 
-![](kpm-character.png){width="126"} Kyle 
+![](kpm-character.png){width="126"} Kyle
 
 ![](group-intro.png){width="200"} CEHD Attendees
 
@@ -85,16 +85,15 @@ knitr::opts_chunk$set(dev.args=list(bg="transparent"))
 
 ## Back Story
 
-![](kpm-character.png){width="126"}  
+![](kpm-character.png){width="126"}
 
-![](group-intro.png){width="200"} Much discussion: "integration ... models ... privacy" 
+![](group-intro.png){width="200"} Much discussion: "integration ... models ... privacy"
 
-![](CW-character.png){width="162"} 
+![](CW-character.png){width="162"}
 
 ## Back Story
 
-![](kpm-character.png){width="126"}
-There are so many PM2.5 models, why do we need another one? 
+![](kpm-character.png){width="126"} There are so many PM2.5 models, why do we need another one?
 
 ![](group-intro.png){width="200"}
 
@@ -106,8 +105,7 @@ There are so many PM2.5 models, why do we need another one?
 
 ![](group-intro.png){width="200"}
 
-![](CW-character.png){width="162"}
-Actually...
+![](CW-character.png){width="162"} Actually...
 
 ## Back Story
 
@@ -115,13 +113,11 @@ Actually...
 
 ![](group-intro.png){width="200"}
 
-![](CW-character.png){width="162"}
-I've had a difficult time finding air pollution models that are available during the same time range as our EHR data
+![](CW-character.png){width="162"} I've had a difficult time finding air pollution models that are available during the same time range as our EHR data
 
 ## Back Story
 
-![](kpm-character.png){width="126"}
-Interesting ... I'll look into developing a PM2.5 model for recent years
+![](kpm-character.png){width="126"} Interesting ... I'll look into developing a PM2.5 model for recent years
 
 ![](group-intro.png){width="200"}
 
@@ -129,67 +125,59 @@ Interesting ... I'll look into developing a PM2.5 model for recent years
 
 ## Back Story
 
-![](kpm-character.png){width="126"}
-A couple months later ... 
+![](kpm-character.png){width="126"} A couple months later ...
 
 ## Back Story
 
-![](kpm-character.png){width="126"}
-I have new group of postdocs and data analysts joining and am worried about how to keep track of their code and knowledge retention
+![](kpm-character.png){width="126"} I have new group of postdocs and data analysts joining and am worried about how to keep track of their code and knowledge retention
 
 ## Back Story
 
-![](kpm-character.png){width="126"}
-I have new group of postdocs and data analysts joining and am worried about how to keep track of their code and knowledge retention
-
+![](kpm-character.png){width="126"} I have new group of postdocs and data analysts joining and am worried about how to keep track of their code and knowledge retention
 
 ## Back Story
 
-![](kpm-character.png){width="126"}
-30 hours of NIH sponsored project management
+![](kpm-character.png){width="126"} 30 hours of NIH sponsored project management
 
 ![](ProjectManagement.png){width="126"}
 
 ::: incremental
-- Project and Portfolio management approaches
-- Task management through tools like Kanban boards
-- Agile project management 
+-   Project and Portfolio management approaches
+-   Task management through tools like Kanban boards
+-   Agile project management
 :::
 
 ## Back Story
 
 ![](ProjectManagement.png){width="126"}
 
-- Agile $||$ CI/CD 
+-   Agile $||$ CI/CD
 
 ![](continuous-integration.png){width="300"}
-
 
 ## Back Story
 
 ![](kpm-character.png){width="126"}
 
-![](SET-grou-characters-silly.png){width="350"}
-SET group! 
+![](SET-grou-characters-silly.png){width="350"} SET group!
 
 ## Back Story
+
 We discuss the idea of a group project focused the development of an air pollution model with regular updates using TDD and CI/CD principles
 
 ![](kpm-character.png){width="126"}
 
-![](SET-grou-characters-silly.png){width="350"}
-Sounds good to us! 
+![](SET-grou-characters-silly.png){width="350"} Sounds good to us!
 
 ## Back Story
+
 Group project using TDD and CI/CD principles
 
 ![](kpm-character.png){width="126"}
 
 ![](SET-grou-characters-silly.png){width="250"}
 
-![](CW-character.png){width="150"}
-Awesome! 
-
+![](CW-character.png){width="150"} Awesome!
 
 ## 
 
