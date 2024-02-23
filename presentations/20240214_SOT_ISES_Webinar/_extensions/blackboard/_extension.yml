@@ -1,0 +1,19 @@
+title: Blackboard Theme 
+author: David Schoch
+version: 1.0.0
+contributes:
+  formats:
+    revealjs:
+      slide-number: true
+      self_contained: true
+      menu: true
+      progress: true
+      preview-links: auto
+      filters: [imgs.lua]
+      theme: [default, blackboard.scss]
+      css: theme.css
+      footer: '<img src="set-logo-no-text.jpg" alt="Footer Image" class="framed" style="width: 125px; height: auto; float: left; margin-left: 50px;">'
+      title-slide-attributes:
+        data-background-image: blackboard.png
+
+

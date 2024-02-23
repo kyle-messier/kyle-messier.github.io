@@ -1,0 +1,57 @@
+Questions: 
+1) What is an example of a point-level exposure data set? Check all that apply.
+A) Air pollution monitoring 
+B) water quality samples
+C) Poverty 
+D) Climate vulnerability  
+Answer: A and B
+
+2) In figure C, what is an example of geospatial health data geometry at a point?
+A) Residential address  
+B) Census tract 
+C) work address
+D) County 
+Answer: A and C
+
+2)What is an example of an areal-level exposure data set? 
+A) Satellite imagery
+B) NASA model for aerosols
+C) gridded weather data
+D) Model output to a grid 
+answer: All of the above 
+
+
+3) In figure I, what is an example of geospatial health data geometry at an area?
+A) Residential address  
+B) Census tract 
+C) work address
+D) County 
+Answer: B and D
+
+3) What are examples of proximity metrics? 
+A) Distance to polluted site
+B) log-distance to CAFO
+C) density of polluted sites in a 5km buffer
+D) Social vulnerability in a census tract
+Answer: A, B, C
+
+4) What are the advantages of a proximity metric? 
+A) Simple
+B) function of distance
+C) interpretable 
+D) Qualitative
+Answer: A, B, C
+5) What is the key difference between LUR and GWR? 
+A) In GWR, the betas vary across space. 
+B) In GWR, the betas are random 
+C) They are the same 
+
+Answer: A
+
+6)  What physical quantity is the Kriging covariance function solely dependent on?
+A) Covariates
+B) Time
+C) Distance
+D) Angle from horizon
+Answer: C
+ 

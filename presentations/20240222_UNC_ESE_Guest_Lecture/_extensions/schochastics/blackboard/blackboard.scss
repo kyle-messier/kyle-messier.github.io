@@ -1,0 +1,27 @@
+/*-- scss:defaults --*/
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+$font-family-sans-serif: 'Times New Roman', sans-serif !default; // Change here
+$presentation-heading-font: 'Times New Roman', sans-serif !default; // Change here
+
+// Background image for all slides
+.reveal .slides {
+    background-image: url('blackboard.png');
+    background-size: cover;
+}
+
+// colors
+$body-bg: #333333 !default;
+$body-color: white !default;
+$link-color: $body-color !default;
+
+$code-block-border-color: transparent !default;
+
+/*Background image for code blocks*/
+pre > code.sourceCode > span {
+    font-family: 'Times New Roman', sans-serif; // Change here
+}
+
+

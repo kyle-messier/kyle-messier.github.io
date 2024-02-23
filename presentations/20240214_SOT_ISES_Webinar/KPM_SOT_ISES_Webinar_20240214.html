@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.4.550">
+
+  <meta name="author" content="Kyle P Messier, PhD">
+  <title>{SET}grp - GeoTox and RGCA</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="_extensions/blackboard/theme.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+</head>
+<body class="quarto-dark">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="_extensions/blackboard/blackboard.png" class="quarto-title-block center">
+  <h1 class="title">GeoTox and RGCA</h1>
+  <p class="subtitle">Developing Extensible Software for Geospatial Exposure and Risk Assessment of Chemical Mixtures</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Kyle P Messier, PhD 
+</div>
+        <p class="quarto-title-affiliation">
+            <strong>Stadtman Tenure Track Investigator</strong>
+          </p>
+        <p class="quarto-title-affiliation">
+            National Institute of Environmental Health Sciences
+          </p>
+        <p class="quarto-title-affiliation">
+            Division of Translational Toxicology
+          </p>
+        <p class="quarto-title-affiliation">
+            February 14, 2024
+          </p>
+    </div>
+</div>
+
+</section>
+<section id="about-us-setgroup" class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>About Us: {SET}<sub>group</sub></h2>
+<div>
+<ul>
+<li class="fragment">Spatiotemporal Exposure Mapping <span class="math display">\[ y \sim GP(X\beta, \Sigma) \]</span></li>
+<li class="fragment">Chemical and Stressor Mixtures Prediction <span class="math display">\[ \frac{[A]}{f_A^{-1}(R)}+\frac{[B]}{f_B^{-1}(R)} = 1
+\]</span></li>
+<li class="fragment">Mechanistically Informed Risk Assessment <span class="math display">\[  R = f(c|\alpha,\theta, \beta) = \frac{\alpha}{1+\left (  \frac{\theta}{x}\right )^\beta }
+\]</span></li>
+</ul>
+</div>
+</section>
+<section id="about-us-setgroup-1" class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>About Us: {SET}<sub>group</sub></h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img data-src="SETgroup-Oct2023.jpg" class="framed" style="width: 600px; height: auto;"></p>
+</div><div class="column" style="width:40%;">
+<ul>
+<li><p>Eva Marques</p></li>
+<li><p>Daniel Zilber</p></li>
+<li><p>Ranadeep Daw</p></li>
+<li><p>Mariana Alifa</p></li>
+<li><p>Insang Song</p></li>
+<li><p>Kyle Messier</p></li>
+<li><p>Mitchell Manware (Not Pictured)</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="a-necessary-cascade-for-exogoneous-risk-factors" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out" data-background-image="_extensions/blackboard/blackboard.png">
+<h2 data-id="quarto-animate-title">A Necessary Cascade for Exogoneous Risk Factors</h2>
+<div>
+<ul>
+<li class="fragment">Exogenous Sources</li>
+<li class="fragment">External Exposure</li>
+<li class="fragment">Internal Exposure</li>
+<li class="fragment">Molecular Targets and Events</li>
+<li class="fragment">Cellular and Tissue Effects</li>
+<li class="fragment">Individual Outcomes</li>
+<li class="fragment">Population Outcomes</li>
+</ul>
+</div>
+<p><img data-src="Exposome-Cascade.png" class="framed absolute" style="width: 400px; height: auto;top: 115px; left: 400px; width: 550px; height: auto; "></p>
+</section>
+<section id="getting-two-frameworks-to-work-together" class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>Getting Two Frameworks to Work Together</h2>
+<blockquote>
+<p><u><strong>Aggregate Exposure Pathways</strong></u></p>
+<p>AEP is a comprehensive external analysis of source, media, and transformations</p>
+</blockquote>
+<blockquote>
+<p><u><strong>Adverse Outcome Pathway</strong></u></p>
+<p>AOPs provide a linkage specific biological target, pathway or process by a stressor and an adverse outcome(s) considered relevant to risk assessment</p>
+</blockquote>
+</section>
+<section id="getting-two-frameworks-to-work-together-1" class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>Getting Two Frameworks to Work Together</h2>
+<div class="framed">
+<div class="center">
+<p><span class="math display">\[
+\LARGE{GeoTox = AEP + AOP}
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="key-steps-of-geotox" class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>Key Steps of GeoTox</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TB;
+    A[External Sources] 
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<ul>
+<li>A forward, exposure-based approach for mixtures risk modeling</li>
+<li>Exposure modeling provides a <strong><em>geospatial</em></strong> foundation for risk assessment</li>
+</ul>
+</section>
+<section id="key-steps-of-geotox-1" class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>Key Steps of GeoTox</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TB;
+    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="key-steps-of-geotox-2" class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>Key Steps of GeoTox</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TB;
+    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="key-steps-of-geotox-3" class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>Key Steps of GeoTox</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TB;
+    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];
+    C[Internal Exposure] --&gt; |PBTK| D[Target Organ Dose];
+    
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="key-steps-of-geotox-4" class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>Key Steps of GeoTox</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TB;
+    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];
+    C[Internal Exposure] --&gt; |PBTK| D[Target Organ Dose];
+    D[Target Organ Dose] --&gt; |IVIVE| E[In vitro Equivalent Concentration];
+   
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="key-steps-of-geotox-5" class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>Key Steps of GeoTox</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TB;
+    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];
+    C[Internal Exposure] --&gt; |PBTK| D[Target Organ Dose];
+    D[Target Organ Dose] --&gt; |IVIVE| E[In vitro Equivalent Concentration];
+    E[In vitro Equivalent Concentration] --&gt; |Mixtures Modeling| F[Concentration Response];
+   
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="geotox-proof-of-concept" class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>GeoTox Proof of Concept</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img data-src="STOTEN-paper.png" class="framed" style="width: 500px; height: auto;"> <img data-src="POY.png" class="absolute" style="width: 250px; height: auto;left: 310px; bottom: 120px; "></p>
+</div><div class="column" style="width:40%;">
+<p><img data-src="Eccles_headshot_resized.jpg" class="framed" style="width: 200px; height: auto;"> Dr.&nbsp;Kristin Eccles, Former Visiting Fellow in DTT and SET, Now at Health Canada</p>
+</div>
+</div>
+</section>
+<section id="making-geotox-f.a.i.r." class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>Making GeoTox F.A.I.R.</h2>
+<div>
+<ul>
+<li class="fragment">Findable: Publicly available via GitHub, CRAN, NIEHS websites</li>
+<li class="fragment">Accessible: Open-Source, Easy installation</li>
+<li class="fragment">Interoperable: Integrate with current and future applications</li>
+<li class="fragment">Reusable: Documentation and reproducible pipelines</li>
+</ul>
+</div>
+</section>
+<section id="geotox-development" class="slide level2 scrollable smaller" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>GeoTox Development</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Currently developing (experimental or not-stable)</li>
+<li>Submitting to CRAN</li>
+<li>Static website hosted via {SET}group website</li>
+<li>Maintained</li>
+<li>Extensible for future development</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="reif_david.jpg" class="framed" style="width:35.0%"></p>
+<figcaption>Dr David Reif, Predictive Toxicology Branch, Senior Scientist and Branch Chief</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Skylar_Marvel.jpg" class="framed" style="width:40.0%"></p>
+<figcaption>Dr Skylar Marvel, Predictive Toxicology Branch, Bioinformatic Scientist</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="geotox-simulating-data" class="slide level2" data-auto-animate="true" data-background-image="_extensions/blackboard/blackboard.png">
+<h2 data-id="quarto-animate-title">GeoTox: Simulating Data</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb1-1" class="hljs-ln-code"><a></a><span class="co"># Age</span></span>
+<span id="cb1-2" class="hljs-ln-code"><a></a>age <span class="ot">&lt;-</span> <span class="fu">simulate_age</span>(<span class="fu">split</span>(geo_tox_data<span class="sc">$</span>age, <span class="sc">~</span>FIPS), <span class="at">n =</span> MC_iter)</span>
+<span id="cb1-3" class="hljs-ln-code"><a></a></span>
+<span id="cb1-4" class="hljs-ln-code"><a></a><span class="co"># Obesity status</span></span>
+<span id="cb1-5" class="hljs-ln-code"><a></a>obesity <span class="ot">&lt;-</span> <span class="fu">simulate_obesity</span>(geo_tox_data<span class="sc">$</span>obesity, <span class="at">n =</span> MC_iter)</span>
+<span id="cb1-6" class="hljs-ln-code"><a></a></span>
+<span id="cb1-7" class="hljs-ln-code"><a></a><span class="co"># Inhalation rate</span></span>
+<span id="cb1-8" class="hljs-ln-code"><a></a>IR <span class="ot">&lt;-</span> <span class="fu">simulate_inhalation_rate</span>(age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="geotox-simulating-data-1" class="slide level2" data-auto-animate="true" data-background-image="_extensions/blackboard/blackboard.png">
+<h2 data-id="quarto-animate-title">GeoTox: Simulating Data</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb2-1" class="hljs-ln-code"><a></a><span class="co"># Age</span></span>
+<span id="cb2-2" class="hljs-ln-code"><a></a>age <span class="ot">&lt;-</span> <span class="fu">simulate_age</span>(<span class="fu">split</span>(geo_tox_data<span class="sc">$</span>age, <span class="sc">~</span>FIPS), <span class="at">n =</span> MC_iter)</span>
+<span id="cb2-3" class="hljs-ln-code"><a></a></span>
+<span id="cb2-4" class="hljs-ln-code"><a></a><span class="co"># Obesity status</span></span>
+<span id="cb2-5" class="hljs-ln-code"><a></a>obesity <span class="ot">&lt;-</span> <span class="fu">simulate_obesity</span>(geo_tox_data<span class="sc">$</span>obesity, <span class="at">n =</span> MC_iter)</span>
+<span id="cb2-6" class="hljs-ln-code"><a></a></span>
+<span id="cb2-7" class="hljs-ln-code"><a></a><span class="co"># Inhalation rate</span></span>
+<span id="cb2-8" class="hljs-ln-code"><a></a>IR <span class="ot">&lt;-</span> <span class="fu">simulate_inhalation_rate</span>(age)</span>
+<span id="cb2-9" class="hljs-ln-code"><a></a></span>
+<span id="cb2-10" class="hljs-ln-code"><a></a><span class="co"># External exposure concentration</span></span>
+<span id="cb2-11" class="hljs-ln-code"><a></a>C_ext <span class="ot">&lt;-</span> <span class="fu">simulate_exposure</span>(<span class="fu">split</span>(geo_tox_data<span class="sc">$</span>exposure, <span class="sc">~</span>FIPS), <span class="at">n =</span> MC_iter)</span>
+<span id="cb2-12" class="hljs-ln-code"><a></a></span>
+<span id="cb2-13" class="hljs-ln-code"><a></a><span class="co"># Sample from pre-simulated steady-state plasma concentration data</span></span>
+<span id="cb2-14" class="hljs-ln-code"><a></a>C_ss <span class="ot">&lt;-</span> <span class="fu">sample_Css</span>(geo_tox_data<span class="sc">$</span>simulated_css, age, obesity)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="geotox-core-functions" class="slide level2" data-auto-animate="true" data-background-image="_extensions/blackboard/blackboard.png">
+<h2 data-id="quarto-animate-title">GeoTox: Core Functions</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb3-1" class="hljs-ln-code"><a></a><span class="co"># Internal dose</span></span>
+<span id="cb3-2" class="hljs-ln-code"><a></a>D_int <span class="ot">&lt;-</span> <span class="fu">calc_internal_dose</span>(C_ext, IR, <span class="at">scaling =</span> <span class="dv">1</span> <span class="sc">/</span> <span class="dv">1000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="geotox-core-functions-1" class="slide level2" data-auto-animate="true" data-background-image="_extensions/blackboard/blackboard.png">
+<h2 data-id="quarto-animate-title">GeoTox: Core Functions</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb4-1" class="hljs-ln-code"><a></a><span class="co"># Internal dose</span></span>
+<span id="cb4-2" class="hljs-ln-code"><a></a>D_int <span class="ot">&lt;-</span> <span class="fu">calc_internal_dose</span>(C_ext, IR, <span class="at">scaling =</span> <span class="dv">1</span> <span class="sc">/</span> <span class="dv">1000</span>)</span>
+<span id="cb4-3" class="hljs-ln-code"><a></a></span>
+<span id="cb4-4" class="hljs-ln-code"><a></a><span class="co"># in vitro concentration</span></span>
+<span id="cb4-5" class="hljs-ln-code"><a></a>C_invitro <span class="ot">&lt;-</span> <span class="fu">calc_invitro_concentration</span>(D_int, C_ss)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="geotox-core-functions-2" class="slide level2" data-auto-animate="true" data-background-image="_extensions/blackboard/blackboard.png">
+<h2 data-id="quarto-animate-title">GeoTox: Core Functions</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb5-1" class="hljs-ln-code"><a></a><span class="co"># Internal dose</span></span>
+<span id="cb5-2" class="hljs-ln-code"><a></a>D_int <span class="ot">&lt;-</span> <span class="fu">calc_internal_dose</span>(C_ext, IR, <span class="at">scaling =</span> <span class="dv">1</span> <span class="sc">/</span> <span class="dv">1000</span>)</span>
+<span id="cb5-3" class="hljs-ln-code"><a></a></span>
+<span id="cb5-4" class="hljs-ln-code"><a></a><span class="co"># in vitro concentration</span></span>
+<span id="cb5-5" class="hljs-ln-code"><a></a>C_invitro <span class="ot">&lt;-</span> <span class="fu">calc_invitro_concentration</span>(D_int, C_ss)</span>
+<span id="cb5-6" class="hljs-ln-code"><a></a></span>
+<span id="cb5-7" class="hljs-ln-code"><a></a><span class="co"># Concentration response</span></span>
+<span id="cb5-8" class="hljs-ln-code"><a></a>resp <span class="ot">&lt;-</span> <span class="fu">calc_concentration_response</span>(C_invitro, hill_2_params)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="geotox-documentation" class="slide level2" data-code-line-numbers="2" data-auto-animate="true" data-background-image="_extensions/blackboard/blackboard.png">
+<h2 data-id="quarto-animate-title">GeoTox: Documentation</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb6-1" class="hljs-ln-code"><a></a><span class="co"># Internal dose</span></span>
+<span id="cb6-2" class="hljs-ln-code"><a></a>D_int <span class="ot">&lt;-</span> <span class="fu">calc_internal_dose</span>(C_ext, IR, <span class="at">scaling =</span> <span class="dv">1</span> <span class="sc">/</span> <span class="dv">1000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="geotox-documentation-1" class="slide level2" data-code-line-numbers="2" data-auto-animate="true" data-background-image="_extensions/blackboard/blackboard.png">
+<h2 data-id="quarto-animate-title">GeoTox: Documentation</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb7-1" class="hljs-ln-code"><a></a><span class="co"># Internal dose</span></span>
+<span id="cb7-2" class="hljs-ln-code"><a></a>D_int <span class="ot">&lt;-</span> <span class="fu">calc_internal_dose</span>(C_ext, IR, <span class="at">scaling =</span> <span class="dv">1</span> <span class="sc">/</span> <span class="dv">1000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img data-src="calc_internal_dose_doc.png" class="absolute framed" style="width: 450px; height: auto;top: 150px; left: 300px; "></p>
+</section>
+<section id="geotox-dose-response" class="slide level2" data-auto-animate="true" data-background-image="_extensions/blackboard/blackboard.png">
+<h2 data-id="quarto-animate-title">GeoTox: Dose-Response</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb8-1" class="hljs-ln-code"><a></a>hill_2_params <span class="ot">&lt;-</span> <span class="fu">fit_hill</span>(data)</span>
+<span id="cb8-2" class="hljs-ln-code"><a></a><span class="fu">plot_hill</span>(hill_2_params)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="presentation-01_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="geotox-dose-response-1" class="slide level2" data-code-line-numbers="1" data-auto-animate="true" data-background-image="_extensions/blackboard/blackboard.png">
+<h2 data-id="quarto-animate-title">GeoTox: Dose-Response</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb9-1" class="hljs-ln-code"><a></a>hill_3_params <span class="ot">&lt;-</span> <span class="fu">fit_hill</span>(data, <span class="at">fixed_slope =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb9-2" class="hljs-ln-code"><a></a><span class="fu">plot_hill</span>(hill_3_params)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="presentation-01_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<section id="geotox-map-visualization" class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>GeoTox: Map Visualization</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>  resp <span class="ot">&lt;-</span> resp_df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(health_measure <span class="sc">==</span> <span class="st">"GCA.Eff"</span>)</span>
+<span id="cb10-2"><a></a>  legend_name <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">"Predicted Response"</span>, <span class="st">"Log2 Fold Change"</span>, <span class="st">"mRNA Expression"</span>,<span class="at">sep =</span> <span class="st">" "</span>)</span>
+<span id="cb10-3"><a></a>  <span class="fu">make_county_heatmap</span>(resp, legend_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="presentation-01_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<section id="geotox-under-development" class="slide level2 scrollable smaller" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>GeoTox: Under Development</h2>
+<p><img data-src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" class="framed" style="width: 300px; height: auto;"></p>
+<ul>
+<li>Individual/Person Level Analysis</li>
+<li>General Grouping or Areal Analysis</li>
+<li>Likely migrating to an object-oriented approach</li>
+</ul>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TB;
+
+    style P1 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;
+    style P2 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;
+    style P3 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;
+    style P4 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;
+    style P5 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;
+    style P6 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;
+
+    style G1 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+    style G2 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+    style G3 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+    style G4 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+    style G5 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+    style G6 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+    style G7 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+
+    P1[Person] --&gt; |Simulate, Sample| P2[Person, External Exposure];
+    G1[Group] --&gt; |Simulate, Sample| G2[Group, External Exposure];
+    P2[Person, External Exposure] --&gt; |Summarize, Simulate, Sample| G2[Group, External Exposure];
+    P2[Person, External Exposure] --&gt; |Calc_Internal_Dose| P3[Person, Internal Exposure];
+    P3[Person, Internal Exposure] --&gt; |Summarize| G3[Group, Internal Exposure];
+    G2[Group, External Exposure] --&gt; |Calc_Internal_Dose| G3[Group, Internal Exposure];
+    P3[Person, Internal Exposure] --&gt; |httk::| P4[Person, Target Organ Dose];
+    G3[Group, Internal Exposure]--&gt; |httk::| G4[Group, Target Organ Dose];
+    P4[Person, Target Organ Dose] --&gt; |summarize| G4[Group, Target Organ Dose];
+    P4[Person, Target Organ Dose] --&gt; |calc_invitro_conc| P5[Person, Invitro Concentration];
+    G4[Group, Target Organ Dose]--&gt; |calc_invitro_conc| G5[Group, Invitro Concentration];
+    P5[Person, Invitro Concentration] --&gt; |summarize| G5[Group, Invitro Concentration];
+    P5[Person, Invitro Concentration] --&gt; |calc_concentration_response| P6[Person, Mixture Response];
+    G5[Group, Invitro Concentration]--&gt; |calc_concentration_response| G6[Group, Mixture Response];
+    P6[Person, Mixture Response]--&gt; |summarize, sample, simulate| G6[Group, Mixture Response];
+    G6[Group, Mixture Response]--&gt; |plot, map| G7[Group, Mixture Response Risk Map];
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="revisiting-the-steps-of-geotox" class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>Revisiting the Steps of GeoTox</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TB;
+    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];
+    C[Internal Exposure] --&gt; |PBTK| D[Target Organ Dose];
+    D[Target Organ Dose] --&gt; |IVIVE| E[In vitro Equivalent Concentration];
+    E[In vitro Equivalent Concentration] --&gt; |Mixtures Modeling| F[Concentration Response];
+   
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="revisiting-the-steps-of-geotox-1" class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>Revisiting the Steps of GeoTox</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TB;
+    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];
+    C[Internal Exposure] --&gt; |PBTK| D[Target Organ Dose];
+    D[Target Organ Dose] --&gt; |IVIVE| E[In vitro Equivalent Concentration];
+    E[In vitro Equivalent Concentration] --&gt; |Mixtures Modeling| F[Concentration Response];
+    
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div data-id="box1" style="background: rgba(39, 128, 227, 0.5); position: absolute; top: calc(95% - 125px); left: calc(50% - 175px); width: 350px; height: 125px; border-radius: 50%;">
+
+</div>
+</section>
+<section id="revisiting-the-steps-of-geotox-2" class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>Revisiting the Steps of GeoTox</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TB;
+    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];
+    C[Internal Exposure] --&gt; |PBTK| D[Target Organ Dose];
+    D[Target Organ Dose] --&gt; |IVIVE| E[In vitro Equivalent Concentration];
+    E[In vitro Equivalent Concentration] --&gt; |Independent Action| F[Concentration Response];
+    E[In vitro Equivalent Concentration] --&gt; F[Concentration Response];
+    E[In vitro Equivalent Concentration] --&gt; |Concentration Addition| F[Concentration Response];
+    
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="rgca-motivation" class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>RGCA Motivation</h2>
+<ul>
+<li><p><strong><em>Infinite Mixture Problem</em></strong>: There are infinitely many possible mixtures and we can’t test them all</p></li>
+<li><p><strong><em>Independent vs Additive</em></strong>: No clear approach for general mixtures</p></li>
+<li><p><strong><em>Something from Nothing</em></strong>: Independently safe chemicals can combine to form a hazardous mixture</p></li>
+</ul>
+</section>
+<section id="rgca-notation" class="slide level2 scrollable smaller" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>RGCA: Notation</h2>
+<p>We assume a parametric model for interpretability: <span class="math display">\[ r_i(c) =f_i(c|a_i,\theta_i,\beta_i) = \frac{a_i}{1+\left(\frac{\theta_i}{c}\right)^{\beta_i}}\]</span> where:</p>
+<ul>
+<li><span class="math inline">\(r_i\)</span>: toxic effect or response of chemical <span class="math inline">\(i\)</span></li>
+<li><span class="math inline">\(c\)</span>: concentration of a chemical, later indexed by chemical <span class="math inline">\(i\)</span></li>
+<li><span class="math inline">\(a_i\)</span>: sill or maximum effect parameter</li>
+<li><span class="math inline">\(\theta_i\)</span>: dissociation constant or EC50 value</li>
+<li><span class="math inline">\(\beta_i\)</span>: slope parameter</li>
+</ul>
+</section>
+<section id="rgca-common-mixture-models" class="slide level2 scrollable smaller" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>RGCA: Common Mixture Models</h2>
+<ul>
+<li>Concentration Addition, CA (Loewe, Isobole): effective total dose adjusted for potency <span class="math display">\[ \sum_i \frac{c_i}{EC_i(R)} = 1\]</span> Intuition: ``How much <span class="math inline">\(c_2\)</span> do I need to get response <span class="math inline">\(R\)</span> under chem 1 given <span class="math inline">\(c_1\)</span>” <span class="math display">\[EC_1(R) = c_1 + c_2 \frac{EC_1(R)}{EC_2(R)}\]</span></li>
+</ul>
+</section>
+<section id="rgca-partial-agonists" class="slide level2" data-auto-animate="true" data-background-image="_extensions/blackboard/blackboard.png">
+<h2 data-id="quarto-animate-title">RGCA: Partial Agonists</h2>
+<p>Partial agonists are the major limitation of traditional CA</p>
+
+<img data-src="presentation-01_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
+<section id="rgca-partial-agonists-1" class="slide level2" data-auto-animate="true" data-background-image="_extensions/blackboard/blackboard.png">
+<h2 data-id="quarto-animate-title">RGCA: Partial Agonists</h2>
+<p>Partial agonists are the major limitation of traditional CA</p>
+
+<img data-src="presentation-01_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
+<section id="rgca-partial-agonists-2" class="slide level2 scrollable smaller" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>RGCA: Partial Agonists</h2>
+<p>GCA (Howard and Webster, 2009) substitutes <span class="math inline">\(f^{-1}_i(R)\)</span> for <span class="math inline">\(EC_i(R)\)</span> and solves for <span class="math inline">\(R\)</span> to balance the equation given <span class="math inline">\(c_i\)</span>’s: <span class="math display">\[\sum_i \frac{c_i}{f_i^{-1}(R)} = 1\]</span></p>
+<ul>
+<li><p>For the Hill model with slope <span class="math inline">\(\beta_i = 1\)</span>, we get a hyperbolic function: <span class="math display">\[ R=f_i(c) = \frac{a_i}{1+\left(\frac{\theta_i}{c}\right)^{\beta_i}} = \frac{c \cdot a_i}{c+ \theta_i}  \]</span> </p></li>
+<li><p>So: when <span class="math inline">\(R&gt;a_1\)</span>, <span class="math inline">\(c&lt;0\)</span>!</p></li>
+<li><p>A large toxic effect of the mixture requires small concentrations of chemical 1.</p></li>
+</ul>
+</section>
+<section id="rgca-partial-agonists-3" class="slide level2 scrollable smaller" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>RGCA: Partial Agonists</h2>
+<p>The GCA trick can be used with <span class="math inline">\(\beta = 1\)</span> because the inverse is still defined for <span class="math inline">\(R&gt;a\)</span>: <span class="math display">\[f^{-1}(R) = \frac{\theta}{\left(\frac{a}{R}-1\right)^{1/\beta}} = \frac{\theta}{\frac{a}{R}-1} \]</span> </p>
+<p>For most <span class="math inline">\(\beta\)</span>, the inverse at <span class="math inline">\(R&gt;a\)</span> is undefined because it contains a root of a negative value. We propose a series of reflections to have a well-defined inverse</p>
+</section>
+<section id="rgca-piecewise-inverse-function" class="slide level2 scrollable smaller" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>RGCA: Piecewise Inverse Function</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="DZ-Headshot-Oct2023.jpg" class="framed quarto-figure quarto-figure-left" style="width:100.0%"></p>
+<figcaption>Daniel Zilber, PhD, Postdoctoral Fellow</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:75%;">
+<p><span class="math display">\[
+\begin{equation} \label{eq:Hill_reflected_inverse}
+f^{-1}(r | \alpha&gt;0, \theta, \beta&gt;0) =
+\begin{cases}
+   \frac{- \theta}{1+\left (\frac{-\alpha}{r} \right)^{1/\beta}} &amp; r \in (-\infty, 0)\\
+\theta \left (\frac{\alpha}{r} -1 \right)^{-1/\beta} &amp; r \in[0, \alpha)\\
+  -2\theta - \theta\left (\frac{\alpha}{2\alpha - r} -1 \right)^{-1/\beta} &amp; r \in (\alpha, 2\alpha)\\
+    -2\theta + \frac{\theta}{1+\left(\frac{\alpha}{r-2\alpha} \right)^{1/\beta}} &amp; r \in (2\alpha, \infty)\\
+\end{cases}
+\end{equation}
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="rgca-piecewise-inverse-function-1" class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>RGCA: Piecewise Inverse Function</h2>
+
+<img data-src="RGCA_symmetry_full-DZ.png" class="framed quarto-figure quarto-figure-center r-stretch" style="width:20.0%"><ul>
+<li>This inverse provides a wide enough support to satisfy the invertibility requirements of GCA</li>
+</ul>
+</section>
+<section id="rgca-summary" class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>RGCA: Summary</h2>
+<ul>
+<li><p>IA and CA represent two extremes of mixture prediction</p></li>
+<li><p>GCA extends CA to partial agonists but requires a slope of 1</p></li>
+<li><p>We can extend GCA to not require slope 1: RGCA</p></li>
+<li><p>Non-unit slope allows for additional post-hoc analyses like clustering on slope, curve, etc.</p></li>
+<li><p>Daniel Zilber and Kyle P Messier, <em>Reflected Generalized Concentration Addition and Bayesian Hierarchical Models to Improve Chemical Mixture Prediction</em>, <u>PLOS One,</u> In-Press</p></li>
+</ul>
+</section>
+<section id="rgca-future-work" class="slide level2 scrollable smaller" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>RGCA: Future Work</h2>
+<p>Both IA and CA are additive: there is no interaction. One approach is to rescale GCA (Jonker et al.&nbsp;2005):</p>
+<p><span class="math display">\[ \sum \frac{c_i}{f_i^{-1}(R)} = \exp{g(Z)}, \quad g(Z) = a \prod z_i \]</span> where the <span class="math inline">\(z_i\)</span> is a toxic unit, <span class="math inline">\(z_i = c_i/f_i^{-1}(a/2)\)</span>.<br>
+</p>
+<p>We considered the following quadratic version, with a matrix <span class="math inline">\(A\)</span> to be specified by QSAR: <span class="math display">\[g(Z) = -\frac{1}{2}z^\top A z\]</span> But it is not clear how to determine <span class="math inline">\(A\)</span> from QSAR. Also, this approach is symmetric: there is no dominant chemical.</p>
+</section>
+<section id="rgca-extensible-software" class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>RGCA: Extensible Software</h2>
+
+<img data-src="RGCA-pkgdown.png" class="framed quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
+<section id="rgca-extensible-software-1" class="slide level2" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>RGCA: Extensible Software</h2>
+
+<img data-src="RGCA-usage.png" class="framed quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
+<section id="geotox-rgca-integration" class="slide level2 scrollable smaller" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>GeoTox + RGCA Integration</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TB;
+    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];
+    C[Internal Exposure] --&gt; |PBTK| D[Target Organ Dose];
+    D[Target Organ Dose] --&gt; |IVIVE| E[In vitro Equivalent Concentration];
+    E[In vitro Equivalent Concentration] --&gt; |Mixtures Modeling| F[Concentration Response];
+    
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div data-id="box1" style="background: rgba(39, 128, 227, 0.5); position: absolute; top: calc(95% - 175px); left: calc(50% - 175px); width: 350px; height: 125px; border-radius: 50%; margin-top: 50px;">
+<p>RGCA</p>
+</div>
+</section>
+<section id="extensible-geotox" class="slide level2 scrollable smaller" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>Extensible GeoTox</h2>
+<ul>
+<li>Looking forward, there are many ways to improve GeoTox mixture risk assessment</li>
+<li>Better handling of <strong><em>time</em></strong></li>
+<li>More and better resolved AOPs!</li>
+</ul>
+</section>
+<section id="geotox-temporal-feedback" class="slide level2 scrollable smaller" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>GeoTox: Temporal Feedback</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TB;
+    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];
+    C[Internal Exposure] --&gt; |PBTK| D[Target Organ Dose];
+    D[Target Organ Dose] --&gt; |IVIVE| E[In vitro Equivalent Concentration];
+    E[In vitro Equivalent Concentration] --&gt; |Mixtures Modeling| F[Concentration Response];
+    F[Concentration Response] --&gt; C[Internal Exposure] ;
+
+    
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="geotox-with-complete-aops" class="slide level2 scrollable smaller" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>GeoTox: With Complete AOPs</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TB;
+    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];
+    C[Internal Exposure] --&gt; |PBTK| D[Target Organ Dose];
+    D[Target Organ Dose] --&gt; |IVIVE| E[In vitro Equivalent Concentration];
+    E[In vitro Equivalent Concentration] --&gt; |Mixtures Modeling| F[Concentration Response];
+    F[Concentration Response] --&gt;|Key Event Relationship| G[Key Event 1];
+    G[Key Event 1] --&gt;|Key Event Relationship| H[Key Event 2];
+    H[Key Event 2] --&gt;|Key Event Relationship| I[Adverse Outcome];
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="multiple-assays-informing-an-aop" class="slide level2 scrollable smaller" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>Multiple Assays Informing an AOP</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TB;
+    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];
+    C[Internal Exposure] --&gt; |PBTK| D[Target Organ Dose];
+    D[Target Organ Dose] --&gt; |IVIVE| E[In vitro Equivalent Concentration];
+    E[In vitro Equivalent Concentration] --&gt; |Mixtures Modeling| F[Concentration Response];
+    F[Concentration Response] --&gt;|Key Event Relationship| G[Key Event 1A];
+    F[Concentration Response] --&gt;|Key Event Relationship| H[Key Event 1B];
+    F[Concentration Response] --&gt;|Key Event Relationship| I[Key Event 1C];
+    G[Key Event 1A] --&gt;|Key Event Relationship| J[Key Event 2];
+    H[Key Event 1B] --&gt;|Key Event Relationship| J[Key Event 2];
+    I[Key Event 1C] --&gt;|Key Event Relationship| J[Key Event 2];
+    J[Key Event 2] --&gt;|Key Event Relationship| K[Adverse Outcome];
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="set-summary" class="slide level2 scrollable smaller" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>{SET} Summary</h2>
+<ul>
+<li>GeoTox and RGCA code are currently experimental</li>
+<li>Publishing versions 1.0.0. to SET Github and CRAN ASAP</li>
+<li>Many other documented, test-driven, and extensible packages from the SET group on air pollution exposures across the US, download/process GIS environmental data, and scalable GIS operations</li>
+<li>Follow <strong><em>Spatiotemporal-Exposures-and-Toxicology</em></strong> on GitHub</li>
+<li>We are fostering a community around best-practices for software in geospatial exposure assessment, risk assessment, and computational toxicology</li>
+<li>email: kyle.messier@nih.gov</li>
+</ul>
+</section>
+<section id="acknowledgements" class="slide level2 scrollable smaller" data-background-image="_extensions/blackboard/blackboard.png">
+<h2>Acknowledgements</h2>
+<div class="columns">
+<div class="column" style="width:34%;">
+<div class="quarto-figure quarto-figure-center" style="width: 80%; height: auto;">
+<figure>
+<p><img data-src="SETgroup-Oct2023.jpg" class="framed"></p>
+<figcaption>SET group in October 2023: Eva Marques, Daniel Zilber, Ranadeep Daw, Mariana Alifa Kassien, Insang Song</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:33%;">
+<ul>
+<li>Mitchell Manware</li>
+<li>Skylar Marvel</li>
+<li>Kristin Eccles</li>
+<li>Agnes Karamus</li>
+<li>Nicole Kleinstreuer</li>
+<li>Fred Parham</li>
+<li>Cynthia Rider</li>
+<li>Melissa Lowe</li>
+<li>Taylor Potter</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<ul>
+<li>John Wambaugh</li>
+<li>Mike DeVito</li>
+<li>Andy Shapiro</li>
+<li>Julia Rager</li>
+<li>Alison Motsinger-Reif</li>
+<li>David Reif</li>
+<li>Aubrey Miller</li>
+<li>Charles Schmitt</li>
+<li>Trisha Castranio</li>
+<li>Ann Liu</li>
+<li>Richard Kwok</li>
+</ul>
+</div>
+</div>
+
+<div class="quarto-auto-generated-content">
+<div class="footer footer-default">
+<p><img src="set-logo-no-text.jpg" alt="Footer Image" class="framed" style="width: 125px; height: auto; float: left; margin-left: 50px;"></p>
+</div>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

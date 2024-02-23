@@ -1,0 +1,18 @@
+title: Blackboard Theme 
+author: David Schoch
+version: 1.0.0
+contributes:
+  formats:
+    revealjs:
+      slide-number: true
+      self_contained: true
+      menu: true
+      progress: true
+      preview-links: auto
+      filters: [imgs.lua]
+      theme: [default, blackboard.scss]
+      css: theme.css
+      title-slide-attributes:
+        data-background-image: blackboard.png
+
+

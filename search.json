@@ -96,5 +96,579 @@
     "title": "Geostatistical Methods for Environmental Exposomics and Mechanistically-Informed Risk Assessment",
     "section": "What drives health outcomes (i.e. phenotypes)?",
     "text": "What drives health outcomes (i.e. phenotypes)?"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#about-us-setgroup",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#about-us-setgroup",
+    "title": "GeoTox and RGCA",
+    "section": "About Us: {SET}group",
+    "text": "About Us: {SET}group\n\n\nSpatiotemporal Exposure Mapping \\[ y \\sim GP(X\\beta, \\Sigma) \\]\nChemical and Stressor Mixtures Prediction \\[ \\frac{[A]}{f_A^{-1}(R)}+\\frac{[B]}{f_B^{-1}(R)} = 1\n\\]\nMechanistically Informed Risk Assessment \\[  R = f(c|\\alpha,\\theta, \\beta) = \\frac{\\alpha}{1+\\left (  \\frac{\\theta}{x}\\right )^\\beta }\n\\]"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#about-us-setgroup-1",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#about-us-setgroup-1",
+    "title": "GeoTox and RGCA",
+    "section": "About Us: {SET}group",
+    "text": "About Us: {SET}group\n\n\n\n\n\nEva Marques\nDaniel Zilber\nRanadeep Daw\nMariana Alifa\nInsang Song\nKyle Messier\nMitchell Manware (Not Pictured)"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#a-necessary-cascade-for-exogoneous-risk-factors",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#a-necessary-cascade-for-exogoneous-risk-factors",
+    "title": "GeoTox and RGCA",
+    "section": "A Necessary Cascade for Exogoneous Risk Factors",
+    "text": "A Necessary Cascade for Exogoneous Risk Factors\n\n\nExogenous Sources\nExternal Exposure\nInternal Exposure\nMolecular Targets and Events\nCellular and Tissue Effects\nIndividual Outcomes\nPopulation Outcomes"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#getting-two-frameworks-to-work-together",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#getting-two-frameworks-to-work-together",
+    "title": "GeoTox and RGCA",
+    "section": "Getting Two Frameworks to Work Together",
+    "text": "Getting Two Frameworks to Work Together\n\nAggregate Exposure Pathways\nAEP is a comprehensive external analysis of source, media, and transformations\n\n\nAdverse Outcome Pathway\nAOPs provide a linkage specific biological target, pathway or process by a stressor and an adverse outcome(s) considered relevant to risk assessment"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#getting-two-frameworks-to-work-together-1",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#getting-two-frameworks-to-work-together-1",
+    "title": "GeoTox and RGCA",
+    "section": "Getting Two Frameworks to Work Together",
+    "text": "Getting Two Frameworks to Work Together\n\n\n\\[\n\\LARGE{GeoTox = AEP + AOP}\n\\]"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#key-steps-of-geotox",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#key-steps-of-geotox",
+    "title": "GeoTox and RGCA",
+    "section": "Key Steps of GeoTox",
+    "text": "Key Steps of GeoTox\n\n\n\n\n\ngraph TB;\n    A[External Sources] \n\n\n\n\n\n\n\nA forward, exposure-based approach for mixtures risk modeling\nExposure modeling provides a geospatial foundation for risk assessment"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#key-steps-of-geotox-1",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#key-steps-of-geotox-1",
+    "title": "GeoTox and RGCA",
+    "section": "Key Steps of GeoTox",
+    "text": "Key Steps of GeoTox\n\n\n\n\n\ngraph TB;\n    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#key-steps-of-geotox-2",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#key-steps-of-geotox-2",
+    "title": "GeoTox and RGCA",
+    "section": "Key Steps of GeoTox",
+    "text": "Key Steps of GeoTox\n\n\n\n\n\ngraph TB;\n    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];\n    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#key-steps-of-geotox-3",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#key-steps-of-geotox-3",
+    "title": "GeoTox and RGCA",
+    "section": "Key Steps of GeoTox",
+    "text": "Key Steps of GeoTox\n\n\n\n\n\ngraph TB;\n    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];\n    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];\n    C[Internal Exposure] --&gt; |PBTK| D[Target Organ Dose];"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#key-steps-of-geotox-4",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#key-steps-of-geotox-4",
+    "title": "GeoTox and RGCA",
+    "section": "Key Steps of GeoTox",
+    "text": "Key Steps of GeoTox\n\n\n\n\n\ngraph TB;\n    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];\n    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];\n    C[Internal Exposure] --&gt; |PBTK| D[Target Organ Dose];\n    D[Target Organ Dose] --&gt; |IVIVE| E[In vitro Equivalent Concentration];"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#key-steps-of-geotox-5",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#key-steps-of-geotox-5",
+    "title": "GeoTox and RGCA",
+    "section": "Key Steps of GeoTox",
+    "text": "Key Steps of GeoTox\n\n\n\n\n\ngraph TB;\n    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];\n    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];\n    C[Internal Exposure] --&gt; |PBTK| D[Target Organ Dose];\n    D[Target Organ Dose] --&gt; |IVIVE| E[In vitro Equivalent Concentration];\n    E[In vitro Equivalent Concentration] --&gt; |Mixtures Modeling| F[Concentration Response];"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-proof-of-concept",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-proof-of-concept",
+    "title": "GeoTox and RGCA",
+    "section": "GeoTox Proof of Concept",
+    "text": "GeoTox Proof of Concept\n\n\n \n\n Dr. Kristin Eccles, Former Visiting Fellow in DTT and SET, Now at Health Canada"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#making-geotox-f.a.i.r.",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#making-geotox-f.a.i.r.",
+    "title": "GeoTox and RGCA",
+    "section": "Making GeoTox F.A.I.R.",
+    "text": "Making GeoTox F.A.I.R.\n\n\nFindable: Publicly available via GitHub, CRAN, NIEHS websites\nAccessible: Open-Source, Easy installation\nInteroperable: Integrate with current and future applications\nReusable: Documentation and reproducible pipelines"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-development",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-development",
+    "title": "GeoTox and RGCA",
+    "section": "GeoTox Development",
+    "text": "GeoTox Development\n\n\n\nCurrently developing (experimental or not-stable)\nSubmitting to CRAN\nStatic website hosted via {SET}group website\nMaintained\nExtensible for future development\n\n\n\n\n\nDr David Reif, Predictive Toxicology Branch, Senior Scientist and Branch Chief\n\n\n\n\n\nDr Skylar Marvel, Predictive Toxicology Branch, Bioinformatic Scientist"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-simulating-data",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-simulating-data",
+    "title": "GeoTox and RGCA",
+    "section": "GeoTox: Simulating Data",
+    "text": "GeoTox: Simulating Data\n# Age\nage &lt;- simulate_age(split(geo_tox_data$age, ~FIPS), n = MC_iter)\n\n# Obesity status\nobesity &lt;- simulate_obesity(geo_tox_data$obesity, n = MC_iter)\n\n# Inhalation rate\nIR &lt;- simulate_inhalation_rate(age)"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-simulating-data-1",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-simulating-data-1",
+    "title": "GeoTox and RGCA",
+    "section": "GeoTox: Simulating Data",
+    "text": "GeoTox: Simulating Data\n# Age\nage &lt;- simulate_age(split(geo_tox_data$age, ~FIPS), n = MC_iter)\n\n# Obesity status\nobesity &lt;- simulate_obesity(geo_tox_data$obesity, n = MC_iter)\n\n# Inhalation rate\nIR &lt;- simulate_inhalation_rate(age)\n\n# External exposure concentration\nC_ext &lt;- simulate_exposure(split(geo_tox_data$exposure, ~FIPS), n = MC_iter)\n\n# Sample from pre-simulated steady-state plasma concentration data\nC_ss &lt;- sample_Css(geo_tox_data$simulated_css, age, obesity)"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-core-functions",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-core-functions",
+    "title": "GeoTox and RGCA",
+    "section": "GeoTox: Core Functions",
+    "text": "GeoTox: Core Functions\n# Internal dose\nD_int &lt;- calc_internal_dose(C_ext, IR, scaling = 1 / 1000)"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-core-functions-1",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-core-functions-1",
+    "title": "GeoTox and RGCA",
+    "section": "GeoTox: Core Functions",
+    "text": "GeoTox: Core Functions\n# Internal dose\nD_int &lt;- calc_internal_dose(C_ext, IR, scaling = 1 / 1000)\n\n# in vitro concentration\nC_invitro &lt;- calc_invitro_concentration(D_int, C_ss)"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-core-functions-2",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-core-functions-2",
+    "title": "GeoTox and RGCA",
+    "section": "GeoTox: Core Functions",
+    "text": "GeoTox: Core Functions\n# Internal dose\nD_int &lt;- calc_internal_dose(C_ext, IR, scaling = 1 / 1000)\n\n# in vitro concentration\nC_invitro &lt;- calc_invitro_concentration(D_int, C_ss)\n\n# Concentration response\nresp &lt;- calc_concentration_response(C_invitro, hill_2_params)"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-documentation",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-documentation",
+    "title": "GeoTox and RGCA",
+    "section": "GeoTox: Documentation",
+    "text": "GeoTox: Documentation\n# Internal dose\nD_int &lt;- calc_internal_dose(C_ext, IR, scaling = 1 / 1000)"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-documentation-1",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-documentation-1",
+    "title": "GeoTox and RGCA",
+    "section": "GeoTox: Documentation",
+    "text": "GeoTox: Documentation\n# Internal dose\nD_int &lt;- calc_internal_dose(C_ext, IR, scaling = 1 / 1000)"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-dose-response",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-dose-response",
+    "title": "GeoTox and RGCA",
+    "section": "GeoTox: Dose-Response",
+    "text": "GeoTox: Dose-Response\n\nhill_2_params &lt;- fit_hill(data)\nplot_hill(hill_2_params)"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-dose-response-1",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-dose-response-1",
+    "title": "GeoTox and RGCA",
+    "section": "GeoTox: Dose-Response",
+    "text": "GeoTox: Dose-Response\n\nhill_3_params &lt;- fit_hill(data, fixed_slope = FALSE)\nplot_hill(hill_3_params)"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-map-visualization",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-map-visualization",
+    "title": "GeoTox and RGCA",
+    "section": "GeoTox: Map Visualization",
+    "text": "GeoTox: Map Visualization\n\n  resp &lt;- resp_df %&gt;% filter(health_measure == \"GCA.Eff\")\n  legend_name &lt;- paste(\"Predicted Response\", \"Log2 Fold Change\", \"mRNA Expression\",sep = \" \")\n  make_county_heatmap(resp, legend_name)"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-under-development",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-under-development",
+    "title": "GeoTox and RGCA",
+    "section": "GeoTox: Under Development",
+    "text": "GeoTox: Under Development\n\n\nIndividual/Person Level Analysis\nGeneral Grouping or Areal Analysis\nLikely migrating to an object-oriented approach\n\n\n\n\n\n\ngraph TB;\n\n    style P1 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n    style P2 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n    style P3 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n    style P4 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n    style P5 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n    style P6 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n\n    style G1 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;\n    style G2 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;\n    style G3 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;\n    style G4 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;\n    style G5 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;\n    style G6 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;\n    style G7 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;\n\n    P1[Person] --&gt; |Simulate, Sample| P2[Person, External Exposure];\n    G1[Group] --&gt; |Simulate, Sample| G2[Group, External Exposure];\n    P2[Person, External Exposure] --&gt; |Summarize, Simulate, Sample| G2[Group, External Exposure];\n    P2[Person, External Exposure] --&gt; |Calc_Internal_Dose| P3[Person, Internal Exposure];\n    P3[Person, Internal Exposure] --&gt; |Summarize| G3[Group, Internal Exposure];\n    G2[Group, External Exposure] --&gt; |Calc_Internal_Dose| G3[Group, Internal Exposure];\n    P3[Person, Internal Exposure] --&gt; |httk::| P4[Person, Target Organ Dose];\n    G3[Group, Internal Exposure]--&gt; |httk::| G4[Group, Target Organ Dose];\n    P4[Person, Target Organ Dose] --&gt; |summarize| G4[Group, Target Organ Dose];\n    P4[Person, Target Organ Dose] --&gt; |calc_invitro_conc| P5[Person, Invitro Concentration];\n    G4[Group, Target Organ Dose]--&gt; |calc_invitro_conc| G5[Group, Invitro Concentration];\n    P5[Person, Invitro Concentration] --&gt; |summarize| G5[Group, Invitro Concentration];\n    P5[Person, Invitro Concentration] --&gt; |calc_concentration_response| P6[Person, Mixture Response];\n    G5[Group, Invitro Concentration]--&gt; |calc_concentration_response| G6[Group, Mixture Response];\n    P6[Person, Mixture Response]--&gt; |summarize, sample, simulate| G6[Group, Mixture Response];\n    G6[Group, Mixture Response]--&gt; |plot, map| G7[Group, Mixture Response Risk Map];"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#revisiting-the-steps-of-geotox",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#revisiting-the-steps-of-geotox",
+    "title": "GeoTox and RGCA",
+    "section": "Revisiting the Steps of GeoTox",
+    "text": "Revisiting the Steps of GeoTox\n\n\n\n\n\ngraph TB;\n    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];\n    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];\n    C[Internal Exposure] --&gt; |PBTK| D[Target Organ Dose];\n    D[Target Organ Dose] --&gt; |IVIVE| E[In vitro Equivalent Concentration];\n    E[In vitro Equivalent Concentration] --&gt; |Mixtures Modeling| F[Concentration Response];"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#revisiting-the-steps-of-geotox-1",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#revisiting-the-steps-of-geotox-1",
+    "title": "GeoTox and RGCA",
+    "section": "Revisiting the Steps of GeoTox",
+    "text": "Revisiting the Steps of GeoTox\n\n\n\n\n\ngraph TB;\n    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];\n    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];\n    C[Internal Exposure] --&gt; |PBTK| D[Target Organ Dose];\n    D[Target Organ Dose] --&gt; |IVIVE| E[In vitro Equivalent Concentration];\n    E[In vitro Equivalent Concentration] --&gt; |Mixtures Modeling| F[Concentration Response];"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#revisiting-the-steps-of-geotox-2",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#revisiting-the-steps-of-geotox-2",
+    "title": "GeoTox and RGCA",
+    "section": "Revisiting the Steps of GeoTox",
+    "text": "Revisiting the Steps of GeoTox\n\n\n\n\n\ngraph TB;\n    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];\n    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];\n    C[Internal Exposure] --&gt; |PBTK| D[Target Organ Dose];\n    D[Target Organ Dose] --&gt; |IVIVE| E[In vitro Equivalent Concentration];\n    E[In vitro Equivalent Concentration] --&gt; |Independent Action| F[Concentration Response];\n    E[In vitro Equivalent Concentration] --&gt; F[Concentration Response];\n    E[In vitro Equivalent Concentration] --&gt; |Concentration Addition| F[Concentration Response];"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-motivation",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-motivation",
+    "title": "GeoTox and RGCA",
+    "section": "RGCA Motivation",
+    "text": "RGCA Motivation\n\nInfinite Mixture Problem: There are infinitely many possible mixtures and we can’t test them all\nIndependent vs Additive: No clear approach for general mixtures\nSomething from Nothing: Independently safe chemicals can combine to form a hazardous mixture"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-notation",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-notation",
+    "title": "GeoTox and RGCA",
+    "section": "RGCA: Notation",
+    "text": "RGCA: Notation\nWe assume a parametric model for interpretability: \\[ r_i(c) =f_i(c|a_i,\\theta_i,\\beta_i) = \\frac{a_i}{1+\\left(\\frac{\\theta_i}{c}\\right)^{\\beta_i}}\\] where:\n\n\\(r_i\\): toxic effect or response of chemical \\(i\\)\n\\(c\\): concentration of a chemical, later indexed by chemical \\(i\\)\n\\(a_i\\): sill or maximum effect parameter\n\\(\\theta_i\\): dissociation constant or EC50 value\n\\(\\beta_i\\): slope parameter"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-common-mixture-models",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-common-mixture-models",
+    "title": "GeoTox and RGCA",
+    "section": "RGCA: Common Mixture Models",
+    "text": "RGCA: Common Mixture Models\n\nConcentration Addition, CA (Loewe, Isobole): effective total dose adjusted for potency \\[ \\sum_i \\frac{c_i}{EC_i(R)} = 1\\] Intuition: ``How much \\(c_2\\) do I need to get response \\(R\\) under chem 1 given \\(c_1\\)” \\[EC_1(R) = c_1 + c_2 \\frac{EC_1(R)}{EC_2(R)}\\]"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-partial-agonists",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-partial-agonists",
+    "title": "GeoTox and RGCA",
+    "section": "RGCA: Partial Agonists",
+    "text": "RGCA: Partial Agonists\nPartial agonists are the major limitation of traditional CA"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-partial-agonists-1",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-partial-agonists-1",
+    "title": "GeoTox and RGCA",
+    "section": "RGCA: Partial Agonists",
+    "text": "RGCA: Partial Agonists\nPartial agonists are the major limitation of traditional CA"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-partial-agonists-2",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-partial-agonists-2",
+    "title": "GeoTox and RGCA",
+    "section": "RGCA: Partial Agonists",
+    "text": "RGCA: Partial Agonists\nGCA (Howard and Webster, 2009) substitutes \\(f^{-1}_i(R)\\) for \\(EC_i(R)\\) and solves for \\(R\\) to balance the equation given \\(c_i\\)’s: \\[\\sum_i \\frac{c_i}{f_i^{-1}(R)} = 1\\]\n\nFor the Hill model with slope \\(\\beta_i = 1\\), we get a hyperbolic function: \\[ R=f_i(c) = \\frac{a_i}{1+\\left(\\frac{\\theta_i}{c}\\right)^{\\beta_i}} = \\frac{c \\cdot a_i}{c+ \\theta_i}  \\] \nSo: when \\(R&gt;a_1\\), \\(c&lt;0\\)!\nA large toxic effect of the mixture requires small concentrations of chemical 1."
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-partial-agonists-3",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-partial-agonists-3",
+    "title": "GeoTox and RGCA",
+    "section": "RGCA: Partial Agonists",
+    "text": "RGCA: Partial Agonists\nThe GCA trick can be used with \\(\\beta = 1\\) because the inverse is still defined for \\(R&gt;a\\): \\[f^{-1}(R) = \\frac{\\theta}{\\left(\\frac{a}{R}-1\\right)^{1/\\beta}} = \\frac{\\theta}{\\frac{a}{R}-1} \\] \nFor most \\(\\beta\\), the inverse at \\(R&gt;a\\) is undefined because it contains a root of a negative value. We propose a series of reflections to have a well-defined inverse"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-piecewise-inverse-function",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-piecewise-inverse-function",
+    "title": "GeoTox and RGCA",
+    "section": "RGCA: Piecewise Inverse Function",
+    "text": "RGCA: Piecewise Inverse Function\n\n\n\n\n\nDaniel Zilber, PhD, Postdoctoral Fellow\n\n\n\n\\[\n\\begin{equation} \\label{eq:Hill_reflected_inverse}\nf^{-1}(r | \\alpha&gt;0, \\theta, \\beta&gt;0) =\n\\begin{cases}\n   \\frac{- \\theta}{1+\\left (\\frac{-\\alpha}{r} \\right)^{1/\\beta}} & r \\in (-\\infty, 0)\\\\\n\\theta \\left (\\frac{\\alpha}{r} -1 \\right)^{-1/\\beta} & r \\in[0, \\alpha)\\\\\n  -2\\theta - \\theta\\left (\\frac{\\alpha}{2\\alpha - r} -1 \\right)^{-1/\\beta} & r \\in (\\alpha, 2\\alpha)\\\\\n    -2\\theta + \\frac{\\theta}{1+\\left(\\frac{\\alpha}{r-2\\alpha} \\right)^{1/\\beta}} & r \\in (2\\alpha, \\infty)\\\\\n\\end{cases}\n\\end{equation}\n\\]"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-piecewise-inverse-function-1",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-piecewise-inverse-function-1",
+    "title": "GeoTox and RGCA",
+    "section": "RGCA: Piecewise Inverse Function",
+    "text": "RGCA: Piecewise Inverse Function\n\n\nThis inverse provides a wide enough support to satisfy the invertibility requirements of GCA"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-summary",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-summary",
+    "title": "GeoTox and RGCA",
+    "section": "RGCA: Summary",
+    "text": "RGCA: Summary\n\nIA and CA represent two extremes of mixture prediction\nGCA extends CA to partial agonists but requires a slope of 1\nWe can extend GCA to not require slope 1: RGCA\nNon-unit slope allows for additional post-hoc analyses like clustering on slope, curve, etc.\nDaniel Zilber and Kyle P Messier, Reflected Generalized Concentration Addition and Bayesian Hierarchical Models to Improve Chemical Mixture Prediction, PLOS One, In-Press"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-future-work",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-future-work",
+    "title": "GeoTox and RGCA",
+    "section": "RGCA: Future Work",
+    "text": "RGCA: Future Work\nBoth IA and CA are additive: there is no interaction. One approach is to rescale GCA (Jonker et al. 2005):\n\\[ \\sum \\frac{c_i}{f_i^{-1}(R)} = \\exp{g(Z)}, \\quad g(Z) = a \\prod z_i \\] where the \\(z_i\\) is a toxic unit, \\(z_i = c_i/f_i^{-1}(a/2)\\).\n\nWe considered the following quadratic version, with a matrix \\(A\\) to be specified by QSAR: \\[g(Z) = -\\frac{1}{2}z^\\top A z\\] But it is not clear how to determine \\(A\\) from QSAR. Also, this approach is symmetric: there is no dominant chemical."
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-extensible-software",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-extensible-software",
+    "title": "GeoTox and RGCA",
+    "section": "RGCA: Extensible Software",
+    "text": "RGCA: Extensible Software"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-extensible-software-1",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#rgca-extensible-software-1",
+    "title": "GeoTox and RGCA",
+    "section": "RGCA: Extensible Software",
+    "text": "RGCA: Extensible Software"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-rgca-integration",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-rgca-integration",
+    "title": "GeoTox and RGCA",
+    "section": "GeoTox + RGCA Integration",
+    "text": "GeoTox + RGCA Integration\n\n\n\n\n\ngraph TB;\n    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];\n    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];\n    C[Internal Exposure] --&gt; |PBTK| D[Target Organ Dose];\n    D[Target Organ Dose] --&gt; |IVIVE| E[In vitro Equivalent Concentration];\n    E[In vitro Equivalent Concentration] --&gt; |Mixtures Modeling| F[Concentration Response];\n    \n\n\n\n\n\n\n\nRGCA"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#extensible-geotox",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#extensible-geotox",
+    "title": "GeoTox and RGCA",
+    "section": "Extensible GeoTox",
+    "text": "Extensible GeoTox\n\nLooking forward, there are many ways to improve GeoTox mixture risk assessment\nBetter handling of time\nMore and better resolved AOPs!"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-temporal-feedback",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-temporal-feedback",
+    "title": "GeoTox and RGCA",
+    "section": "GeoTox: Temporal Feedback",
+    "text": "GeoTox: Temporal Feedback\n\n\n\n\n\ngraph TB;\n    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];\n    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];\n    C[Internal Exposure] --&gt; |PBTK| D[Target Organ Dose];\n    D[Target Organ Dose] --&gt; |IVIVE| E[In vitro Equivalent Concentration];\n    E[In vitro Equivalent Concentration] --&gt; |Mixtures Modeling| F[Concentration Response];\n    F[Concentration Response] --&gt; C[Internal Exposure] ;"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-with-complete-aops",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#geotox-with-complete-aops",
+    "title": "GeoTox and RGCA",
+    "section": "GeoTox: With Complete AOPs",
+    "text": "GeoTox: With Complete AOPs\n\n\n\n\n\ngraph TB;\n    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];\n    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];\n    C[Internal Exposure] --&gt; |PBTK| D[Target Organ Dose];\n    D[Target Organ Dose] --&gt; |IVIVE| E[In vitro Equivalent Concentration];\n    E[In vitro Equivalent Concentration] --&gt; |Mixtures Modeling| F[Concentration Response];\n    F[Concentration Response] --&gt;|Key Event Relationship| G[Key Event 1];\n    G[Key Event 1] --&gt;|Key Event Relationship| H[Key Event 2];\n    H[Key Event 2] --&gt;|Key Event Relationship| I[Adverse Outcome];"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#multiple-assays-informing-an-aop",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#multiple-assays-informing-an-aop",
+    "title": "GeoTox and RGCA",
+    "section": "Multiple Assays Informing an AOP",
+    "text": "Multiple Assays Informing an AOP\n\n\n\n\n\ngraph TB;\n    A[External Sources] --&gt; |Geospatial Modeling| B[External Exposure];\n    B[External Exposure] --&gt; |Behaviorial and Physiological Modeling| C[Internal Exposure];\n    C[Internal Exposure] --&gt; |PBTK| D[Target Organ Dose];\n    D[Target Organ Dose] --&gt; |IVIVE| E[In vitro Equivalent Concentration];\n    E[In vitro Equivalent Concentration] --&gt; |Mixtures Modeling| F[Concentration Response];\n    F[Concentration Response] --&gt;|Key Event Relationship| G[Key Event 1A];\n    F[Concentration Response] --&gt;|Key Event Relationship| H[Key Event 1B];\n    F[Concentration Response] --&gt;|Key Event Relationship| I[Key Event 1C];\n    G[Key Event 1A] --&gt;|Key Event Relationship| J[Key Event 2];\n    H[Key Event 1B] --&gt;|Key Event Relationship| J[Key Event 2];\n    I[Key Event 1C] --&gt;|Key Event Relationship| J[Key Event 2];\n    J[Key Event 2] --&gt;|Key Event Relationship| K[Adverse Outcome];"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#set-summary",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#set-summary",
+    "title": "GeoTox and RGCA",
+    "section": "{SET} Summary",
+    "text": "{SET} Summary\n\nGeoTox and RGCA code are currently experimental\nPublishing versions 1.0.0. to SET Github and CRAN ASAP\nMany other documented, test-driven, and extensible packages from the SET group on air pollution exposures across the US, download/process GIS environmental data, and scalable GIS operations\nFollow Spatiotemporal-Exposures-and-Toxicology on GitHub\nWe are fostering a community around best-practices for software in geospatial exposure assessment, risk assessment, and computational toxicology\nemail: kyle.messier@nih.gov"
+  },
+  {
+    "objectID": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#acknowledgements",
+    "href": "presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html#acknowledgements",
+    "title": "GeoTox and RGCA",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\n\n\n\n\n\nSET group in October 2023: Eva Marques, Daniel Zilber, Ranadeep Daw, Mariana Alifa Kassien, Insang Song\n\n\n\n\nMitchell Manware\nSkylar Marvel\nKristin Eccles\nAgnes Karamus\nNicole Kleinstreuer\nFred Parham\nCynthia Rider\nMelissa Lowe\nTaylor Potter\n\n\n\nJohn Wambaugh\nMike DeVito\nAndy Shapiro\nJulia Rager\nAlison Motsinger-Reif\nDavid Reif\nAubrey Miller\nCharles Schmitt\nTrisha Castranio\nAnn Liu\nRichard Kwok"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#about-me",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#about-me",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "About Me",
+    "text": "About Me\n\nBS Environmental Science: UNC-Asheville\nMS, PhD, Environmental Science and Engineering, UNC ESE, Advisor: Marc Serre\nPostdoc, Environmental Defense Fund, High-Resolution Air Pollution Mapping with Mobile Monitoring\nResearch Faculty, Oregon State University, Department of Environmental and Molecular Toxicology\nTenure Track Investigator, NIH/NIEHS/DTT"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#about-us-setgroup",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#about-us-setgroup",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "About Us: {SET}group",
+    "text": "About Us: {SET}group\n\n\nSpatiotemporal Exposure Mapping\nChemical and Stressor Mixtures Prediction\nMechanistically Informed Risk Assessment\n\n\n\n\\[\n\\newcommand\\by{{\\mathbf{y}}}\n\\newcommand\\bY{{\\mathbf{Y}}}\n\\]"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#about-us-setgroup-1",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#about-us-setgroup-1",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "About Us: {SET}group",
+    "text": "About Us: {SET}group\n\n\n\n\n\nEva Marques\nDaniel Zilber\nRanadeep Daw\nMariana Alifa\nInsang Song\nKyle Messier\nMitchell Manware (Not Pictured)"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#the-importance-of-place",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#the-importance-of-place",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "The Importance of Place",
+    "text": "The Importance of Place"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#the-importance-of-place-1",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#the-importance-of-place-1",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "The Importance of Place",
+    "text": "The Importance of Place\n\n\n\n\n\nHurricane Matthew, 2016\nHurricane Florence, 2018\nSwine Waste Concerns\nFecal Bateria\nNitrate and Phosphorous Pollution\nInfectious Diseases"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#the-importance-of-place-2",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#the-importance-of-place-2",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "The Importance of Place",
+    "text": "The Importance of Place\n\nFloodWildfireWindHeatAir Quality\n\n\n\n\n\nhttps://riskfactor.com/\n\n\n\n\n\n\n\nhttps://riskfactor.com/\n\n\n\n\n\n\n\nhttps://riskfactor.com/\n\n\n\n\n\n\n\nhttps://riskfactor.com/\n\n\n\n\n\n\n\nhttps://riskfactor.com/"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#history-of-spatial-geo-statistics-mining",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#history-of-spatial-geo-statistics-mining",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "History of Spatial [Geo] Statistics Mining",
+    "text": "History of Spatial [Geo] Statistics Mining\n\n\n\n\n\nMatheron and Krige developed geostatistical methods to predict ore content from core samples\nMatheron coined the term “Kriging” after Krige\n“Nugget” is a term used to random noise because predicting where gold nuggets were was so difficult"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#history-of-spatial-geo-statistics-forestry",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#history-of-spatial-geo-statistics-forestry",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "History of Spatial [Geo] Statistics: Forestry",
+    "text": "History of Spatial [Geo] Statistics: Forestry\n\n\n\n\n\nMatérn developed correlation models for spatial variation for applications in Forestry\nTo this day, we use the “Matérn” covariance function"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#history-of-spatial-geo-statistics-petroleum-engineering",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#history-of-spatial-geo-statistics-petroleum-engineering",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "History of Spatial [Geo] Statistics: Petroleum Engineering",
+    "text": "History of Spatial [Geo] Statistics: Petroleum Engineering\n\n\n\n\n\nUsed to evaluate the oil and gas field reservoirs\nUses geology and seismic data"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#history-of-spatial-geo-statistics-public-health",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#history-of-spatial-geo-statistics-public-health",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "History of Spatial [Geo] Statistics: Public Health",
+    "text": "History of Spatial [Geo] Statistics: Public Health\n\n\n\n\n\nCressie, 1990: Statistics for Spatial Data\nWaller and Gotway, 2004: Applied Statistics for Public Health Data\nWide scale adoption for statisticians and engineers in ecological and human exposure and risk applications"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#source-and-receptor-geometries",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#source-and-receptor-geometries",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Source and Receptor Geometries",
+    "text": "Source and Receptor Geometries\n\n\n\n\nQuestions:\n\n\nIn figure C, what is an example of geospatial health data geometry at a point? Check all that apply.\nIn figure I, what is an example of geospatial health data geometry at an area? Check all that apply."
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#geospatial-health-analysis-overview",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#geospatial-health-analysis-overview",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Geospatial Health Analysis Overview",
+    "text": "Geospatial Health Analysis Overview\n\n\n\n\n\ngraph TD;\n\n    style A fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n    style B fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n    style C fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n\n    A[Research Question: Exposure and Health Outcome Relationship?] --&gt; B[Preparation of Geospatial Exposure Data];\n    A --&gt; C[Preparation of Health Outcome Data];"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#geospatial-health-analysis-overview-1",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#geospatial-health-analysis-overview-1",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Geospatial Health Analysis Overview",
+    "text": "Geospatial Health Analysis Overview\n\n\n\n\n\ngraph TD;\n\n    style A fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n    style B fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n    style C fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n\n    A[Research Question: Exposure and Health Outcome Relationship?] --&gt; B[Preparation of Geospatial Exposure Data];\n    A --&gt; C[Preparation of Health Outcome Data];\n    \n    B1[Selection of Exposure Metrics];\n    B2[Geospatial Exposure Modeling Strategy];\n    B3[Geospatial data collection and integration];\n    B4[Geospatial model fitting and calibration];\n    \n\n    B --&gt; B1;\n    B1 --&gt; B2;\n    B2 --&gt; B3;\n    B3 --&gt; B4;\n    \n\n\n\n\n\n\n\nQuestions:\n\n\nwhat is an example of a point-level exposure data set? Check all that apply.\nWhich of the following are examples of an area-level exposure data set? Check all that apply."
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#geospatial-health-analysis-overview-2",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#geospatial-health-analysis-overview-2",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Geospatial Health Analysis Overview",
+    "text": "Geospatial Health Analysis Overview\n\n\n\n\n\ngraph TD;\n\n    style A fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n    style B fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n    style C fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n\n    A[Research Question: Exposure and Health Outcome Relationship?] --&gt; B[Preparation of Geospatial Exposure Data];\n    A --&gt; C[Preparation of Health Outcome Data];\n    \n    B1[Selection of Exposure Metrics];\n    B2[Geospatial Exposure Modeling Strategy];\n    B3[Geospatial data collection and integration];\n    B4[Geospatial model fitting and calibration];\n    \n    C1[Selection of health outcome metrics];\n    C2[Health outcome data collection and integration: Individual or Population Level];\n    C3[Geocoding of Health Outcome Data];\n\n    B --&gt; B1;\n    B1 --&gt; B2;\n    B2 --&gt; B3;\n    B3 --&gt; B4;\n    \n    C --&gt; C1;\n    C1 --&gt; C2;\n    C2 --&gt; C3;"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#geospatial-health-analysis-overview-3",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#geospatial-health-analysis-overview-3",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Geospatial Health Analysis Overview",
+    "text": "Geospatial Health Analysis Overview\n\n\n\n\n\ngraph TD;\n\n    style A fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n    style B fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n    style C fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n    style D fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n\n    A[Research Question: Exposure and Health Outcome Relationship?] --&gt; B[Preparation of Geospatial Exposure Data];\n    A --&gt; C[Preparation of Health Outcome Data];\n    \n    B1[Selection of Exposure Metrics];\n    B2[Geospatial Exposure Modeling Strategy];\n    B3[Geospatial data collection and integration];\n    B4[Geospatial model fitting and calibration];\n    \n    C1[Selection of health outcome metrics];\n    C2[Health outcome data collection and integration: Individual or Population Level];\n    C3[Geocoding of Health Outcome Data];\n    \n    D[Exposure and Health Outcome Data Integration and Analysis];\n    D1[Linkage of Exposure Model with Health Data];\n    D2[Prediction of Exposure Model at Health Data Locations];\n    D3[Exposure and Health Outcome Model Analysis];\n    \n    B --&gt; B1;\n    B1 --&gt; B2;\n    B2 --&gt; B3;\n    B3 --&gt; B4;\n    \n    C --&gt; C1;\n    C1 --&gt; C2;\n    C2 --&gt; C3;\n    \n    B4 --&gt; D;\n    C3 --&gt; D;\n    \n    D --&gt; D1;\n    D1 --&gt; D2;\n    D2 --&gt; D3;"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#the-landscape-of-geospatial-exposure-models",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#the-landscape-of-geospatial-exposure-models",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "The Landscape of Geospatial Exposure Models",
+    "text": "The Landscape of Geospatial Exposure Models\nThe next section will focus on details of geospatial exposure models\nMany types of models are used for geospatial exposure assessment.\n\nProximity\nIndex\nLand Use Regression\nGeographically Weighted Regression\nKriging and Gaussian Processes\nMachine Learning\nMechanistic Models\nSatellite Imagery\nHybrid / Ensemble Models"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#notation-spatial-random-field",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#notation-spatial-random-field",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Notation: Spatial Random Field",
+    "text": "Notation: Spatial Random Field\n\n\\(\\mathbf{y}\\): A single random variable is denoted by a bold lowercase letter\n\\(\\mathbf{Y}\\): Spatial Random Field (SRF): A collection of random variables across a spatial domain.\nSRF provides full, probabilistic characterization of exposure across space\nSRF is referenced to a real-valued domain with spatial and temporal indices, \\(\\{\\mathbf{Y}(s); s \\in \\mathbb{R}^2\\}\\)."
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#a-review-of-linear-regression",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#a-review-of-linear-regression",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "A Review of Linear Regression",
+    "text": "A Review of Linear Regression\nResponse\n\\[\n    Y_i \\in  \\{1, ..., n\\}\n\\] \\(p\\) covariates:\n\\[\n    X = X_{i1}, ..., X_{ip}\n\\]\nThe model is :\n\\[\n    Y_i = \\beta_0 + X_{i1}\\beta_1 + , ..., X_{ip}\\beta_p\n\\]\n\nThe mean is a linear combination of the covariates\n\n\\[\nE(Y_i) = \\mu_i = \\beta_0 + X_{i1}\\beta_1 + ... + X_{ip}\\beta_p\n\\]\n\nError/Residuals are assumed to be independent and identically distributed (iid)\n\n\\[\n\\varepsilon_i = Y_i - \\mu_i\n\\]"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#linear-regression-for-spatial-idea",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#linear-regression-for-spatial-idea",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Linear Regression for spatial idea",
+    "text": "Linear Regression for spatial idea\n\nAs a method, not a terrible idea\nUnbiased\nOverconfident error estiamte (p-values, SE)\nModel Selection (Type 1 and 2 error)"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#land-use-regression",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#land-use-regression",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Land Use Regression",
+    "text": "Land Use Regression\nLinear regression for spatial data\n\\[\n    \\bY(s) =  X(s)\\beta + \\varepsilon\n\\]\n\\[\n    X(s) = X_{i1}(s_1), ..., X_{ip}(s_p)\n\\]"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#spatial-covariance-model",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#spatial-covariance-model",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Spatial Covariance Model",
+    "text": "Spatial Covariance Model\n\nAs a random-effect model, we add a spatially explicity error term\n\n\\[\n    \\bY(s) = \\mu(s) + \\varepsilon +  \\eta(s)\n\\]\n\n\\(\\mu(s)\\) can take many forms such as linear, nonlinear, or even machine learning models such as random forest.\nMore details on a spatial covariance model later"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#proximity",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#proximity",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Proximity",
+    "text": "Proximity\n\nProximity based metrics are the most basic form of an exposure assessment because they rely only on the distance between a pollution source and the observed outcome location.\nA proximity model is simply a deterministic covariate based on distance:\n\n\\[\n  Y(s) = X(s)\n\\]\nGiven a matrix of distances between monitoring locations and pollution sources, \\(d_{ij}\\), minimum and average distance are:\n\\[\n  X_i^{min} = min(d_{i,\\cdot}) \\\\\n  \\overline{X}_i = \\frac{1}{n_j}\\sum_{j=1}^{n_j}d_{ij}\\\\\n\\]\nQuestions:\n\n\nWhat are examples of proximity metrics? Check all that apply.\nWhat are the advantages of a proximity metric? Check all that apply."
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#index-models",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#index-models",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Index Models",
+    "text": "Index Models\n\nIndex variables are deterministic quantities that summarize (e.g. prinicipal components) multiple complex variables of interest into a simple and interpretable metric.\nCovariates are made up of geographic variables across different domains\nSocial Vulnerability Index, Climate Vulnerability Index, etc."
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#land-use-regression-1",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#land-use-regression-1",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Land Use Regression",
+    "text": "Land Use Regression\n\\[\n  \\bY(s) =  X(s)\\beta + \\varepsilon\n\\] - where \\(\\bY(p)\\) are the \\(n \\times 1\\) observations for the variable of interest (e.g. PM\\(_{2.5}\\), \\(NO_3^{-}\\), etc.). \\(X(s)\\) is a \\(n \\times k\\) design matrix of \\(k\\) spatial geographic covariates\nKey Steps\n\n\nCalculate geographic covariates\nFit the model - may include model selection or dimension reduction\nPredict at unmonitored locations"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#geographically-weighted-regression",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#geographically-weighted-regression",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Geographically Weighted Regression",
+    "text": "Geographically Weighted Regression\n\n\n\\[   \\bY(s) =  X(s)\\beta(s) + \\varepsilon\n\\]\nWhat is the key difference between LUR and GWR? Select one. Recall, LUR = \\(\\bY(s) = X(s)\\beta + \\varepsilon\\)\nHint: It’s in the \\(\\beta\\)"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#gaussian-process-and-kriging",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#gaussian-process-and-kriging",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Gaussian Process and Kriging",
+    "text": "Gaussian Process and Kriging\n\n\nGaussian process and Kriging are one in the same\nUtilize information on spatial correlation to help interpolate\nAccount for spatial error\nHighly flexible"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#gaussian-process-and-kriging-1",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#gaussian-process-and-kriging-1",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Gaussian Process and Kriging",
+    "text": "Gaussian Process and Kriging\n\\[\n    \\bY(s) = \\mu(s) +  \\eta(s)\n\\]\n\n\\(\\mu(s)\\) can take many forms such as linear, nonlinear, or even machine learning models such as random forest\n\\(\\eta \\sim N_n(0,\\Sigma_{\\theta}+\\tau^2I)\\)\n\\(\\Sigma_{\\theta}\\) is a covariance matrix with parameters, \\(\\theta\\), that accounts for correlation between spatial and temporal locations\n\nQuestion:\n\n\nWhat physical quantity is \\(\\Sigma_{\\theta}\\) solely dependent on?"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#machine-learning",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#machine-learning",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Machine Learning",
+    "text": "Machine Learning\nMachine learning (ML) is the general culture, philosophy, or school of thought for predictive modeling that focuses on the learning algorithm and out-of-sample prediction generalization\n\n\nMany common machine learning algorithms can be used for geospatial modeling\nFlexible\nDon’t make strict assumptions on the distriubtions of the data\nCoordinates and other spatial information is input as covariates\n\n\n\n\nCommon Methods in Exposure Modeling\n\n\n\n\nGeneralized Additive Models (GAM)\nRandom Forest\nxgboost\nNeural Networks: CNN, LSTM, GAN, etc."
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#machine-learning-trees",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#machine-learning-trees",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Machine Learning: Trees",
+    "text": "Machine Learning: Trees"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#mechanistic",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#mechanistic",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Mechanistic",
+    "text": "Mechanistic\n\n\nI would be remiss if I didn’t mention another entirely different class of exposure models\nMechanistic models are not statistical models\nMechanistic models are based on physics and chemistry"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#hybrid",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#hybrid",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Hybrid",
+    "text": "Hybrid\nA consensus of multiple models is almost always better than any single model.\nRequia, Weeberb J., et al. “An ensemble learning approach for estimating high spatiotemporal resolution of ground-level ozone in the contiguous United States.” Environmental science & technology 54.18 (2020): 11037-11047.\n Yu, Wenhua, et al. “Deep ensemble machine learning framework for the estimation of PM 2.5 concentrations.” Environmental Health Perspectives 130.3 (2022): 037004."
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#integrating-geospatial-exposure-models-into-health-data",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#integrating-geospatial-exposure-models-into-health-data",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Integrating Geospatial Exposure Models into Health Data",
+    "text": "Integrating Geospatial Exposure Models into Health Data\n\n\n\n\n\ngraph TD;\n\n    style A fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n    style B fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n    style C fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n    style D fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n\n    A[Research Question: Exposure and Health Outcome Relationship?] --&gt; B[Preparation of Geospatial Exposure Data];\n    A --&gt; C[Preparation of Health Outcome Data];\n    \n    B1[Selection of Exposure Metrics];\n    B2[Geospatial Exposure Modeling Strategy];\n    B3[Geospatial data collection and integration];\n    B4[Geospatial model fitting and calibration];\n    \n    C1[Selection of health outcome metrics];\n    C2[Health outcome data collection and integration: Individual or Population Level];\n    C3[Geocoding of Health Outcome Data];\n    \n    D[Exposure and Health Outcome Data Integration and Analysis];\n    D1[Linkage of Exposure Model with Health Data];\n    D2[Prediction of Exposure Model at Health Data Locations];\n    D3[Exposure and Health Outcome Model Analysis];\n    \n    B --&gt; B1;\n    B1 --&gt; B2;\n    B2 --&gt; B3;\n    B3 --&gt; B4;\n    \n    C --&gt; C1;\n    C1 --&gt; C2;\n    C2 --&gt; C3;\n    \n    B4 --&gt; D;\n    C3 --&gt; D;\n    \n    D --&gt; D1;\n    D1 --&gt; D2;\n    D2 --&gt; D3;"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#classical-framework-for-geospatial-risk-assessment",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#classical-framework-for-geospatial-risk-assessment",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Classical Framework for Geospatial Risk Assessment",
+    "text": "Classical Framework for Geospatial Risk Assessment\n\n\n\n\n\ngraph TB;\n\n    style A fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;\n\n    A(Hazard Identification);\n    B(External Exposure Assessment) --&gt; |Behaviorial, Physiological, Toxicokinetic Modeling| C(Internal Exposure);\n    C --&gt; |Epidemiological Methods| E(Health Effect Assessment);\n    E --&gt; |Health Impact Model| F(Health Burden);\n    B --&gt; |Epidemiological Methods| E;\n\n\n\n\n\n\n\nQuestions\n\n\nThe left size of the figure shows an option to calculate internal exposure from a geospatially modeled external exposure. What are some key assumptions in this approach?"
+  },
+  {
+    "objectID": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#classical-framework-for-geospatial-risk-assessment-1",
+    "href": "presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html#classical-framework-for-geospatial-risk-assessment-1",
+    "title": "Geospatial exposure modeling methods and applications in human health",
+    "section": "Classical Framework for Geospatial Risk Assessment",
+    "text": "Classical Framework for Geospatial Risk Assessment"
   }
 ]

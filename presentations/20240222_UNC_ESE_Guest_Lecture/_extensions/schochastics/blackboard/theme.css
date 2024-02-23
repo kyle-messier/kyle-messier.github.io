@@ -1,0 +1,98 @@
+.framed {
+ display: inline-block;
+ border-style: solid;
+ padding: 10px;  
+ border-width: 15px 15px 15px 15px;
+ border-image: url("frame2.png") 20% 20% 20% 20% stretch;
+}
+
+
+pre, code {
+ background-color: transparent !important;
+ border-style: solid;
+ border-width: 5px 5px 5px 5px;
+ border-image: url(frame.png) 10% 0% 40% 20% stretch;
+}
+
+.reveal ol, .reveal dl, .reveal ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li{
+ font-family: Times New Roman;
+ padding-left: 30px;
+ background: url('dot.png') no-repeat left top;
+}
+
+h2{
+ width:1107px;
+ background-image: url(underline.png);
+ background-position: 0 1em;
+ background-repeat: repeat-x;
+ background-size: 1107px 12px;
+}
+
+#title-slide {
+  text-align: left;
+}
+
+
+.subtitle{
+ background-image: url(underline.png);
+ background-position: 0 1em;
+ background-repeat: repeat-x;
+ background-size: 1107px 12px;
+}
+
+.author{
+  padding-top: 2em;
+}
+
+
+:root {
+  --mermaid-bg-color: transparent;
+  --mermaid-edge-color: #588b3e;
+  --mermaid-node-bg-color: #588b3e;
+  --mermaid-node-fg-color:#588b3e;
+  --mermaid-fg-color: #FFFFFF;
+  --mermaid-label-bg-color: #FFFFFF; 
+  --mermaid-label-fg-color: #FFFFFF;
+  --mermaid-font-family: 'Pangolin', sans-serif;
+  --mermaid-label-bg-color: #{$mermaid-label-bg-color};
+}
+
+
+/* Apply Pangolin font to MathJax elements */
+.MathJax {
+  font-family: 'Pangolin', sans-serif !important;
+  color: #eded18; /* White text color for better contrast */
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+.mermaid {
+    font-size: 24;
+}
+
+.framed-box {
+ display: inline-block;
+ border-style: solid;
+ padding: 10px;  
+ border-width: 15px 15px 15px 15px;
+ border-image: url("frame2.png") 20% 20% 20% 20% stretch;
+}
+
+/* Adjust font size for title page */
+.reveal h1.title {
+  font-size: 2em; /* Adjust the font size as needed */
+}
+
+.reveal h2.author {
+  font-size: 1.5em; /* Adjust the font size as needed */
+}
+
+/* Adjust font size of panel titles within panel-tabset */
+.reveal .panel-tabset .slide-content h3.panel-title {
+  font-size: 0.5em; /* Adjust the font size as needed */
+}

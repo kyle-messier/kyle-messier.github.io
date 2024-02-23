@@ -1,0 +1,207 @@
+---
+title: "Exposure on Time:"
+subtitle: "Deploying exposure models in a timely manner"
+author: "Kyle P Messier, MS, PhD"
+institute: "NIEHS/DTT"
+format: blackboard-revealjs
+self-contained: false
+---
+
+```{r setup, include=FALSE}
+library(showtext)
+library(ggplot2)
+font_add_google("Pangolin", "Pangolin")
+showtext_auto()
+
+#theme for chalkboard
+theme_chalk <- function () { 
+  theme_minimal() %+replace% 
+    theme(
+      axis.ticks = element_line(colour = "white",size=0.25),
+      text = element_text(colour = "white"),
+      axis.text  = element_text(colour = "white",family = "Pangolin",size=18),
+      axis.title  = element_text(colour = "white",family = "Pangolin",size=24),
+      panel.background  = element_rect(colour = NA,fill="transparent"),
+      plot.background = element_rect(colour = "white",fill="transparent"),
+      legend.position = "bottom",
+      legend.title = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.grid.major.x = element_line(colour = "white",size=0.25),
+      panel.grid.major.y = element_line(colour = "white",size=0.25),
+      legend.text = element_text(size = 24)
+    )
+}
+
+knitr::opts_chunk$set(dev.args=list(bg="transparent"))
+```
+
+## About Us: {SET}~group~
+
+::: incremental
+-   Spatiotemporal Exposure Mapping
+-   Chemical and Stressor Mixtures Prediction
+-   Mechanistically Informed Risk Assessment
+:::
+
+## About Us: {SET}~group~ {.scrollable}
+
+::: columns
+::: {.column width="60%"}
+![](SETgroup-Oct2023.jpg){.framed style="width: 600px; height: auto;"}
+:::
+
+::: {.column width="40%"}
+-   Eva Marques
+
+-   Daniel Zilber
+
+-   Ranadeep Daw
+
+-   Mariana Alifa
+
+-   Insang Song
+
+-   Kyle Messier
+
+-   Mitchell Manware![Mitchell Manware](manware_headshot.jpeg){.framed width="35%"}
+:::
+:::
+
+## Back Story
+
+![](kpm-character.png){width="126"}
+
+![](group-intro.png){width="200"}
+
+![](CW-character.png){width="162"}
+
+## Back Story
+
+![](kpm-character.png){width="126"} Kyle 
+
+![](group-intro.png){width="200"} CEHD Attendees
+
+![](CW-character.png){width="162"} Cavin
+
+## Back Story
+
+![](kpm-character.png){width="126"}  
+
+![](group-intro.png){width="200"} Much discussion: "integration ... models ... privacy" 
+
+![](CW-character.png){width="162"} 
+
+## Back Story
+
+![](kpm-character.png){width="126"}
+There are so many PM2.5 models, why do we need another one? 
+
+![](group-intro.png){width="200"}
+
+![](CW-character.png){width="162"}
+
+## Back Story
+
+![](kpm-character.png){width="126"}
+
+![](group-intro.png){width="200"}
+
+![](CW-character.png){width="162"}
+Actually...
+
+## Back Story
+
+![](kpm-character.png){width="126"}
+
+![](group-intro.png){width="200"}
+
+![](CW-character.png){width="162"}
+I've had a difficult time finding air pollution models that are available during the same time range as our EHR data
+
+## Back Story
+
+![](kpm-character.png){width="126"}
+Interesting ... I'll look into developing a PM2.5 model for recent years
+
+![](group-intro.png){width="200"}
+
+![](CW-character.png){width="162"}
+
+## Back Story
+
+![](kpm-character.png){width="126"}
+A couple months later ... 
+
+## Back Story
+
+![](kpm-character.png){width="126"}
+I have new group of postdocs and data analysts joining and am worried about how to keep track of their code and knowledge retention
+
+## Back Story
+
+![](kpm-character.png){width="126"}
+I have new group of postdocs and data analysts joining and am worried about how to keep track of their code and knowledge retention
+
+
+## Back Story
+
+![](kpm-character.png){width="126"}
+30 hours of NIH sponsored project management
+
+![](ProjectManagement.png){width="126"}
+
+::: incremental
+- Project and Portfolio management approaches
+- Task management through tools like Kanban boards
+- Agile project management 
+:::
+
+## Back Story
+
+![](ProjectManagement.png){width="126"}
+
+- Agile $||$ CI/CD 
+
+![](continuous-integration.png){width="300"}
+
+
+## Back Story
+
+![](kpm-character.png){width="126"}
+
+![](SET-grou-characters-silly.png){width="350"}
+SET group! 
+
+## Back Story
+We discuss the idea of a group project focused the development of an air pollution model with regular updates using TDD and CI/CD principles
+
+![](kpm-character.png){width="126"}
+
+![](SET-grou-characters-silly.png){width="350"}
+Sounds good to us! 
+
+## Back Story
+Group project using TDD and CI/CD principles
+
+![](kpm-character.png){width="126"}
+
+![](SET-grou-characters-silly.png){width="250"}
+
+![](CW-character.png){width="150"}
+Awesome! 
+
+
+## 
+
+## Some Geospatial Models From Me
+
+#### That are not FAIR+
+
+1.  Arsenic in North Carolina
+2.  Tetrachloroethylene in North Carolina
+3.  Nitrate in North Carolina
+4.  
+
+## 
+
+## ACAG

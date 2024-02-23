@@ -1,0 +1,776 @@
+---
+title: "GeoTox and RGCA"
+subtitle: "Developing Extensible Software for Geospatial Exposure and Risk Assessment of Chemical Mixtures"
+author: 
+  - "Kyle P Messier, PhD"
+institute: 
+  - "**Stadtman Tenure Track Investigator**"
+  - "National Institute of Environmental Health Sciences"
+  - "Division of Translational Toxicology" 
+  - "February 14, 2024"
+format: blackboard-revealjs
+output-file: KPM_SOT_ISES_Webinar_20240214.html
+self-contained: false
+---
+
+```{r setup, include=FALSE}
+library(showtext)
+library(ggplot2)
+
+showtext_auto()
+
+#theme for chalkboard
+theme_chalk <- function () { 
+  theme_minimal() %+replace% 
+    theme(
+      axis.ticks = element_line(colour = "white",size=0.25),
+      text = element_text(colour = "white"),
+      axis.text  = element_text(colour = "white",family = "Times New Roman",size=18),
+      axis.title  = element_text(colour = "white",family = "Times New Roman",size=24),
+      panel.background  = element_rect(colour = NA,fill="transparent"),
+      plot.background = element_rect(colour = "white",fill="transparent"),
+      legend.position = "bottom",
+      legend.title = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.grid.major.x = element_blank(),
+      panel.grid.major.y = element_blank(),
+      legend.text = element_text(size = 24)
+    )
+}
+
+knitr::opts_chunk$set(dev.args=list(bg="transparent"))
+
+library(dplyr, warn.conflicts = FALSE)
+library(tidyr)
+library(readr)
+library(stringr)
+library(readxl)
+library(httk)
+library(GeoTox)
+suppressPackageStartupMessages(library(sf))
+
+
+set.seed(1234)
+
+MC_iter <- 50
+
+geo_tox_data <- GeoTox::geo_tox_data 
+
+data <- split(geo_tox_data$dose_response, geo_tox_data$dose_response$casn)
+
+hill_2_params <- fit_hill(data)
+hill_3_params <- fit_hill(data, fixed_slope = FALSE)
+
+# Age
+age <- simulate_age(split(geo_tox_data$age, ~FIPS), n = MC_iter)
+
+# Obesity status
+obesity <- simulate_obesity(geo_tox_data$obesity, n = MC_iter)
+
+# Inhalation rate
+IR <- simulate_inhalation_rate(age)
+
+# External exposure concentration
+C_ext <- simulate_exposure(split(geo_tox_data$exposure, ~FIPS), n = MC_iter)
+
+# Sample from pre-simulated steady-state plasma concentration data
+C_ss <- sample_Css(geo_tox_data$simulated_css, age, obesity)
+
+# Internal dose
+D_int <- calc_internal_dose(C_ext, IR, scaling = 1 / 1000)
+
+# in vitro concentration
+C_invitro <- calc_invitro_concentration(D_int, C_ss)
+
+# Concentration response
+resp <- calc_concentration_response(C_invitro, hill_2_params)
+
+resp_df <- tibble(
+  FIPS = names(resp),
+  data = resp
+) %>%
+  unnest(cols = data) %>%
+  pivot_longer(-FIPS, names_to = "health_measure") %>%
+  mutate(
+    health_measure = factor(
+      health_measure,
+      levels = c("GCA.Eff", "IA.eff", "GCA.HQ.10", "IA.HQ.10")
+    )
+  ) %>%
+  # Compute summary stats
+  summarize(
+    median = median(value , na.rm = TRUE),
+    quantile_05 = quantile(value, 0.05, na.rm = TRUE, names = FALSE),
+    quantile_95 = quantile(value, 0.95, na.rm = TRUE, names = FALSE),
+    .by = c(FIPS, health_measure)
+  ) %>%
+  pivot_longer(
+    cols = c(median, quantile_05, quantile_95),
+    names_to = "stat"
+  ) %>%
+  # Order stats
+  mutate(
+    stat = factor(stat, levels = c("quantile_05", "median", "quantile_95"))
+  ) %>%
+  # Add county boundaries
+  left_join(geo_tox_data$boundaries$county, by = join_by(FIPS)) %>%
+  st_as_sf()
+
+make_county_heatmap <- function(df, legend_name) {
+  ggplot(df, aes(fill = value)) +
+    # Plot county data using fill, hide county borders by setting color = NA
+    geom_sf(color = NA) +
+    # Add state borders
+    geom_sf(data = geo_tox_data$boundaries$state, fill = NA, size = 0.15) +
+    # Create separate plots for each stat
+    facet_wrap(
+      ~stat,
+      ncol = 3,
+      labeller = labeller(
+        stat = c(
+          "quantile_05" = "5th Percentile",
+          "median" = "Median",
+          "quantile_95" = "95th Percentile"
+        )
+      )
+    ) +
+    # Add fill scale
+    scale_fill_viridis_c(
+      name = legend_name,
+      direction = -1,
+      option = "A",
+      trans = "sqrt"
+    ) +
+    # Theme
+    theme_chalk() +
+    theme(
+      text = element_text(size = 12),
+      legend.text = element_text(size = 8),
+      axis.ticks = element_blank(),
+      axis.text = element_blank(),
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      legend.position = "right"
+    )+
+  ggtitle(legend_name)
+}
+
+GCA_Eff_plot <- make_county_heatmap(
+  resp_df %>% filter(health_measure == "GCA.Eff"),
+  paste("Predicted Response", "Log2 Fold Change", "mRNA Expression",sep = "\n")
+)
+
+HQ_10_plot <- make_county_heatmap(
+  resp_df %>% filter(health_measure == "IA.HQ.10"),
+  "Risk Quotient"
+)
+
+
+
+```
+
+## About Us: {SET}~group~ {background-image="_extensions/blackboard/blackboard.png"}
+
+::: incremental
+-   Spatiotemporal Exposure Mapping $$ y \sim GP(X\beta, \Sigma) $$
+-   Chemical and Stressor Mixtures Prediction $$ \frac{[A]}{f_A^{-1}(R)}+\frac{[B]}{f_B^{-1}(R)} = 1
+     $$
+-   Mechanistically Informed Risk Assessment $$  R = f(c|\alpha,\theta, \beta) = \frac{\alpha}{1+\left (  \frac{\theta}{x}\right )^\beta } 
+     $$
+:::
+
+## About Us: {SET}~group~ {background-image="_extensions/blackboard/blackboard.png"}
+
+::: columns
+::: {.column width="60%"}
+![](SETgroup-Oct2023.jpg){.framed style="width: 600px; height: auto;"}
+:::
+
+::: {.column width="40%"}
+-   Eva Marques
+
+-   Daniel Zilber
+
+-   Ranadeep Daw
+
+-   Mariana Alifa
+
+-   Insang Song
+
+-   Kyle Messier
+
+-   Mitchell Manware (Not Pictured)
+:::
+:::
+
+## A Necessary Cascade for Exogoneous Risk Factors {auto-animate="true" auto-animate-easing="ease-in-out" background-image="_extensions/blackboard/blackboard.png"}
+
+::: incremental
+-   Exogenous Sources
+-   External Exposure
+-   Internal Exposure
+-   Molecular Targets and Events
+-   Cellular and Tissue Effects
+-   Individual Outcomes
+-   Population Outcomes
+:::
+
+![](Exposome-Cascade.png){.framed .absolute style="width: 400px; height: auto;" top="115" left="400" width="550" height="auto"}
+
+## Getting Two Frameworks to Work Together {background-image="_extensions/blackboard/blackboard.png"}
+
+> [**Aggregate Exposure Pathways**]{.underline}
+>
+> AEP is a comprehensive external analysis of source, media, and transformations
+
+> [**Adverse Outcome Pathway**]{.underline}
+>
+> AOPs provide a linkage specific biological target, pathway or process by a stressor and an adverse outcome(s) considered relevant to risk assessment
+
+## Getting Two Frameworks to Work Together {background-image="_extensions/blackboard/blackboard.png"}
+
+::: framed
+::: center
+$$
+\LARGE{GeoTox = AEP + AOP}
+$$
+:::
+:::
+
+## Key Steps of GeoTox {background-image="_extensions/blackboard/blackboard.png"}
+
+```{mermaid}
+graph TB;
+    A[External Sources] 
+```
+
+-   A forward, exposure-based approach for mixtures risk modeling
+-   Exposure modeling provides a ***geospatial*** foundation for risk assessment
+
+## Key Steps of GeoTox {background-image="_extensions/blackboard/blackboard.png"}
+
+```{mermaid}
+graph TB;
+    A[External Sources] --> |Geospatial Modeling| B[External Exposure];
+```
+
+## Key Steps of GeoTox {background-image="_extensions/blackboard/blackboard.png"}
+
+```{mermaid}
+graph TB;
+    A[External Sources] --> |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --> |Behaviorial and Physiological Modeling| C[Internal Exposure];
+```
+
+## Key Steps of GeoTox {background-image="_extensions/blackboard/blackboard.png"}
+
+```{mermaid}
+graph TB;
+    A[External Sources] --> |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --> |Behaviorial and Physiological Modeling| C[Internal Exposure];
+    C[Internal Exposure] --> |PBTK| D[Target Organ Dose];
+    
+```
+
+## Key Steps of GeoTox {background-image="_extensions/blackboard/blackboard.png"}
+
+```{mermaid}
+graph TB;
+    A[External Sources] --> |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --> |Behaviorial and Physiological Modeling| C[Internal Exposure];
+    C[Internal Exposure] --> |PBTK| D[Target Organ Dose];
+    D[Target Organ Dose] --> |IVIVE| E[In vitro Equivalent Concentration];
+   
+```
+
+## Key Steps of GeoTox {background-image="_extensions/blackboard/blackboard.png"}
+
+```{mermaid}
+graph TB;
+    A[External Sources] --> |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --> |Behaviorial and Physiological Modeling| C[Internal Exposure];
+    C[Internal Exposure] --> |PBTK| D[Target Organ Dose];
+    D[Target Organ Dose] --> |IVIVE| E[In vitro Equivalent Concentration];
+    E[In vitro Equivalent Concentration] --> |Mixtures Modeling| F[Concentration Response];
+   
+```
+
+## GeoTox Proof of Concept {background-image="_extensions/blackboard/blackboard.png"}
+
+::: columns
+::: {.column width="60%"}
+![](STOTEN-paper.png){.framed style="width: 500px; height: auto;"} ![](POY.png){.absolute bottom="120px" left="310px" style="width: 250px; height: auto;"}
+:::
+
+::: {.column width="40%"}
+![](Eccles_headshot_resized.jpg){.framed style="width: 200px; height: auto;"} Dr. Kristin Eccles, Former Visiting Fellow in DTT and SET, Now at Health Canada
+:::
+:::
+
+## Making GeoTox F.A.I.R. {background-image="_extensions/blackboard/blackboard.png"}
+
+::: incremental
+-   Findable: Publicly available via GitHub, CRAN, NIEHS websites
+-   Accessible: Open-Source, Easy installation
+-   Interoperable: Integrate with current and future applications
+-   Reusable: Documentation and reproducible pipelines
+:::
+
+## GeoTox Development {.scrollable .smaller background-image="_extensions/blackboard/blackboard.png"}
+
+::: columns
+::: {.column width="50%"}
+-   Currently developing (experimental or not-stable)
+-   Submitting to CRAN
+-   Static website hosted via {SET}group website
+-   Maintained
+-   Extensible for future development
+:::
+
+::: {.column width="50%"}
+![Dr David Reif, Predictive Toxicology Branch, Senior Scientist and Branch Chief](reif_david.jpg){.framed width="35%"}
+
+![Dr Skylar Marvel, Predictive Toxicology Branch, Bioinformatic Scientist](Skylar_Marvel.jpg){.framed width="40%"}
+:::
+:::
+
+## GeoTox: Simulating Data {auto-animate="true" background-image="_extensions/blackboard/blackboard.png"}
+
+``` r
+# Age
+age <- simulate_age(split(geo_tox_data$age, ~FIPS), n = MC_iter)
+
+# Obesity status
+obesity <- simulate_obesity(geo_tox_data$obesity, n = MC_iter)
+
+# Inhalation rate
+IR <- simulate_inhalation_rate(age)
+```
+
+## GeoTox: Simulating Data {auto-animate="true" background-image="_extensions/blackboard/blackboard.png"}
+
+``` r
+# Age
+age <- simulate_age(split(geo_tox_data$age, ~FIPS), n = MC_iter)
+
+# Obesity status
+obesity <- simulate_obesity(geo_tox_data$obesity, n = MC_iter)
+
+# Inhalation rate
+IR <- simulate_inhalation_rate(age)
+
+# External exposure concentration
+C_ext <- simulate_exposure(split(geo_tox_data$exposure, ~FIPS), n = MC_iter)
+
+# Sample from pre-simulated steady-state plasma concentration data
+C_ss <- sample_Css(geo_tox_data$simulated_css, age, obesity)
+```
+
+## GeoTox: Core Functions {auto-animate="true" background-image="_extensions/blackboard/blackboard.png"}
+
+``` r
+# Internal dose
+D_int <- calc_internal_dose(C_ext, IR, scaling = 1 / 1000)
+```
+
+## GeoTox: Core Functions {auto-animate="true" background-image="_extensions/blackboard/blackboard.png"}
+
+``` r
+# Internal dose
+D_int <- calc_internal_dose(C_ext, IR, scaling = 1 / 1000)
+
+# in vitro concentration
+C_invitro <- calc_invitro_concentration(D_int, C_ss)
+```
+
+## GeoTox: Core Functions {auto-animate="true" background-image="_extensions/blackboard/blackboard.png"}
+
+``` r
+# Internal dose
+D_int <- calc_internal_dose(C_ext, IR, scaling = 1 / 1000)
+
+# in vitro concentration
+C_invitro <- calc_invitro_concentration(D_int, C_ss)
+
+# Concentration response
+resp <- calc_concentration_response(C_invitro, hill_2_params)
+```
+
+## GeoTox: Documentation {code-line-numbers="2" auto-animate="true" background-image="_extensions/blackboard/blackboard.png"}
+
+``` r
+# Internal dose
+D_int <- calc_internal_dose(C_ext, IR, scaling = 1 / 1000)
+```
+
+## GeoTox: Documentation {code-line-numbers="2" auto-animate="true" background-image="_extensions/blackboard/blackboard.png"}
+
+``` r
+# Internal dose
+D_int <- calc_internal_dose(C_ext, IR, scaling = 1 / 1000)
+```
+
+![](calc_internal_dose_doc.png){.absolute .framed top="150" left="300" style="width: 450px; height: auto;"}
+
+## GeoTox: Dose-Response {auto-animate="true" background-image="_extensions/blackboard/blackboard.png"}
+
+```{r, include=FALSE}
+plot_hill <- function(fit_params) {
+
+  log10_x <- seq(-1, 4, length.out = 100)
+
+  y <- apply(fit_params, 1, function(par) {
+    tp      <- as.numeric(par["tp"])
+    logAC50 <- as.numeric(par["logAC50"])
+    slope   <- as.numeric(par["slope"])
+    tp / (1 + 10^(slope * (logAC50 - log10_x)))
+  })
+  colnames(y) <- fit_params$name
+
+  as_tibble(y) %>%
+    mutate(conc = 10^log10_x, .before = 1) %>%
+    pivot_longer(!conc, values_to = "resp") %>%
+    ggplot(aes(conc, resp, color = name)) +
+    geom_line() +
+    scale_x_log10(labels = scales::label_math(10^.x, format = log10))+
+      theme_chalk()
+}
+
+```
+
+```{r, echo=TRUE}
+hill_2_params <- fit_hill(data)
+plot_hill(hill_2_params)
+
+```
+
+## GeoTox: Dose-Response {code-line-numbers="1" auto-animate="true" background-image="_extensions/blackboard/blackboard.png"}
+
+```{r, echo=TRUE}
+hill_3_params <- fit_hill(data, fixed_slope = FALSE)
+plot_hill(hill_3_params)
+
+```
+
+## GeoTox: Map Visualization {background-image="_extensions/blackboard/blackboard.png"}
+
+```{r , echo=TRUE}
+#| code-line-numbers: "3"
+  resp <- resp_df %>% filter(health_measure == "GCA.Eff")
+  legend_name <- paste("Predicted Response", "Log2 Fold Change", "mRNA Expression",sep = " ")
+  make_county_heatmap(resp, legend_name)
+```
+
+## GeoTox: Under Development {.scrollable .smaller background-image="_extensions/blackboard/blackboard.png"}
+
+![](https://img.shields.io/badge/lifecycle-experimental-orange.svg){.framed style="width: 300px; height: auto;"}
+
+-   Individual/Person Level Analysis
+-   General Grouping or Areal Analysis
+-   Likely migrating to an object-oriented approach
+
+```{mermaid}
+graph TB;
+
+    style P1 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;
+    style P2 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;
+    style P3 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;
+    style P4 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;
+    style P5 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;
+    style P6 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;
+
+    style G1 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+    style G2 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+    style G3 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+    style G4 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+    style G5 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+    style G6 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+    style G7 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+
+
+    P1[Person] --> |Simulate, Sample| P2[Person, External Exposure];
+    G1[Group] --> |Simulate, Sample| G2[Group, External Exposure];
+    P2[Person, External Exposure] --> |Summarize, Simulate, Sample| G2[Group, External Exposure];
+    P2[Person, External Exposure] --> |Calc_Internal_Dose| P3[Person, Internal Exposure];
+    P3[Person, Internal Exposure] --> |Summarize| G3[Group, Internal Exposure];
+    G2[Group, External Exposure] --> |Calc_Internal_Dose| G3[Group, Internal Exposure];
+    P3[Person, Internal Exposure] --> |httk::| P4[Person, Target Organ Dose];
+    G3[Group, Internal Exposure]--> |httk::| G4[Group, Target Organ Dose];
+    P4[Person, Target Organ Dose] --> |summarize| G4[Group, Target Organ Dose];
+    P4[Person, Target Organ Dose] --> |calc_invitro_conc| P5[Person, Invitro Concentration];
+    G4[Group, Target Organ Dose]--> |calc_invitro_conc| G5[Group, Invitro Concentration];
+    P5[Person, Invitro Concentration] --> |summarize| G5[Group, Invitro Concentration];
+    P5[Person, Invitro Concentration] --> |calc_concentration_response| P6[Person, Mixture Response];
+    G5[Group, Invitro Concentration]--> |calc_concentration_response| G6[Group, Mixture Response];
+    P6[Person, Mixture Response]--> |summarize, sample, simulate| G6[Group, Mixture Response];
+    G6[Group, Mixture Response]--> |plot, map| G7[Group, Mixture Response Risk Map];
+```
+
+## Revisiting the Steps of GeoTox {background-image="_extensions/blackboard/blackboard.png"}
+
+```{mermaid}
+graph TB;
+    A[External Sources] --> |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --> |Behaviorial and Physiological Modeling| C[Internal Exposure];
+    C[Internal Exposure] --> |PBTK| D[Target Organ Dose];
+    D[Target Organ Dose] --> |IVIVE| E[In vitro Equivalent Concentration];
+    E[In vitro Equivalent Concentration] --> |Mixtures Modeling| F[Concentration Response];
+   
+```
+
+## Revisiting the Steps of GeoTox {background-image="_extensions/blackboard/blackboard.png"}
+
+```{mermaid}
+graph TB;
+    A[External Sources] --> |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --> |Behaviorial and Physiological Modeling| C[Internal Exposure];
+    C[Internal Exposure] --> |PBTK| D[Target Organ Dose];
+    D[Target Organ Dose] --> |IVIVE| E[In vitro Equivalent Concentration];
+    E[In vitro Equivalent Concentration] --> |Mixtures Modeling| F[Concentration Response];
+    
+```
+
+::: {data-id="box1" style="background: rgba(39, 128, 227, 0.5); position: absolute; top: calc(95% - 125px); left: calc(50% - 175px); width: 350px; height: 125px; border-radius: 50%;"}
+:::
+
+## Revisiting the Steps of GeoTox {background-image="_extensions/blackboard/blackboard.png"}
+
+```{mermaid}
+graph TB;
+    A[External Sources] --> |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --> |Behaviorial and Physiological Modeling| C[Internal Exposure];
+    C[Internal Exposure] --> |PBTK| D[Target Organ Dose];
+    D[Target Organ Dose] --> |IVIVE| E[In vitro Equivalent Concentration];
+    E[In vitro Equivalent Concentration] --> |Independent Action| F[Concentration Response];
+    E[In vitro Equivalent Concentration] --> F[Concentration Response];
+    E[In vitro Equivalent Concentration] --> |Concentration Addition| F[Concentration Response];
+    
+```
+
+## RGCA Motivation {background-image="_extensions/blackboard/blackboard.png"}
+
+-   ***Infinite Mixture Problem***: There are infinitely many possible mixtures and we can't test them all
+
+-   ***Independent vs Additive***: No clear approach for general mixtures
+
+-   ***Something from Nothing***: Independently safe chemicals can combine to form a hazardous mixture
+
+## RGCA: Notation {.scrollable .smaller background-image="_extensions/blackboard/blackboard.png"}
+
+We assume a parametric model for interpretability: $$ r_i(c) =f_i(c|a_i,\theta_i,\beta_i) = \frac{a_i}{1+\left(\frac{\theta_i}{c}\right)^{\beta_i}}$$ where:
+
+-   $r_i$: toxic effect or response of chemical $i$
+-   $c$: concentration of a chemical, later indexed by chemical $i$
+-   $a_i$: sill or maximum effect parameter
+-   $\theta_i$: dissociation constant or EC50 value
+-   $\beta_i$: slope parameter
+
+## RGCA: Common Mixture Models {.scrollable .smaller background-image="_extensions/blackboard/blackboard.png"}
+
+-   Concentration Addition, CA (Loewe, Isobole): effective total dose adjusted for potency $$ \sum_i \frac{c_i}{EC_i(R)} = 1$$ Intuition: \`\`How much $c_2$ do I need to get response $R$ under chem 1 given $c_1$" $$EC_1(R) = c_1 + c_2 \frac{EC_1(R)}{EC_2(R)}$$
+
+## RGCA: Partial Agonists {auto-animate="true" background-image="_extensions/blackboard/blackboard.png"}
+
+Partial agonists are the major limitation of traditional CA
+
+```{r, echo=FALSE}
+plot_hill(hill_2_params[c(3,6),])
+```
+
+## RGCA: Partial Agonists {auto-animate="true" background-image="_extensions/blackboard/blackboard.png"}
+
+Partial agonists are the major limitation of traditional CA
+
+```{r, echo=FALSE}
+plot_hill(hill_2_params[c(3,6),]) + 
+  geom_rect(aes(xmin=0,xmax=10^4,ymin=hill_2_params[6,]$tp,ymax=hill_2_params[3,]$tp),fill = NA,linetype = 3,linewidth=2.5,color = "white")
+
+```
+
+## RGCA: Partial Agonists {.scrollable .smaller background-image="_extensions/blackboard/blackboard.png"}
+
+GCA (Howard and Webster, 2009) substitutes $f^{-1}_i(R)$ for $EC_i(R)$ and solves for $R$ to balance the equation given $c_i$'s: $$\sum_i \frac{c_i}{f_i^{-1}(R)} = 1$$
+
+-   For the Hill model with slope $\beta_i = 1$, we get a hyperbolic function: $$ R=f_i(c) = \frac{a_i}{1+\left(\frac{\theta_i}{c}\right)^{\beta_i}} = \frac{c \cdot a_i}{c+ \theta_i}  $$ \vfill \pause
+
+-   So: when $R>a_1$, $c<0$!
+
+-   A large toxic effect of the mixture requires small \textbf{or negative} concentrations of chemical 1.
+
+## RGCA: Partial Agonists {.scrollable .smaller background-image="_extensions/blackboard/blackboard.png"}
+
+The GCA trick can be used with $\beta = 1$ because the inverse is still defined for $R>a$: \vspace{4mm} $$f^{-1}(R) = \frac{\theta}{\left(\frac{a}{R}-1\right)^{1/\beta}} = \frac{\theta}{\frac{a}{R}-1} $$ \vspace{4mm}
+
+For most $\beta$, the inverse at $R>a$ is undefined because it contains a root of a negative value. We propose a series of reflections to have a well-defined inverse
+
+## RGCA: Piecewise Inverse Function {.scrollable .smaller background-image="_extensions/blackboard/blackboard.png"}
+
+::: columns
+::: {.column width="25%"}
+![Daniel Zilber, PhD, Postdoctoral Fellow](DZ-Headshot-Oct2023.jpg){.framed fig-align="left" width="100%"}
+:::
+
+::: {.column width="75%"}
+$$
+\begin{equation} \label{eq:Hill_reflected_inverse}
+f^{-1}(r | \alpha>0, \theta, \beta>0) = 
+\begin{cases}
+   \frac{- \theta}{1+\left (\frac{-\alpha}{r} \right)^{1/\beta}} & r \in (-\infty, 0)\\
+ \theta \left (\frac{\alpha}{r} -1 \right)^{-1/\beta} & r \in[0, \alpha)\\
+  -2\theta - \theta\left (\frac{\alpha}{2\alpha - r} -1 \right)^{-1/\beta} & r \in (\alpha, 2\alpha)\\
+    -2\theta + \frac{\theta}{1+\left(\frac{\alpha}{r-2\alpha} \right)^{1/\beta}} & r \in (2\alpha, \infty)\\
+ \end{cases}
+\end{equation}
+$$
+:::
+:::
+
+## RGCA: Piecewise Inverse Function {background-image="_extensions/blackboard/blackboard.png"}
+
+![](RGCA_symmetry_full-DZ.png){.framed fig-align="center" width="20%"}
+
+-   This inverse provides a wide enough support to satisfy the invertibility requirements of GCA
+
+## RGCA: Summary {background-image="_extensions/blackboard/blackboard.png"}
+
+-   IA and CA represent two extremes of mixture prediction
+
+-   GCA extends CA to partial agonists but requires a slope of 1
+
+-   We can extend GCA to not require slope 1: RGCA
+
+-   Non-unit slope allows for additional post-hoc analyses like clustering on slope, curve, etc.
+
+-   Daniel Zilber and Kyle P Messier, *Reflected Generalized Concentration Addition and Bayesian Hierarchical Models to Improve Chemical Mixture Prediction*, [PLOS One,]{.underline} In-Press
+
+## RGCA: Future Work {.scrollable .smaller background-image="_extensions/blackboard/blackboard.png"}
+
+Both IA and CA are additive: there is no interaction. One approach is to rescale GCA (Jonker et al. 2005):
+
+$$ \sum \frac{c_i}{f_i^{-1}(R)} = \exp{g(Z)}, \quad g(Z) = a \prod z_i $$ where the $z_i$ is a toxic unit, $z_i = c_i/f_i^{-1}(a/2)$.\
+\vspace{4mm}\pause
+
+We considered the following quadratic version, with a matrix $A$ to be specified by QSAR: $$g(Z) = -\frac{1}{2}z^\top A z$$ But it is not clear how to determine $A$ from QSAR. Also, this approach is symmetric: there is no dominant chemical.
+
+## RGCA: Extensible Software {background-image="_extensions/blackboard/blackboard.png"}
+
+![](RGCA-pkgdown.png){.framed fig-align="center" width="80%"}
+
+## RGCA: Extensible Software {background-image="_extensions/blackboard/blackboard.png"}
+
+![](RGCA-usage.png){.framed fig-align="center" width="80%"}
+
+## GeoTox + RGCA Integration {.scrollable .smaller background-image="_extensions/blackboard/blackboard.png"}
+
+```{mermaid}
+graph TB;
+    A[External Sources] --> |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --> |Behaviorial and Physiological Modeling| C[Internal Exposure];
+    C[Internal Exposure] --> |PBTK| D[Target Organ Dose];
+    D[Target Organ Dose] --> |IVIVE| E[In vitro Equivalent Concentration];
+    E[In vitro Equivalent Concentration] --> |Mixtures Modeling| F[Concentration Response];
+    
+```
+
+::: {data-id="box1" style="background: rgba(39, 128, 227, 0.5); position: absolute; top: calc(95% - 175px); left: calc(50% - 175px); width: 350px; height: 125px; border-radius: 50%; margin-top: 50px;"}
+RGCA
+:::
+
+## Extensible GeoTox {.scrollable .smaller background-image="_extensions/blackboard/blackboard.png"}
+
+-   Looking forward, there are many ways to improve GeoTox mixture risk assessment
+-   Better handling of ***time***
+-   More and better resolved AOPs!
+
+## GeoTox: Temporal Feedback {.scrollable .smaller background-image="_extensions/blackboard/blackboard.png"}
+
+```{mermaid, scale = 0.8}
+graph TB;
+    A[External Sources] --> |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --> |Behaviorial and Physiological Modeling| C[Internal Exposure];
+    C[Internal Exposure] --> |PBTK| D[Target Organ Dose];
+    D[Target Organ Dose] --> |IVIVE| E[In vitro Equivalent Concentration];
+    E[In vitro Equivalent Concentration] --> |Mixtures Modeling| F[Concentration Response];
+    F[Concentration Response] --> C[Internal Exposure] ;
+
+    
+```
+
+## GeoTox: With Complete AOPs {.scrollable .smaller background-image="_extensions/blackboard/blackboard.png"}
+
+```{mermaid, scale = 0.8}
+graph TB;
+    A[External Sources] --> |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --> |Behaviorial and Physiological Modeling| C[Internal Exposure];
+    C[Internal Exposure] --> |PBTK| D[Target Organ Dose];
+    D[Target Organ Dose] --> |IVIVE| E[In vitro Equivalent Concentration];
+    E[In vitro Equivalent Concentration] --> |Mixtures Modeling| F[Concentration Response];
+    F[Concentration Response] -->|Key Event Relationship| G[Key Event 1];
+    G[Key Event 1] -->|Key Event Relationship| H[Key Event 2];
+    H[Key Event 2] -->|Key Event Relationship| I[Adverse Outcome];
+
+
+```
+
+## Multiple Assays Informing an AOP {.scrollable .smaller background-image="_extensions/blackboard/blackboard.png"}
+
+```{mermaid, scale = 0.8}
+graph TB;
+    A[External Sources] --> |Geospatial Modeling| B[External Exposure];
+    B[External Exposure] --> |Behaviorial and Physiological Modeling| C[Internal Exposure];
+    C[Internal Exposure] --> |PBTK| D[Target Organ Dose];
+    D[Target Organ Dose] --> |IVIVE| E[In vitro Equivalent Concentration];
+    E[In vitro Equivalent Concentration] --> |Mixtures Modeling| F[Concentration Response];
+    F[Concentration Response] -->|Key Event Relationship| G[Key Event 1A];
+    F[Concentration Response] -->|Key Event Relationship| H[Key Event 1B];
+    F[Concentration Response] -->|Key Event Relationship| I[Key Event 1C];
+    G[Key Event 1A] -->|Key Event Relationship| J[Key Event 2];
+    H[Key Event 1B] -->|Key Event Relationship| J[Key Event 2];
+    I[Key Event 1C] -->|Key Event Relationship| J[Key Event 2];
+    J[Key Event 2] -->|Key Event Relationship| K[Adverse Outcome];
+
+
+```
+
+## {SET} Summary {.scrollable .smaller background-image="_extensions/blackboard/blackboard.png"}
+
+-   GeoTox and RGCA code are currently experimental
+-   Publishing versions 1.0.0. to SET Github and CRAN ASAP
+-   Many other documented, test-driven, and extensible packages from the SET group on air pollution exposures across the US, download/process GIS environmental data, and scalable GIS operations
+-   Follow ***Spatiotemporal-Exposures-and-Toxicology*** on GitHub
+-   We are fostering a community around best-practices for software in geospatial exposure assessment, risk assessment, and computational toxicology
+-   email: kyle.messier\@nih.gov
+
+## Acknowledgements {.scrollable .smaller background-image="_extensions/blackboard/blackboard.png"}
+
+::: columns
+::: {.column width="34%"}
+![SET group in October 2023: Eva Marques, Daniel Zilber, Ranadeep Daw, Mariana Alifa Kassien, Insang Song](SETgroup-Oct2023.jpg){.framed style="width: 80%; height: auto;"}
+:::
+
+::: {.column width="33%"}
+-   Mitchell Manware
+-   Skylar Marvel
+-   Kristin Eccles
+-   Agnes Karamus
+-   Nicole Kleinstreuer
+-   Fred Parham
+-   Cynthia Rider
+-   Melissa Lowe
+-   Taylor Potter
+:::
+
+::: {.column width="33%"}
+-   John Wambaugh
+-   Mike DeVito
+-   Andy Shapiro
+-   Julia Rager
+-   Alison Motsinger-Reif
+-   David Reif
+-   Aubrey Miller
+-   Charles Schmitt
+-   Trisha Castranio
+-   Ann Liu
+-   Richard Kwok
+:::
+:::
