@@ -1,0 +1,5 @@
+CEHD Notes
+
+Can we utilize CHOPIN, AMADEUS to facilitate env data linkages with OMAP/EHR Data
+
+Could CHOPIN be used on AWS - on the fly calculations for envr data 
