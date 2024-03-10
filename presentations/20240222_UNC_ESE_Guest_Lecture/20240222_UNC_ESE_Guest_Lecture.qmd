@@ -8,7 +8,7 @@ institute:
   - "Division of Translational Toxicology" 
   - "ENVR 500 Guest Lecture: February 22, 2024"
 format: blackboard-revealjs
-self-contained: false
+self-contained: true
 ---
 
 ```{r setup, include=FALSE}

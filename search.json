@@ -675,8 +675,8 @@
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#about-us-setgroup",
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#about-us-setgroup",
     "title": "Exposure on Time:",
-    "section": "About Us: {SET}group",
-    "text": "About Us: {SET}group\n\n\nSpatiotemporal Exposure Mapping\nChemical and Stressor Mixtures Prediction\nMechanistically Informed Risk Assessment"
+    "section": "",
+    "text": "Spatiotemporal Exposure Mapping\nChemical and Stressor Mixtures Prediction\nMechanistically Informed Risk Assessment"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#about-us-setgroup-1",
@@ -795,7 +795,7 @@
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#some-geospatial-models-from-me",
     "title": "Exposure on Time:",
     "section": "Some Geospatial Models From Me",
-    "text": "Some Geospatial Models From Me\nThat are not FAIR+\n\n\nArsenic in North Carolina\nTetrachloroethylene in North Carolina\nNitrate in North Carolina\nRadon in North Carolina\nNitrogen Dioxide in the US\nMobile monitoring NO, PM, and BC in the Bay Area\n\n\nKind of FAIR+\nRaw data is available for research\nModeled data is not readily usable for epidemiology"
+    "text": "Some Geospatial Models From Me\n\nThat are not FAIR+\n\n\nArsenic in North Carolina\nTetrachloroethylene in North Carolina\nNitrate in North Carolina\nRadon in North Carolina\nNitrogen Dioxide in the US\nMobile monitoring NO, PM, and BC in the Bay Area\n\n\nKind of FAIR+\nRaw data is available for research\nModeled data is not readily usable for epidemiology"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#acag",
@@ -837,7 +837,7 @@
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#tdd-philosophy",
     "title": "Exposure on Time:",
     "section": "TDD Philosophy",
-    "text": "TDD Philosophy\n\n\nWrite a test\nRun the test -&gt; Expect it to fail\nWrite the minimum code\nRun the test -&gt; Till it passes\nRefactor -&gt; Repeat -&gt; Complete"
+    "text": "TDD Philosophy\n\n\n\n\n\n\nWrite a test\nRun the test -&gt; Expect it to fail\nWrite the minimum code\nRun the test -&gt; Till it passes\nRefactor -&gt; Repeat -&gt; Complete"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#cicd",
@@ -879,35 +879,35 @@
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible",
     "title": "Exposure on Time:",
     "section": "Others making exposure data accessible",
-    "text": "Others making exposure data accessible\nPerhaps not perfect, but better than most\n\nACAG"
+    "text": "Others making exposure data accessible\n\nPerhaps not perfect, but better than most\n\nACAG"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible-1",
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible-1",
     "title": "Exposure on Time:",
     "section": "Others making exposure data accessible",
-    "text": "Others making exposure data accessible\nPerhaps not perfect, but better than most\n\nNASA"
+    "text": "Others making exposure data accessible\n\nPerhaps not perfect, but better than most\n\nNASA"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible-2",
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible-2",
     "title": "Exposure on Time:",
     "section": "Others making exposure data accessible",
-    "text": "Others making exposure data accessible\nPerhaps not perfect, but better than most\n\nNASA"
+    "text": "Others making exposure data accessible\n\nPerhaps not perfect, but better than most\n\nNASA"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible-3",
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible-3",
     "title": "Exposure on Time:",
     "section": "Others making exposure data accessible",
-    "text": "Others making exposure data accessible\nPerhaps not perfect, but better than most\n\nMicrosoft Planetary Computer"
+    "text": "Others making exposure data accessible\n\nPerhaps not perfect, but better than most\n\nMicrosoft Planetary Computer"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible-4",
     "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible-4",
     "title": "Exposure on Time:",
     "section": "Others making exposure data accessible",
-    "text": "Others making exposure data accessible\nPerhaps not perfect, but better than most\n\nOpenAQ"
+    "text": "Others making exposure data accessible\n\nPerhaps not perfect, but better than most\n\nOpenAQ"
   },
   {
     "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html#others-making-exposure-data-accessible-5",
@@ -936,5 +936,12 @@
     "title": "GeoTox and RGCA",
     "section": "",
     "text": "Spatiotemporal Exposure Mapping \\[ y \\sim GP(X\\beta, \\Sigma) \\]\nChemical and Stressor Mixtures Prediction \\[ \\frac{[A]}{f_A^{-1}(R)}+\\frac{[B]}{f_B^{-1}(R)} = 1\n\\]\nMechanistically Informed Risk Assessment \\[  R = f(c|\\alpha,\\theta, \\beta) = \\frac{\\alpha}{1+\\left (  \\frac{\\theta}{x}\\right )^\\beta }\n\\]"
+  },
+  {
+    "objectID": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html",
+    "href": "presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html",
+    "title": "Exposure on Time:",
+    "section": "",
+    "text": "Spatiotemporal Exposure Mapping\nChemical and Stressor Mixtures Prediction\nMechanistically Informed Risk Assessment"
   }
 ]
