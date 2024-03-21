@@ -2,7 +2,7 @@
 title: "Kyle P Messier, PhD"
 about:
   template: jolla
-  image: images/KPM-headshot-Oct2023.jpg
+  image: images/KPM-headshot-updated.png
   links:
     - icon: github
       text: Github
