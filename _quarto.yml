@@ -3,57 +3,13 @@ project:
   output-dir: .
 
 website:
-  title: "{SET}grp"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
-      - text: "People"
-        menu:
-          - text: "Kyle P Messier"
-            href: people.html#KPM
-          - text: "Mariana Alifa"
-            href: people.html#MAK
-          - text: "Ranadeep Daw"
-            href: people.html#RD
-          - text: "Eva Marques"
-            href: people.html#ESM
-          - text: "Insang Song"
-            href: people.html#IS
-          - text: "Daniel Zilber"
-            href: people.html#DZ
-          - text: "Mitchell Manware"
-            href: people.html#MM
-          - text: "Former Members"
-            href: people.html#FormerMembers            
-      - text: "Software"
-        menu: 
-          - text: "GeoTox" 
-            href: https://spatiotemporal-exposures-and-toxicology.github.io/GeoTox/        
-          - text: "beethoven"
-            href: https://spatiotemporal-exposures-and-toxicology.github.io/beethoven/
-          - text: "chopin"
-            href: https://spatiotemporal-exposures-and-toxicology.github.io/chopin/
-          - text: "prestoGP"
-            href: https://spatiotemporal-exposures-and-toxicology.github.io/PrestoGP/
-      - text: "Presentations"
-        menu: 
-          - text: "NIMHD-2024-01-09"
-            href: presentations/nimhd-2024-01-09.pdf
-          - text: "SOT-ISES-Webinar-2024-02-14"
-            href: presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html
-          - text: "UNC-ENVR-500-Lecture-2024-02-22"
-            href: presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html
-          - text: "RENCI-Workshop-2024-02-23"
-            href: presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html            
-    logo: images/setlogo.jpg
+  title: "Kyle P Messier"
 
 format:
   html:
     theme: minty
     css: styles.css
-    toc: true
+    toc: false
 
 editor: visual
 

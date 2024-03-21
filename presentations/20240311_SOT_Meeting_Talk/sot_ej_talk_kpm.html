@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.550">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kyle P Messier, PhD">
+
+<title>{SET}grp - Geospatial Methodologies in Toxicology</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+</head><body class="nav-fixed">\titlegraphic{\includegraphics[width=3cm]{../20240214_SOT_ISES_Webinar/set-logo.jpg}}
+\setbeamertemplate{frametitle continuation}[from second]
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+
+
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/setlogo.jpg" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">{SET}grp</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-people" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">People</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-people">    
+        <li>
+    <a class="dropdown-item" href="../../people.html#KPM">
+ <span class="dropdown-text">Kyle P Messier</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../people.html#MAK">
+ <span class="dropdown-text">Mariana Alifa</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../people.html#RD">
+ <span class="dropdown-text">Ranadeep Daw</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../people.html#ESM">
+ <span class="dropdown-text">Eva Marques</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../people.html#IS">
+ <span class="dropdown-text">Insang Song</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../people.html#DZ">
+ <span class="dropdown-text">Daniel Zilber</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../people.html#MM">
+ <span class="dropdown-text">Mitchell Manware</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../people.html#FormerMembers">
+ <span class="dropdown-text">Former Members</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-software" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Software</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-software">    
+        <li>
+    <a class="dropdown-item" href="https://spatiotemporal-exposures-and-toxicology.github.io/GeoTox/">
+ <span class="dropdown-text">GeoTox</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://spatiotemporal-exposures-and-toxicology.github.io/beethoven/">
+ <span class="dropdown-text">beethoven</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://spatiotemporal-exposures-and-toxicology.github.io/chopin/">
+ <span class="dropdown-text">chopin</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://spatiotemporal-exposures-and-toxicology.github.io/PrestoGP/">
+ <span class="dropdown-text">prestoGP</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-presentations" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Presentations</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-presentations">    
+        <li>
+    <a class="dropdown-item" href="../../presentations/nimhd-2024-01-09.pdf">
+ <span class="dropdown-text">NIMHD-2024-01-09</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../presentations/20240214_SOT_ISES_Webinar/KPM_SOT_ISES_Webinar_20240214.html">
+ <span class="dropdown-text">SOT-ISES-Webinar-2024-02-14</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../presentations/20240222_UNC_ESE_Guest_Lecture/20240222_UNC_ESE_Guest_Lecture.html">
+ <span class="dropdown-text">UNC-ENVR-500-Lecture-2024-02-22</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../presentations/20240223_CEHD_Workshop/20240223_CEHD_Workshop.html">
+ <span class="dropdown-text">RENCI-Workshop-2024-02-23</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="sot_ej_talk_kpm.pdf"><i class="bi bi-file-pdf"></i>Beamer</a></li></ul></div></div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Geospatial Methodologies in Toxicology</h1>
+<p class="subtitle lead">Linking exposure, toxicity, and disease profiles to identify U.S. regions at elevated health risks</p>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Kyle P Messier, PhD </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            National Institute of Environmental Health Sciences - Division of Translational Toxicology - Predictive Toxicology Branch
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<section id="about-us" class="level2">
+<h2 class="anchored" data-anchor-id="about-us">About Us</h2>
+<p><strong>Spatiotemporal Exposures and Toxicology {SET} group</strong></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Spatiotemporal Exposure Mapping</li>
+<li>Chemical and Stressor Mixtures Prediction</li>
+<li>Mechanistically Informed Geospatial Risk Assessment</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img src="../../presentations/20240222_UNC_ESE_Guest_Lecture/SETgroup-Oct2023.jpg" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="geospatial-methods" class="level2">
+<h2 class="anchored" data-anchor-id="geospatial-methods">Geospatial Methods</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img src="../../presentations/20240222_UNC_ESE_Guest_Lecture/maps-translational.png" class="img-fluid"></p>
+</div><div class="column" style="width:50%;">
+<p><img src="../../presentations/20240222_UNC_ESE_Guest_Lecture/geostats-predictive.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="objective" class="level2">
+<h2 class="anchored" data-anchor-id="objective">Objective</h2>
+<ul>
+<li>Provide an overview of geospatial methods, data, applications, and future directions in toxicology and risk assessment</li>
+</ul>
+</section>
+</section>
+<section id="history" class="level1">
+<h1>History</h1>
+<section id="mining" class="level2">
+<h2 class="anchored" data-anchor-id="mining">Mining</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img src="../../presentations/20240222_UNC_ESE_Guest_Lecture/mining.jpg" class="img-fluid"></p>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Matheron and Krige developed geostatistical methods to predict ore content from core samples</li>
+<li>Matheron coined the term “Kriging” after Krige</li>
+<li>“Nugget” is a term used to random noise because predicting where gold nuggets were was so difficult</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="forestry" class="level2">
+<h2 class="anchored" data-anchor-id="forestry">Forestry</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img src="../../presentations/20240222_UNC_ESE_Guest_Lecture/matern.png" class="img-fluid"></p>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Matérn developed correlation models for spatial variation for applications in Forestry</li>
+<li>To this day, we use the “Matérn” covariance function</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="petroleum-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="petroleum-engineering">Petroleum Engineering</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img src="../../presentations/20240222_UNC_ESE_Guest_Lecture/petroleum.png" class="img-fluid" style="width:60.0%"></p>
+</div><div class="column" style="width:40%;">
+<ul>
+<li>Used to evaluate the oil and gas field reservoirs</li>
+<li>Uses geology and seismic data</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="public-health" class="level2">
+<h2 class="anchored" data-anchor-id="public-health">Public Health</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img src="../../presentations/20240222_UNC_ESE_Guest_Lecture/book-cover.jpeg" class="img-fluid"></p>
+</div><div class="column" style="width:60%;">
+<ul>
+<li><p>Cressie, 1990: Statistics for Spatial Data</p></li>
+<li><p>Waller and Gotway, 2004: Applied Statistics for Public Health Data</p></li>
+<li><p>Wide scale adoption for statisticians and engineers in ecological and human exposure and risk applications</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="toxicology" class="level2">
+<h2 class="anchored" data-anchor-id="toxicology">Toxicology</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img src="PublicLands.jpeg" class="img-fluid" style="width:97.0%"></p>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><p><strong>Toxicology is a new frontier for geospatial methods</strong></p></li>
+<li><p>Aggregate Exposure Pathways</p></li>
+<li><p>Adverse Outcome Pathway</p></li>
+<li><p>GeoTox</p></li>
+<li><p>Source-to-Outcome</p></li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="classical-models" class="level1">
+<h1>Classical Models</h1>
+<section id="uses-in-public-health" class="level2">
+<h2 class="anchored" data-anchor-id="uses-in-public-health">Uses in Public Health</h2>
+<ul>
+<li><p>Estimate exposure to air pollutants, water contaminants, and other environmental stressors</p></li>
+<li><p>Geocode patient addresses to link to environmental exposures</p></li>
+<li><p>Estimate the spatial distribution of disease rates</p></li>
+<li><p>Estimate the spatial distribution of health risk factors</p></li>
+</ul>
+</section>
+<section id="land-use-regression" class="level2">
+<h2 class="anchored" data-anchor-id="land-use-regression">Land Use Regression</h2>
+<p>Linear regression for spatial data</p>
+<p><span class="math display">\[
+Y(s) =  X(s)\beta + \varepsilon
+\]</span></p>
+<p>where <span class="math inline">\(Y(s)\)</span> is the response variable, <span class="math inline">\(X(s)\)</span> are the predictor variables, <span class="math inline">\(\beta\)</span> are the regression coefficients, <span class="math inline">\(\varepsilon\)</span> is the iid error term, and <span class="math inline">\((s)\)</span> denotes the spatial location.</p>
+<p>Not a terrible idea for spatial data, but it directly violates the assumption of independence of observations.</p>
+</section>
+<section id="kriging" class="level2">
+<h2 class="anchored" data-anchor-id="kriging">Kriging</h2>
+<p>Kriging and spatial models provide an explicit term for spatial correlation. A reasonable approach is a random-effect model:</p>
+<p><span class="math display">\[
+Y(s) = \mu(s) + \varepsilon +  \eta(s)
+\]</span> where <span class="math inline">\(\eta \sim N_n(0,\Sigma_{\theta})\)</span></p>
+<p>and <span class="math inline">\(\Sigma_{\theta}\)</span> is a covariance matrix with parameters, <span class="math inline">\(\theta\)</span>, that accounts for correlation between spatial and temporal locations</p>
+</section>
+</section>
+<section id="data-sources" class="level1">
+<h1>Data Sources</h1>
+<section id="common-data-sources-and-types" class="level2">
+<h2 class="anchored" data-anchor-id="common-data-sources-and-types">Common Data Sources and Types</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>U.S. Census Bureau</li>
+<li>U.S. Environmental Protection Agency</li>
+<li>U.S. Geological Survey</li>
+<li>National Aeronautics and Space Administration</li>
+<li>National Oceanic and Atmospheric Administration</li>
+<li>U.S. Department of Agriculture</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Land cover data</li>
+<li>Health statistics</li>
+<li>Population characteristics</li>
+<li>Infrastructure data</li>
+<li>Air quality data</li>
+<li>Water quality data</li>
+<li>Satellite imagery</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="satellite-imagery" class="level2">
+<h2 class="anchored" data-anchor-id="satellite-imagery">Satellite Imagery</h2>
+<p><img src="satellite-data.png" class="img-fluid"></p>
+</section>
+<section id="air-quality-data" class="level2">
+<h2 class="anchored" data-anchor-id="air-quality-data">Air Quality Data</h2>
+<p><img src="AQI.jpeg" class="img-fluid"></p>
+</section>
+<section id="toxic-release-data" class="level2">
+<h2 class="anchored" data-anchor-id="toxic-release-data">Toxic Release Data</h2>
+<p><img src="TRI-utah.png" class="img-fluid"></p>
+</section>
+<section id="health-information" class="level2">
+<h2 class="anchored" data-anchor-id="health-information">Health Information</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="places.png" class="img-fluid figure-img"></p>
+<figcaption>CDC Places Health Outcome Data: Diabetes Prevalence</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="case-studies" class="level1">
+<h1>Case Studies</h1>
+<section id="air-pollution-exposure-mapping" class="level2">
+<h2 class="anchored" data-anchor-id="air-pollution-exposure-mapping">Air Pollution Exposure Mapping</h2>
+<p><img src="spatial-PM25.png" class="img-fluid"></p>
+</section>
+<section id="tale-of-two-freeways" class="level2">
+<h2 class="anchored" data-anchor-id="tale-of-two-freeways">Tale of Two Freeways</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p><img src="two-freeways.png" class="img-fluid"></p>
+</div><div class="column" style="width:35%;">
+<ul>
+<li><p>All measured pollutants were consistently higher on I-880 compared to I-580</p></li>
+<li><p>I-580 has a heavy duty truck ban</p></li>
+<li><p>Heavy duty trucks are forced onto I-880 to get to the Port of Oakland</p></li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="source-to-outcome" class="level1">
+<h1>Source-to-Outcome</h1>
+<section id="source-to-outcome-modeling" class="level2">
+<h2 class="anchored" data-anchor-id="source-to-outcome-modeling">Source-to-Outcome Modeling</h2>
+<p><img src="../../presentations/20240214_SOT_ISES_Webinar/Exposome-Cascade.png" class="img-fluid"></p>
+</section>
+<section id="source-to-outcome-modeling-1" class="level2">
+<h2 class="anchored" data-anchor-id="source-to-outcome-modeling-1">Source-to-Outcome Modeling</h2>
+<ul>
+<li><p>Source-to-Outcome is a framework for linking environmental sources to human health outcomes</p></li>
+<li><p>The framework is based on the Aggregate Exposure Pathway (AEP) and Adverse Outcome Pathway (AOP) concepts</p></li>
+</ul>
+</section>
+<section id="source-to-outcome-modeling-2" class="level2">
+<h2 class="anchored" data-anchor-id="source-to-outcome-modeling-2">Source-to-Outcome Modeling</h2>
+<ul>
+<li>Next generation risk of cumulative and total exposomic effects on human health</li>
+<li>A balance between mechanistic and translational research</li>
+<li>A framework for integrating multiple data sources and models</li>
+<li>Incorporate biological and geospatial information on communities and individuals</li>
+</ul>
+</section>
+<section id="getting-two-frameworks-to-work-together" class="level2">
+<h2 class="anchored" data-anchor-id="getting-two-frameworks-to-work-together">Getting Two Frameworks to Work Together</h2>
+<p><strong>Aggregate Exposure Pathways</strong></p>
+<ul>
+<li>AEP is a comprehensive external analysis of source, media, and transformations</li>
+</ul>
+<p><strong>Adverse Outcome Pathway</strong></p>
+<ul>
+<li>AOPs provide a linkage specific biological target, pathway or process by a stressor and an adverse outcome(s) considered relevant to risk assessment</li>
+</ul>
+</section>
+<section id="aep-aop" class="level2">
+<h2 class="anchored" data-anchor-id="aep-aop">AEP-AOP</h2>
+<p><img src="AEP-AOP-hines.jpeg" class="img-fluid" style="width:80.0%"></p>
+<p>Hines, D. E., Conolly, R. B., &amp; Jarabek, A. M. (2019)</p>
+</section>
+<section id="geotox" class="level2 shrink">
+<h2 class="shrink anchored" data-anchor-id="geotox">GeoTox</h2>
+<div class="columns">
+<div class="column" style="width:75%;">
+<p><img src="GeoToxOutline.png" class="img-fluid"></p>
+<p>Dr.&nbsp;Kristin Eccles, Former Visiting Fellow in DTT and SET, Now at Health Canada</p>
+</div><div class="column" style="width:25%;">
+<p><img src="../../presentations/20240214_SOT_ISES_Webinar/Eccles_headshot_resized.jpg" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="geotox-1" class="level2">
+<h2 class="anchored" data-anchor-id="geotox-1">GeoTox</h2>
+<ul>
+<li>Goal is to develop extensible, open-source software for facilitate source-to-outcome modeling (FAIR+)</li>
+<li>Working with Drs. David Reif and Skylar Marvel (NIEHS/DTT)</li>
+<li>Submitting to CRAN</li>
+<li>Static website hosted via {SET}group website</li>
+<li>Maintained, Documented, and Supported</li>
+</ul>
+</section>
+<section id="geotox-2" class="level2 shrink">
+<h2 class="shrink anchored" data-anchor-id="geotox-2">GeoTox</h2>
+<p><img src="sf-sticky.jpeg" class="img-fluid"> <code>sf</code> package for spatial data in R (Edzer Pebesma and others) (Illustration (c) 2018 by Allison Horst)</p>
+</section>
+<section id="geotox-3" class="level2 shrink">
+<h2 class="shrink anchored" data-anchor-id="geotox-3">GeoTox</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TB;
+
+    style P1 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;
+    style P2 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;
+    style P3 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;
+    style P4 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;
+    style P5 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;
+    style P6 fill:#91bcfd , stroke:#333, stroke-width:2px, rounded:true;
+
+    style G1 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+    style G2 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+    style G3 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+    style G4 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+    style G5 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+    style G6 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+    style G7 fill:#588b3e, stroke:#333, stroke-width:2px, rounded:true;
+
+
+    P1[Person] --&gt; |Simulate, Sample| P2[Person, External Exposure];
+    G1[Group] --&gt; |Simulate, Sample| G2[Group, External Exposure];
+    P2[Person, External Exposure] --&gt; |Summarize, Simulate, Sample| G2[Group, External Exposure];
+    P2[Person, External Exposure] --&gt; |Calc_Internal_Dose| P3[Person, Internal Exposure];
+    P3[Person, Internal Exposure] --&gt; |Summarize| G3[Group, Internal Exposure];
+    G2[Group, External Exposure] --&gt; |Calc_Internal_Dose| G3[Group, Internal Exposure];
+    P3[Person, Internal Exposure] --&gt; |httk::| P4[Person, Target Organ Dose];
+    G3[Group, Internal Exposure]--&gt; |httk::| G4[Group, Target Organ Dose];
+    P4[Person, Target Organ Dose] --&gt; |summarize| G4[Group, Target Organ Dose];
+    P4[Person, Target Organ Dose] --&gt; |calc_invitro_conc| P5[Person, Invitro Concentration];
+    G4[Group, Target Organ Dose]--&gt; |calc_invitro_conc| G5[Group, Invitro Concentration];
+    P5[Person, Invitro Concentration] --&gt; |summarize| G5[Group, Invitro Concentration];
+    P5[Person, Invitro Concentration] --&gt; |calc_concentration_response| P6[Person, Mixture Response];
+    G5[Group, Invitro Concentration]--&gt; |calc_concentration_response| G6[Group, Mixture Response];
+    P6[Person, Mixture Response]--&gt; |summarize, sample, simulate| G6[Group, Mixture Response];
+    G6[Group, Mixture Response]--&gt; |plot, map| G7[Group, Mixture Response];
+
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="conclusions" class="level1">
+<h1>Conclusions</h1>
+<section id="looking-forward" class="level2">
+<h2 class="anchored" data-anchor-id="looking-forward">Looking Forward</h2>
+<ul>
+<li><p>The tools for each step of the source-to-outcome modeling framework are available, but the integration is still a work in progress</p></li>
+<li><p>The integration of these tools will allow for the development of a comprehensive source-to-outcome modeling framework that can be used to assess the risk of cumulative and total exposomic effects on human health</p></li>
+</ul>
+</section>
+<section id="multiple-assays-informing-an-aop" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-assays-informing-an-aop">Multiple Assays Informing an AOP</h2>
+<p><img src="mermaid-diagram-2024-03-08-160259.png" class="img-fluid" style="width:115.0%"></p>
+</section>
+<section id="looking-forward-1" class="level2">
+<h2 class="anchored" data-anchor-id="looking-forward-1">Looking Forward</h2>
+<ul>
+<li><p>Incorporate more refined information on individual and population-level susceptibility to environmental exposures</p></li>
+<li><p>It is going to be a massive code and software development challenge</p></li>
+</ul>
+</section>
+<section id="looking-forward-2" class="level2">
+<h2 class="anchored" data-anchor-id="looking-forward-2">Looking Forward</h2>
+<ul>
+<li>Geospatial <strong>exposures</strong> are the foundation of a spatial, total exposome risk approach</li>
+</ul>
+</section>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Daniel Zilber</li>
+<li>Mitchell Manware</li>
+<li>Insang Song</li>
+<li>Eva Marques</li>
+<li>Ranadeep Daw</li>
+<li>Mariana Alifa Kassien</li>
+<li>Kristin Eccles</li>
+<li>Melissa Lowe</li>
+<li>Taylor Potter</li>
+<li>Alvin Sheng</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>John Wambaugh</li>
+<li>Alison Motsinger-Reif</li>
+<li>David Reif</li>
+<li>Skylar Marvel</li>
+<li>Nicole Kleinstreuer</li>
+<li>Julia Rager</li>
+</ul>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
